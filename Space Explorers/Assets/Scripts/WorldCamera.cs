@@ -13,15 +13,6 @@ public class WorldCamera : MonoBehaviour
 
     Vector3 position;
 
-    private void Awake()
-    {
-
-        Vector3 position = target.position; //obtiene posición del objeto que se queire seguir
-        position += Quaternion.Euler(0.0f, 0.0f, 0.0f) * new Vector3(0.0f, height, -distance);
-
-        transform.position = position;
-        transform.LookAt(target);
-    }
 
     void Update()
     {
@@ -37,8 +28,11 @@ public class WorldCamera : MonoBehaviour
 
         if(Input.GetKeyDown(KeyCode.A))
         {
+            Vector3 position = target.position; //obtiene posición del objeto que se queire seguir
+            position += Quaternion.Euler(0.0f, 0.0f, 0.0f) * new Vector3(0.0f, height, -distance);
+
             transform.position = position;
-            transform.LookAt(target);
+            transform.LookAt(target); //Apunta hacia el personaje
         }
             
     }

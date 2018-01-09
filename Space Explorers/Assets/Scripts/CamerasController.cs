@@ -5,22 +5,23 @@ using UnityEngine;
 public class CamerasController : MonoBehaviour {
 
     public Camera playerCamera;
-    public Camera worldCamera;
 	
 	// Update is called once per frame
 	void Update () {
 
-        if(Input.GetKeyDown(KeyCode.Y))
+        //gameObject.GetComponent<Script>().enabled = true;
+
+        if (Input.GetKeyDown(KeyCode.Y))
         {
-            if (playerCamera.enabled == true)
+            if (playerCamera.GetComponent<ThirdPersonCamera>().enabled == true)
             {
-                playerCamera.enabled = false;
-                worldCamera.enabled = true;
+                playerCamera.GetComponent<ThirdPersonCamera>().enabled = false;
+                playerCamera.GetComponent<WorldCamera>().enabled = true;
             }
             else
             {
-                playerCamera.enabled = true;
-                worldCamera.enabled = false;
+                playerCamera.GetComponent<ThirdPersonCamera>().enabled = true;
+                playerCamera.GetComponent<WorldCamera>().enabled = false;
             }
                 
         }
