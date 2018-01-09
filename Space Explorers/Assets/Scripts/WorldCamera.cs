@@ -11,8 +11,6 @@ public class WorldCamera : MonoBehaviour
 
     public float speed = 100.0f;
 
-    Vector3 position;
-
 
     void Update()
     {
