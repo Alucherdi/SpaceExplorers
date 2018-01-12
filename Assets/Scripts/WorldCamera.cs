@@ -16,14 +16,14 @@ public Transform target;
 
     void Update()
     {
-        /*Vector3 position = target.position; //obtiene posición del objeto que se queire seguir
-        position += Quaternion.Euler(0.0f, 0.0f, 0.0f) * new Vector3(0.0f, height, -distance);*/
-		Vector3 dir = new Vector3 (Input.GetAxisRaw ("Mouse X") * Time.deltaTime * speed, 0.0f, Input.GetAxisRaw ("Mouse Y") * Time.deltaTime * speed);
+        //
+        //Vector3 dir = new Vector3 (Input.GetAxisRaw ("Mouse X") * Time.deltaTime * speed, 0.0f, Input.GetAxisRaw ("Mouse Y") * Time.deltaTime * speed);
+
 		// Verificar movimiento de la camara en world camera
-		if (Input.GetAxis("Mouse X") > 0 || Input.GetAxis("Mouse Y") > 0)
+		/*if (Input.GetAxis("Mouse X") > 0 || Input.GetAxis("Mouse Y") > 0)
             transform.position += new Vector3(Input.GetAxisRaw("Mouse X") * Time.deltaTime * speed, Input.GetAxisRaw("Mouse Y") * Time.deltaTime * speed, 0.0f);
 		else if (Input.GetAxis("Mouse X") < 0 || Input.GetAxis("Mouse Y") > 0)
-            transform.position += new Vector3(Input.GetAxisRaw("Mouse X") * Time.deltaTime * speed, Input.GetAxisRaw("Mouse Y") * Time.deltaTime * speed, 0.0f);
+            transform.position += new Vector3(Input.GetAxisRaw("Mouse X") * Time.deltaTime * speed, Input.GetAxisRaw("Mouse Y") * Time.deltaTime * speed, 0.0f);*/
 
 		// Verificar si la cámara se encuentra en un filo
 		// Derecha
