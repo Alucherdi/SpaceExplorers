@@ -6,11 +6,9 @@ public class CamerasController : MonoBehaviour {
 
     public Camera playerCamera;
 	
-	// Update is called once per frame
 	void Update () {
 
-        //gameObject.GetComponent<Script>().enabled = true;
-
+        //Habilita el script de la cámara a utilizar
         if (Input.GetKeyDown(KeyCode.Y))
         {
             if (playerCamera.GetComponent<ThirdPersonCamera>().enabled == true)

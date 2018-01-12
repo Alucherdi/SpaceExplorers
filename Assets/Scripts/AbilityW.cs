@@ -6,46 +6,31 @@ using UnityEngine.UI;
 public class AbilityW : MonoBehaviour {
 
     public static AbilityW instance;
-
-    public bool activeJoystick;
-    bool activeAbility;
-
+    public bool activeAbility;
     Vector3 newPosition;
+    public Image abilityWImage;
+    public Image cursorW;
 
-    Vector3 posicionIncial;
-    public Image joystickAbilities1Image;
-    public Image JoystickAbilities2Image;
+    /*public float area;
+    public float perímetro;
+    public float radio;*/
 
-    //
-    public float velocidad = 1.5f;
-    public float velocidadAngular = 90.0f;
-    public float smooth = 1.5f;
 
-    private Vector3 position;
-    private Quaternion rotation;
-    private float distancia;
-     //
-
-    void Start()
-    {
+    void Start(){
         instance = this;
-        posicionIncial = transform.position;
 
-        joystickAbilities1Image.enabled = false;
-        JoystickAbilities2Image.enabled = false;
+        /*area = Mathf.PI *(radio*radio);
+        perímetro = Mathf.PI * (2 * radio);*/
     }
 
-    void Update()
-    {
-        if (activeJoystick == true)
-        {
-            joystickAbilities1Image.enabled = true;
-            JoystickAbilities2Image.enabled = true;
+    void Update(){
+        if (activeAbility == true) {
+            abilityWImage.enabled = true;
+            cursorW.enabled = true;
         }
-        else
-        {
-            joystickAbilities1Image.enabled = false;
-            JoystickAbilities2Image.enabled = false;
+        else {
+            abilityWImage.enabled = false;
+            cursorW.enabled = false;
         }
 
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -56,28 +41,25 @@ public class AbilityW : MonoBehaviour {
             if (hitFloor.collider.CompareTag("Floor"))
             {
                 newPosition = hitFloor.point;
-                JoystickAbilities2Image.transform.position = newPosition;
+                cursorW.transform.position = new Vector3(newPosition.x, newPosition.y + 0.1f, newPosition.z);
             }
         }
 
+
         if (Input.GetMouseButtonUp(0) && activeAbility == true)
         {
-            AbilitiesController.instance.DesactiveAllAbilities();
+            /*
+            Si un punto esta en el área, realiza el ataque, si esta fuera de ella s dirige hacia el para atacar.
+            posicion de X y Y de dodne se dio el click para saber si esta en el área o no.  
+            */
             Debug.Log("Utilizaste la Habilidad 2/W");
             activeAbility = false;
             PlayerController.instance.AbilityOff();
         }
     }
 
-
-
     public void Active(bool active)
     {
         activeAbility = active;
-    }
-
-    public void EnableJoystick(bool active2)
-    {
-        activeJoystick = active2;
     }
 }

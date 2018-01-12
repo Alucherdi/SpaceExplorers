@@ -1,19 +1,27 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class AbilityQ : MonoBehaviour {
 
     public static AbilityQ instance;
     Vector3 newPosition;
-
-    bool activeAbility;
+    public bool activeAbility;
+    public Image abilityQImage;
 
     void Start () {
         instance = this;
 	}
 	
 	void Update () {
+
+        if (activeAbility == true)
+            abilityQImage.enabled = true;
+        else
+            abilityQImage.enabled = false;
+
+
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hitFloor;
 
@@ -28,7 +36,6 @@ public class AbilityQ : MonoBehaviour {
 
         if (Input.GetMouseButtonUp(0) && activeAbility==true)
         {
-            AbilitiesController.instance.DesactiveAllAbilities();
             Debug.Log("Utilizaste la Habilidad 1/Q");
             activeAbility = false;
             PlayerController.instance.AbilityOff();

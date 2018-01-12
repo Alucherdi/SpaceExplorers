@@ -7,6 +7,6 @@ public class LookCamera : MonoBehaviour {
 
     void Update()
     {
-        transform.LookAt(target);
+        transform.LookAt(target);//Dirige la vista hacia el target
     }
 }

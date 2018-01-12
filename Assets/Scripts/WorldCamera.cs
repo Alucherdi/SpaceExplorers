@@ -16,15 +16,6 @@ public Transform target;
 
     void Update()
     {
-        //
-        //Vector3 dir = new Vector3 (Input.GetAxisRaw ("Mouse X") * Time.deltaTime * speed, 0.0f, Input.GetAxisRaw ("Mouse Y") * Time.deltaTime * speed);
-
-		// Verificar movimiento de la camara en world camera
-		/*if (Input.GetAxis("Mouse X") > 0 || Input.GetAxis("Mouse Y") > 0)
-            transform.position += new Vector3(Input.GetAxisRaw("Mouse X") * Time.deltaTime * speed, Input.GetAxisRaw("Mouse Y") * Time.deltaTime * speed, 0.0f);
-		else if (Input.GetAxis("Mouse X") < 0 || Input.GetAxis("Mouse Y") > 0)
-            transform.position += new Vector3(Input.GetAxisRaw("Mouse X") * Time.deltaTime * speed, Input.GetAxisRaw("Mouse Y") * Time.deltaTime * speed, 0.0f);*/
-
 		// Verificar si la cámara se encuentra en un filo
 		// Derecha
 		if(Input.mousePosition.x >= Screen.width - delta){
@@ -54,34 +45,3 @@ public Transform target;
             
     }
 }
-
-
-
-
-
-/*public Transform target;
-
-public float distance = 50.0f; //distancia de la camara al personaje
-public float height = 20.0f;
-
-public float speed = 100.0f;
-
-
-void Update()
-{
-    if (Input.GetAxis("Mouse X") > 0)
-        transform.position += new Vector3(Input.GetAxisRaw("Mouse X") * Time.deltaTime * speed, 0.0f, Input.GetAxisRaw("Mouse Y") * Time.deltaTime * speed);
-    else if (Input.GetAxis("Mouse X") < 0)
-        transform.position += new Vector3(Input.GetAxisRaw("Mouse X") * Time.deltaTime * speed, 0.0f, Input.GetAxisRaw("Mouse Y") * Time.deltaTime * speed);
-
-
-    if(Input.GetKeyDown(KeyCode.A))
-    {
-        Vector3 position = target.position; //obtiene posición del objeto que se queire seguir
-        position += Quaternion.Euler(0.0f, 0.0f, 0.0f) * new Vector3(0.0f, height, -distance);
-
-        transform.position = position;
-        transform.LookAt(target); //Apunta hacia el personaje
-    }
-
-}*/
