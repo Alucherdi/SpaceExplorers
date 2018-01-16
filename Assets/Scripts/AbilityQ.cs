@@ -36,6 +36,7 @@ public class AbilityQ : MonoBehaviour {
 
         if (Input.GetMouseButtonUp(0) && activeAbility==true)
         {
+            PlayerController.instance.LookDestination(newPosition);
             Debug.Log("Utilizaste la Habilidad 1/Q");
             activeAbility = false;
             PlayerController.instance.AbilityOff();

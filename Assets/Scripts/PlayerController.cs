@@ -7,11 +7,11 @@ using UnityEngine.UI;
 public class PlayerController : MonoBehaviour {
 
     public static PlayerController instance;
-    Animator anim;
+    public Animator anim;
     /*Vector3 target; //Por si se ocupa un identificador al dar los click en la escena
     public GameObject targetPosition;*/
     Vector3 newPosition;
-    bool moving;
+    public bool moving;
 
     public bool abilityQ;
     public bool abilityW;
@@ -35,12 +35,14 @@ public class PlayerController : MonoBehaviour {
 
         if (Input.GetMouseButtonDown(1) || Input.GetMouseButton(1))
         {
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            RaycastHit hitFloor;
+
             /*
             RaycastHit hitObstacles; //Para identificar si hay algun obstáculo
             RaycastHit hitEnemy; //Para identificar si hay algún enemigo
             */
+
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hitFloor;
 
             if (Physics.Raycast(ray, out hitFloor))
             {
@@ -50,11 +52,11 @@ public class PlayerController : MonoBehaviour {
                     transform.LookAt(new Vector3(newPosition.x, newPosition.y, newPosition.z));
 
                     moving = true;
-                    AbilityOff();       
+                    AbilityOff();
                 }
             }
+            //LookDestination(newPosition);
         }
-
 
         if (moving == true)
         {
@@ -114,6 +116,37 @@ public class PlayerController : MonoBehaviour {
             AbilityW.instance.Active(abilityW);
             AbilityE.instance.Active(abilityE);
             AbilityR.instance.Active(abilityR);
+        }
+    }
+
+    public void LookDestination(Vector3 newPosition)
+    {
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        RaycastHit hitFloor;
+
+        if (Physics.Raycast(ray, out hitFloor))
+        {
+            if (hitFloor.collider.CompareTag("Floor"))
+            {
+                newPosition = hitFloor.point;
+                transform.LookAt(new Vector3(newPosition.x, newPosition.y, newPosition.z));
+
+                moving = true;
+            }
+        }
+    }
+
+    public void MovingTo(Vector3 destination, bool moving)
+    {
+        if (moving == true)
+        {
+            anim.SetFloat("Forward", 10.0f);
+            transform.Translate(new Vector3(0, 0, 0.5f));
+            if (Vector3.Distance(transform.position, destination) < 10.0f)
+            {
+                anim.SetFloat("Forward", 0.0f);
+                moving = false;
+            }
         }
     }
 

@@ -11,19 +11,25 @@ public class AbilityW : MonoBehaviour {
     public Image abilityWImage;
     public Image cursorW;
 
-    /*public float area;
+
+    //public GameObject actualPosition;
+    Vector3 targetPosition;
+
+    public float area;
     public float perímetro;
-    public float radio;*/
+    public float radio;
+
 
 
     void Start(){
         instance = this;
 
-        /*area = Mathf.PI *(radio*radio);
-        perímetro = Mathf.PI * (2 * radio);*/
+        area = Mathf.PI *(radio*radio);
+        perímetro = Mathf.PI * (2 * radio);
     }
 
     void Update(){
+
         if (activeAbility == true) {
             abilityWImage.enabled = true;
             cursorW.enabled = true;
@@ -48,18 +54,39 @@ public class AbilityW : MonoBehaviour {
 
         if (Input.GetMouseButtonUp(0) && activeAbility == true)
         {
+            AreaDetector();
             /*
             Si un punto esta en el área, realiza el ataque, si esta fuera de ella s dirige hacia el para atacar.
             posicion de X y Y de dodne se dio el click para saber si esta en el área o no.  
             */
-            Debug.Log("Utilizaste la Habilidad 2/W");
+            /*Debug.Log("Utilizaste la Habilidad 2/W");
             activeAbility = false;
-            PlayerController.instance.AbilityOff();
+            PlayerController.instance.AbilityOff();*/
         }
     }
 
     public void Active(bool active)
     {
         activeAbility = active;
+    }
+
+    public void AreaDetector()
+    {
+        targetPosition = Input.mousePosition;
+
+        if ((targetPosition != PlayerController.instance.transform.position) )
+        {
+            PlayerController.instance.LookDestination(targetPosition);
+            PlayerController.instance.MovingTo(targetPosition, PlayerController.instance.moving);
+            //actualPosition.transform.position=new Vector3(cursorW.transform.position.x, cursorW.transform.position.y, cursorW.transform.position.z);
+            //Debug.Log("Utilizaste la Habilidad 2/W");
+        }
+        else
+        {
+            PlayerController.instance.LookDestination(targetPosition);
+            Debug.Log("Utilizaste la Habilidad 2/W");
+            activeAbility = false;
+            PlayerController.instance.AbilityOff();
+        }
     }
 }
