@@ -55,13 +55,6 @@ public class AbilityW : MonoBehaviour {
         if (Input.GetMouseButtonUp(0) && activeAbility == true)
         {
             AreaDetector();
-            /*
-            Si un punto esta en el área, realiza el ataque, si esta fuera de ella s dirige hacia el para atacar.
-            posicion de X y Y de dodne se dio el click para saber si esta en el área o no.  
-            */
-            /*Debug.Log("Utilizaste la Habilidad 2/W");
-            activeAbility = false;
-            PlayerController.instance.AbilityOff();*/
         }
     }
 
