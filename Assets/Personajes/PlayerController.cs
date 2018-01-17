@@ -7,7 +7,9 @@ using UnityEngine.UI;
 public class PlayerController : MonoBehaviour {
 
     public static PlayerController instance;
-    public Animator anim;
+
+    Wrapper wrapper;
+    Animator anim;
     /*Vector3 target; //Por si se ocupa un identificador al dar los click en la escena
     public GameObject targetPosition;*/
     Vector3 newPosition;
@@ -21,6 +23,7 @@ public class PlayerController : MonoBehaviour {
     void Start()
     {
         instance = this;
+        wrapper = GetComponent<Wrapper>();
         anim = GetComponent<Animator>();
 
         moving = false;
@@ -32,6 +35,8 @@ public class PlayerController : MonoBehaviour {
 
     void Update()
     {
+        if(Input.GetKeyDown(KeyCode.Space))
+            wrapper.launchDash();
 
         if (Input.GetMouseButtonDown(1) || Input.GetMouseButton(1))
         {
@@ -72,50 +77,50 @@ public class PlayerController : MonoBehaviour {
         //Activar Abilidades
         if (Input.GetKeyDown(KeyCode.Q))
         {
-            abilityQ = true;
+            /*abilityQ = true;
             abilityW = false;
             abilityE = false;
             abilityR = false;
             AbilityQ.instance.Active(abilityQ);
             AbilityW.instance.Active(abilityW);
             AbilityE.instance.Active(abilityE);
-            AbilityR.instance.Active(abilityR);
+            AbilityR.instance.Active(abilityR);*/
         }
 
         if (Input.GetKeyDown(KeyCode.W))
         {
-            abilityW = true;
+            /*abilityW = true;
             abilityQ = false;
             abilityE = false;
             abilityR = false;
             AbilityQ.instance.Active(abilityQ);
             AbilityW.instance.Active(abilityW);
             AbilityE.instance.Active(abilityE);
-            AbilityR.instance.Active(abilityR);
+            AbilityR.instance.Active(abilityR);*/
         }
 
         if (Input.GetKeyDown(KeyCode.E))
         {
-            abilityE = true;
+            /*abilityE = true;
             abilityQ = false;
             abilityW = false;
             abilityR = false;
             AbilityQ.instance.Active(abilityQ);
             AbilityW.instance.Active(abilityW);
             AbilityE.instance.Active(abilityE);
-            AbilityR.instance.Active(abilityR);
+            AbilityR.instance.Active(abilityR);*/
         }
 
         if (Input.GetKeyDown(KeyCode.R))
         {
-            abilityR = true;
+            /*abilityR = true;
             abilityQ = false;
             abilityW = false;
             abilityE = false;
             AbilityQ.instance.Active(abilityQ);
             AbilityW.instance.Active(abilityW);
             AbilityE.instance.Active(abilityE);
-            AbilityR.instance.Active(abilityR);
+            AbilityR.instance.Active(abilityR);*/
         }
     }
 
@@ -152,14 +157,14 @@ public class PlayerController : MonoBehaviour {
 
     public void AbilityOff()
     {
-        abilityQ = false;
+        /*abilityQ = false;
         abilityW = false;
         abilityE = false;
         abilityR = false;
         AbilityQ.instance.Active(abilityQ);
         AbilityW.instance.Active(abilityW);
         AbilityE.instance.Active(abilityE);
-        AbilityR.instance.Active(abilityR);
+        AbilityR.instance.Active(abilityR);*/
     }
 
     void OnTriggerEnter(Collider objectCollider)
