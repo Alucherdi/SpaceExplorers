@@ -117,6 +117,17 @@ NavMeshSettings:
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: e194d39a231e29a489a36758f9fb175e, type: 3}
   m_PrefabInternal: {fileID: 2115002787}
+--- !u!114 &1107141865
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1107141864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a90ec58d29d1bb4dbf086067bdd7ac5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1107141866 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: e194d39a231e29a489a36758f9fb175e, type: 3}
