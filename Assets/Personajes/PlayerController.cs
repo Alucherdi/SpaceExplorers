@@ -8,7 +8,7 @@ public class PlayerController : MonoBehaviour {
 
     public static PlayerController instance;
 
-    Wrapper wrapper;
+    public Wrapper wrapper;
     Animator anim;
     /*Vector3 target; //Por si se ocupa un identificador al dar los click en la escena
     public GameObject targetPosition;*/
@@ -23,7 +23,6 @@ public class PlayerController : MonoBehaviour {
     void Start()
     {
         instance = this;
-        wrapper = GetComponent<Wrapper>();
         anim = GetComponent<Animator>();
 
         moving = false;
@@ -77,11 +76,13 @@ public class PlayerController : MonoBehaviour {
         //Activar Abilidades
         if (Input.GetKeyDown(KeyCode.Q))
         {
-            /*abilityQ = true;
+            abilityQ = true;
             abilityW = false;
             abilityE = false;
             abilityR = false;
-            AbilityQ.instance.Active(abilityQ);
+            wrapper.launchQ();
+            Assassin_Q.instance.Active(abilityQ);
+            /*AbilityQ.instance.Active(abilityQ);
             AbilityW.instance.Active(abilityW);
             AbilityE.instance.Active(abilityE);
             AbilityR.instance.Active(abilityR);*/
@@ -135,8 +136,6 @@ public class PlayerController : MonoBehaviour {
             {
                 newPosition = hitFloor.point;
                 transform.LookAt(new Vector3(newPosition.x, newPosition.y, newPosition.z));
-
-                moving = true;
             }
         }
     }
@@ -157,11 +156,11 @@ public class PlayerController : MonoBehaviour {
 
     public void AbilityOff()
     {
-        /*abilityQ = false;
+        abilityQ = false;
         abilityW = false;
         abilityE = false;
         abilityR = false;
-        AbilityQ.instance.Active(abilityQ);
+        /*AbilityQ.instance.Active(abilityQ);
         AbilityW.instance.Active(abilityW);
         AbilityE.instance.Active(abilityE);
         AbilityR.instance.Active(abilityR);*/

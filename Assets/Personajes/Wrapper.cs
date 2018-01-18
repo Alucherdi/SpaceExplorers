@@ -19,8 +19,6 @@ public class Wrapper : MonoBehaviour {
 		abilitiesh.Add ("R", abilities [3]);
 		abilitiesh.Add ("Space", abilities [4]);
         */
-
-
 	}
 
 	public Character character;

@@ -1,11 +1,17 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Assassin_Dash : MonoBehaviour {
+public class Assassin_Dash : Ability_abstract {
 
-	// Use this for initialization
-	void Start () {
+    public override void launch()
+    {
+        Debug.Log("Assassin Dash");
+    }
+
+    // Use this for initialization
+    void Start () {
 		
 	}
 	

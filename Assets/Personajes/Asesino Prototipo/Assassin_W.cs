@@ -2,10 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Assassin_W : MonoBehaviour {
+public class Assassin_W : Ability_abstract
+{
 
-	// Use this for initialization
-	void Start () {
+    public override void launch()
+    {
+        Debug.Log("Assassin Habilidad W");
+    }
+
+    // Use this for initialization
+    void Start () {
 		
 	}
 	
