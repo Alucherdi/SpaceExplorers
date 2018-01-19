@@ -5,11 +5,11 @@ using UnityEngine.UI;
 
 public class Assassin_E : Ability_abstract
 {
-    //Character assassin;
+    int costAbility = 25;
 
     public override void launch()
     {
-        //ActiveCamouflage();
+        ActiveCamouflage();
     }
 
     void Start()
@@ -19,21 +19,30 @@ public class Assassin_E : Ability_abstract
 
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.E))
+        if(PlayerController.instance.skinPlayer.enabled == false)
         {
-            for(int i=0; i >=200; i++)
+            if (PlayerController.instance.barraStamina.fillAmount >= 1)
             {
-                Wrapper.instace.character.stamina--;
+                InvokeRepeating("Invisibilidad", 5.0f, 0.1f);
             }
         }
+
+
+        if (PlayerController.instance.barraStamina.fillAmount == 0)
+        {
+            CancelInvoke("Invisibilidad");
+            PlayerController.instance.skinPlayer.enabled = true;
+        }
+
+    }
+
+    void Invisibilidad()
+    {
+        PlayerController.instance.barraStamina.fillAmount -= 0.02f;
     }
 
     public void ActiveCamouflage()
     {
-        /*if (Wrapper.instace.character.stamina >= 101)
-            {
-                Wrapper.instace.character.stamina--;
-                Debug.Log(Wrapper.instace.character.stamina);
-            }*/
+        PlayerController.instance.skinPlayer.enabled = false;
     }
 }

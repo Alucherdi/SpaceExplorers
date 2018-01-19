@@ -21,9 +21,9 @@ public class PlayerController : MonoBehaviour {
     public bool abilityR;
 
     public Image barraVida;
-    //private int damage = 0;
-
     public Image barraStamina;
+
+    public SkinnedMeshRenderer skinPlayer;
 
     void Start()
     {
@@ -76,7 +76,8 @@ public class PlayerController : MonoBehaviour {
                 moving = false;
             }
         }
-
+        //barraStamina.fillAmount -= precioHabilidad/StaminaPersonaje
+        
         //Activar Abilidades
         if (Input.GetKeyDown(KeyCode.Q))
         {
@@ -105,7 +106,7 @@ public class PlayerController : MonoBehaviour {
         {
             SkillShotCursor.instance.Active(false);
             AreaSkillCursor.instance.Active(false);
-            //wrapper.launchE();
+            wrapper.launchE();
             abilityE = true;
             abilityQ = false;
             abilityW = false;
@@ -125,6 +126,17 @@ public class PlayerController : MonoBehaviour {
 
         if (Input.GetKeyDown(KeyCode.Space))
             wrapper.launchDash();
+
+        /*Sistema para uamentar STAMINA*/
+        if (barraStamina.fillAmount == 1)
+        {
+            CancelInvoke("AumentarStamina");
+        }
+
+        if (barraStamina.fillAmount < 1)
+        {
+            InvokeRepeating("AumentarStamina", 5.0f, 0.1f);
+        }
     }
 
     public void AbilityOff()
@@ -133,6 +145,12 @@ public class PlayerController : MonoBehaviour {
         abilityW = false;
         abilityE = false;
         abilityR = false;
+    }
+
+
+    void AumentarStamina()
+    {
+        barraStamina.fillAmount += 0.002f;
     }
 
     public void LookDestination(Vector3 newPosition)
