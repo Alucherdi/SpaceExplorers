@@ -14,8 +14,7 @@ public class AbilityQ : MonoBehaviour {
         instance = this;
 	}
 	
-	void Update () {
-
+	public void Update () {
         if (activeAbility == true)
             abilityQImage.enabled = true;
         else
@@ -32,14 +31,6 @@ public class AbilityQ : MonoBehaviour {
                 newPosition = hitFloor.point;
                 transform.LookAt(new Vector3(newPosition.x, newPosition.y, newPosition.z));
             }
-        }
-
-        if (Input.GetMouseButtonUp(0) && activeAbility==true)
-        {
-            PlayerController.instance.LookDestination(newPosition);
-            Debug.Log("Utilizaste la Habilidad 1/Q");
-            activeAbility = false;
-            PlayerController.instance.AbilityOff();
         }
     }
 

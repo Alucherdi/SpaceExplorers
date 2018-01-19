@@ -7,16 +7,11 @@ public class Assassin_W : Ability_abstract
 
     public override void launch()
     {
-        Debug.Log("Assassin Habilidad W");
+        SmokeBomb();
     }
-
-    // Use this for initialization
-    void Start () {
-		
-	}
 	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    public void SmokeBomb()
+    {
+        Debug.Log("Utilizaste la bomba de humo para escapar =_=");
+    }
 }

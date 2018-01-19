@@ -8,7 +8,7 @@ public class PlayerController : MonoBehaviour {
 
     public static PlayerController instance;
 
-    public Wrapper wrapper;
+    Wrapper wrapper;
     Animator anim;
     /*Vector3 target; //Por si se ocupa un identificador al dar los click en la escena
     public GameObject targetPosition;*/
@@ -20,9 +20,15 @@ public class PlayerController : MonoBehaviour {
     public bool abilityE;
     public bool abilityR;
 
+    public Image barraVida;
+    //private int damage = 0;
+
+    public Image barraStamina;
+
     void Start()
     {
         instance = this;
+        wrapper = GetComponent<Wrapper>();
         anim = GetComponent<Animator>();
 
         moving = false;
@@ -34,8 +40,6 @@ public class PlayerController : MonoBehaviour {
 
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Space))
-            wrapper.launchDash();
 
         if (Input.GetMouseButtonDown(1) || Input.GetMouseButton(1))
         {
@@ -76,53 +80,59 @@ public class PlayerController : MonoBehaviour {
         //Activar Abilidades
         if (Input.GetKeyDown(KeyCode.Q))
         {
+            SkillShotCursor.instance.Active(false);
+            AreaSkillCursor.instance.Active(false);
+            wrapper.launchQ();
             abilityQ = true;
             abilityW = false;
             abilityE = false;
             abilityR = false;
-            wrapper.launchQ();
-            Assassin_Q.instance.Active(abilityQ);
-            /*AbilityQ.instance.Active(abilityQ);
-            AbilityW.instance.Active(abilityW);
-            AbilityE.instance.Active(abilityE);
-            AbilityR.instance.Active(abilityR);*/
+
         }
 
         if (Input.GetKeyDown(KeyCode.W))
         {
-            /*abilityW = true;
+            SkillShotCursor.instance.Active(false);
+            AreaSkillCursor.instance.Active(false);
+            wrapper.launchW();
+            abilityW = true;
             abilityQ = false;
             abilityE = false;
             abilityR = false;
-            AbilityQ.instance.Active(abilityQ);
-            AbilityW.instance.Active(abilityW);
-            AbilityE.instance.Active(abilityE);
-            AbilityR.instance.Active(abilityR);*/
         }
 
         if (Input.GetKeyDown(KeyCode.E))
         {
-            /*abilityE = true;
+            SkillShotCursor.instance.Active(false);
+            AreaSkillCursor.instance.Active(false);
+            //wrapper.launchE();
+            abilityE = true;
             abilityQ = false;
             abilityW = false;
             abilityR = false;
-            AbilityQ.instance.Active(abilityQ);
-            AbilityW.instance.Active(abilityW);
-            AbilityE.instance.Active(abilityE);
-            AbilityR.instance.Active(abilityR);*/
         }
 
         if (Input.GetKeyDown(KeyCode.R))
         {
-            /*abilityR = true;
+            SkillShotCursor.instance.Active(false);
+            AreaSkillCursor.instance.Active(false);
+            wrapper.launchR();
+            abilityR = true;
             abilityQ = false;
             abilityW = false;
             abilityE = false;
-            AbilityQ.instance.Active(abilityQ);
-            AbilityW.instance.Active(abilityW);
-            AbilityE.instance.Active(abilityE);
-            AbilityR.instance.Active(abilityR);*/
         }
+
+        if (Input.GetKeyDown(KeyCode.Space))
+            wrapper.launchDash();
+    }
+
+    public void AbilityOff()
+    {
+        abilityQ = false;
+        abilityW = false;
+        abilityE = false;
+        abilityR = false;
     }
 
     public void LookDestination(Vector3 newPosition)
@@ -154,27 +164,16 @@ public class PlayerController : MonoBehaviour {
         }
     }
 
-    public void AbilityOff()
-    {
-        abilityQ = false;
-        abilityW = false;
-        abilityE = false;
-        abilityR = false;
-        /*AbilityQ.instance.Active(abilityQ);
-        AbilityW.instance.Active(abilityW);
-        AbilityE.instance.Active(abilityE);
-        AbilityR.instance.Active(abilityR);*/
-    }
-
     void OnTriggerEnter(Collider objectCollider)
     {
         if (objectCollider.gameObject.tag == "Enemy")
-            anim.SetBool("Crouch", true);
-    }
-
-    void OnTriggerExit(Collider objectCollider)
-    {
-        if (objectCollider.gameObject.tag == "Enemy")
-            anim.SetBool("Crouch", false);
+        {
+            //Debug.Log("Entre en colisión");
+            barraVida.fillAmount -= 0.1f;
+            /*
+             *barraVida.fillAmount -= AtaqueEnemigo/VidadelPersonaje.
+            */ 
+             
+        }
     }
 }

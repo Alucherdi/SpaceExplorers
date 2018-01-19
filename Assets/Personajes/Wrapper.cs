@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class Wrapper : MonoBehaviour {
 
+    public static Wrapper instace;
 	private Ability_abstract[] abilities;
 	private Hashtable abilitiesh;
 
 	void Start()
 	{
+        instace = this;
 		abilities = GetComponents<Ability_abstract> ();
 
 		/*

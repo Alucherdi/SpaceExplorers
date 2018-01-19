@@ -12,18 +12,18 @@ MonoBehaviour:
   m_Name: Assassin
   m_EditorClassIdentifier: 
   characterName: Assassin_Proto
-  healt: 0
-  stamina: 0
-  healthRegen: 0
-  staminaRegen: 0
-  attack: 0
-  energy: 0
-  attackResist: 0
-  energyResist: 0
-  movementSpeed: 0
-  attackSpeed: 0
-  cooldownReduction: 0
-  launchQcdr: 0
-  launchWcdr: 0
-  launchEcdr: 0
-  launchRcdr: 0
+  healt: 400
+  stamina: 200
+  healthRegen: 10
+  staminaRegen: 10
+  attack: 50
+  energy: 50
+  attackResist: 50
+  energyResist: 50
+  movementSpeed: 75
+  attackSpeed: 75
+  cooldownReduction: 10
+  launchQcdr: 10
+  launchWcdr: 20
+  launchEcdr: 20
+  launchRcdr: 50

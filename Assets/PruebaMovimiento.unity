@@ -588,6 +588,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b818ab9082472d4c9bcf34851e5af37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moving: 0
   abilityQ: 0
   abilityW: 0
   abilityE: 0
@@ -1405,7 +1406,7 @@ Transform:
   m_PrefabParentObject: {fileID: 496262, guid: 7737647c22c1fc64a88d5cd030c352ce, type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 300270483}
-  m_LocalRotation: {x: 0.53267515, y: 0.07034045, z: 0.83613265, w: -0.11041513}
+  m_LocalRotation: {x: 0.5326752, y: 0.070340455, z: 0.83613276, w: -0.110415146}
   m_LocalPosition: {x: 0.000022271464, y: -0.00006150465, z: 0.026027026}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1958,10 +1959,8 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 520972379}
-  - component: {fileID: 520972380}
   - component: {fileID: 520972381}
-  - component: {fileID: 520972383}
-  - component: {fileID: 520972382}
+  - component: {fileID: 520972380}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -1991,11 +1990,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 520972378}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03775956efce4cc43b42d65464448167, type: 3}
+  m_Script: {fileID: 11500000, guid: 0b091302ad24837458474ee1ef240dd2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activeAbility: 0
-  abilityQImage: {fileID: 551635078}
 --- !u!114 &520972381
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2004,42 +2001,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 520972378}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 31b98b70a568ace43968d56235daf9f7, type: 3}
+  m_Script: {fileID: 11500000, guid: bf7c1e8001c302048b393c95a9128b5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   activeAbility: 0
-  abilityWImage: {fileID: 1431595145}
-  cursorW: {fileID: 353759491}
-  actualPosition: {fileID: 82712918}
-  area: 0
-  "per\xEDmetro": 0
-  radio: 12.5
---- !u!114 &520972382
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 520972378}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7c26106f800b5464faae8eb740ac3437, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  activeAbility: 0
-  abilityRImage: {fileID: 1061494827}
---- !u!114 &520972383
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 520972378}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c3c5d972602c42845899f63420dd2e17, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  activeAbility: 0
-  abilityEImage: {fileID: 440817548}
+  abilityQImage: {fileID: 551635078}
 --- !u!1 &526589585
 GameObject:
   m_ObjectHideFlags: 0
@@ -5566,6 +5532,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b818ab9082472d4c9bcf34851e5af37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moving: 0
   abilityQ: 0
   abilityW: 0
   abilityE: 0
@@ -7279,6 +7246,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b818ab9082472d4c9bcf34851e5af37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moving: 0
   abilityQ: 0
   abilityW: 0
   abilityE: 0
