@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-
+public enum CharacterState {NORMAL, PSN, STUNNED, BATTLE}
 public class PlayerController : MonoBehaviour {
 
     public static PlayerController instance;
@@ -19,11 +19,14 @@ public class PlayerController : MonoBehaviour {
     public bool abilityW;
     public bool abilityE;
     public bool abilityR;
+    public bool dash;
 
     public Image barraVida;
     public Image barraStamina;
 
     public SkinnedMeshRenderer skinPlayer;
+
+    private CharacterState characterState;
 
     void Start()
     {
@@ -36,6 +39,9 @@ public class PlayerController : MonoBehaviour {
         abilityW = false;
         abilityE = false;
         abilityR = false;
+        dash = false;
+
+        characterState = CharacterState.NORMAL;
     }
 
     void Update()
@@ -86,6 +92,7 @@ public class PlayerController : MonoBehaviour {
             abilityW = false;
             abilityE = false;
             abilityR = false;
+            dash = false;
 
         }
 
@@ -98,6 +105,8 @@ public class PlayerController : MonoBehaviour {
             abilityQ = false;
             abilityE = false;
             abilityR = false;
+            dash = false;
+
         }
 
         if (Input.GetKeyDown(KeyCode.E))
@@ -109,6 +118,7 @@ public class PlayerController : MonoBehaviour {
             abilityQ = false;
             abilityW = false;
             abilityR = false;
+            dash = false;
         }
 
         if (Input.GetKeyDown(KeyCode.R))
@@ -120,32 +130,38 @@ public class PlayerController : MonoBehaviour {
             abilityQ = false;
             abilityW = false;
             abilityE = false;
+            dash = false;
         }
 
         if (Input.GetKeyDown(KeyCode.Space))
+        {
+            SkillShotCursor.instance.Active(false);
+            AreaSkillCursor.instance.Active(false);
             wrapper.launchDash();
-
-        /*Sistema para aumentar Vida*/
-        if (barraVida.fillAmount >= 0.75)
-        {
-            CancelInvoke("AumentarVida");
+            abilityR = false;
+            abilityQ = false;
+            abilityW = false;
+            abilityE = false;
+            dash = true;
         }
 
-        if (barraVida.fillAmount <= 0.25)
+        if(characterState==CharacterState.NORMAL)
         {
-            InvokeRepeating("AumentarVida", 5.0f, 0.1f);
+            /*Sistema para aumentar Vida*/
+            if (barraVida.fillAmount >= 0.75)
+                CancelInvoke("AumentarVida");
+
+            if (barraVida.fillAmount <= 0.25)
+                InvokeRepeating("AumentarVida", 5.0f, 0.1f);
         }
+
 
         /*Sistema para aumentar STAMINA*/
         if (barraStamina.fillAmount == 1.0)
-        {
             CancelInvoke("AumentarStamina");
-        }
 
         if (barraStamina.fillAmount <= 0.9)
-        {
             InvokeRepeating("AumentarStamina", 5.0f, 0.1f);
-        }
     }
 
     void AumentarVida()
@@ -166,6 +182,7 @@ public class PlayerController : MonoBehaviour {
         abilityW = false;
         abilityE = false;
         abilityR = false;
+        dash = false;
     }
 
     public void LookDestination(Vector3 newPosition)
@@ -181,11 +198,5 @@ public class PlayerController : MonoBehaviour {
                 transform.LookAt(new Vector3(newPosition.x, newPosition.y, newPosition.z));
             }
         }
-    }
-
-    void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.tag == "Enemy")
-            barraVida.fillAmount -= 0.1f;  
     }
 }

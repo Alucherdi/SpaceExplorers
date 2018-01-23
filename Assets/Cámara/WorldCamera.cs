@@ -41,7 +41,6 @@ public Transform target;
 
             transform.position = position;
             transform.LookAt(target); //Apunta hacia el personaje
-        }
-            
+        }      
     }
 }

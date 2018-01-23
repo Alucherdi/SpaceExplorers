@@ -54,12 +54,7 @@ public class Assassin_R : Ability_abstract
             PlayerController.instance.anim.SetFloat("Forward", 0.0f);
             PlayerController.instance.moving = false;
             //Animación de asesinato
-            SpecialAttack();
+            Debug.Log("Has asesinado al enemigo >:3");
         }
-    }
-
-    public void SpecialAttack()
-    {
-        Debug.Log("Has asesinado al enemigo >:3");
     }
 }
