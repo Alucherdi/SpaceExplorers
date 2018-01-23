@@ -5,40 +5,25 @@ using UnityEngine.UI;
 
 public class Assassin_E : Ability_abstract
 {
-    int costAbility = 25;
+    int costAbility = 1;
 
     public override void launch()
     {
         ActiveCamouflage();
     }
 
-    void Start()
-    {
-
-    }
-
     void Update()
     {
         if(PlayerController.instance.skinPlayer.enabled == false)
-        {
-            if (PlayerController.instance.barraStamina.fillAmount >= 1)
-            {
-                InvokeRepeating("Invisibilidad", 5.0f, 0.1f);
-            }
-        }
+            PlayerController.instance.barraStamina.fillAmount -= costAbility / Wrapper.instace.character.stamina;
 
-
-        if (PlayerController.instance.barraStamina.fillAmount == 0)
-        {
-            CancelInvoke("Invisibilidad");
-            PlayerController.instance.skinPlayer.enabled = true;
-        }
-
+        if (Input.GetMouseButtonUp(0) || PlayerController.instance.barraStamina.fillAmount == 0)
+            DisableCamouflage();
     }
 
-    void Invisibilidad()
+    public void DisableCamouflage()
     {
-        PlayerController.instance.barraStamina.fillAmount -= 0.02f;
+        PlayerController.instance.skinPlayer.enabled = true;
     }
 
     public void ActiveCamouflage()

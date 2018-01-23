@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class Assassin_R : Ability_abstract
 {
+    int costAbility = 150;
 
     public override void launch()
     {
@@ -15,15 +16,50 @@ public class Assassin_R : Ability_abstract
     {
         if (Input.GetMouseButtonUp(0) && AreaSkillCursor.instance.activeCursor == true)
         {
-            AreaSkillCursor.instance.activeCursor = false;
+            if (PlayerController.instance.barraStamina.fillAmount >= costAbility / Wrapper.instace.character.stamina)
+            {
+                Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+                RaycastHit hitEnemy;
+
+                if (Physics.Raycast(ray, out hitEnemy))
+                {
+                    if (hitEnemy.collider.CompareTag("Enemy"))
+                    {
+                        PlayerController.instance.newPosition = hitEnemy.point;
+                        transform.LookAt(new Vector3(PlayerController.instance.newPosition.x, PlayerController.instance.newPosition.y, PlayerController.instance.newPosition.z));
+
+                        PlayerController.instance.moving = true;
+
+
+                        AreaSkillCursor.instance.activeCursor = false;
+                        PlayerController.instance.barraStamina.fillAmount -= costAbility / Wrapper.instace.character.stamina;
+                        PlayerController.instance.AbilityOff();
+                    }
+
+                }
+            }
+            else
+            {
+                AreaSkillCursor.instance.activeCursor = false;
+                Debug.Log("Imposible utilizar la habilidad, poca stamina");
+                PlayerController.instance.AbilityOff();
+            }
+        }
+    }
+
+    void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Enemy")
+        {
+            PlayerController.instance.anim.SetFloat("Forward", 0.0f);
+            PlayerController.instance.moving = false;
+            //Animación de asesinato
             SpecialAttack();
-            PlayerController.instance.LookDestination(SkillShotCursor.instance.newPosition);
-            PlayerController.instance.AbilityOff();
         }
     }
 
     public void SpecialAttack()
     {
-        Debug.Log("Utilizaste el ataque mas prron D:");
+        Debug.Log("Has asesinado al enemigo >:3");
     }
 }

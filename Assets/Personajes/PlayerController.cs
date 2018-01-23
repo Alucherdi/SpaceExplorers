@@ -9,10 +9,10 @@ public class PlayerController : MonoBehaviour {
     public static PlayerController instance;
 
     Wrapper wrapper;
-    Animator anim;
+    public Animator anim;
     /*Vector3 target; //Por si se ocupa un identificador al dar los click en la escena
     public GameObject targetPosition;*/
-    Vector3 newPosition;
+    public Vector3 newPosition;
     public bool moving;
 
     public bool abilityQ;
@@ -63,7 +63,6 @@ public class PlayerController : MonoBehaviour {
                     AbilityOff();
                 }
             }
-            //LookDestination(newPosition);
         }
 
         if (moving == true)
@@ -76,7 +75,6 @@ public class PlayerController : MonoBehaviour {
                 moving = false;
             }
         }
-        //barraStamina.fillAmount -= precioHabilidad/StaminaPersonaje
         
         //Activar Abilidades
         if (Input.GetKeyDown(KeyCode.Q))
@@ -127,30 +125,47 @@ public class PlayerController : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.Space))
             wrapper.launchDash();
 
-        /*Sistema para uamentar STAMINA*/
-        if (barraStamina.fillAmount == 1)
+        /*Sistema para aumentar Vida*/
+        if (barraVida.fillAmount >= 0.75)
+        {
+            CancelInvoke("AumentarVida");
+        }
+
+        if (barraVida.fillAmount <= 0.25)
+        {
+            InvokeRepeating("AumentarVida", 5.0f, 0.1f);
+        }
+
+        /*Sistema para aumentar STAMINA*/
+        if (barraStamina.fillAmount == 1.0)
         {
             CancelInvoke("AumentarStamina");
         }
 
-        if (barraStamina.fillAmount < 1)
+        if (barraStamina.fillAmount <= 0.9)
         {
             InvokeRepeating("AumentarStamina", 5.0f, 0.1f);
         }
     }
 
+    void AumentarVida()
+    {
+        barraVida.fillAmount += 0.00001f;
+    }
+
+    void AumentarStamina()
+    {
+        barraStamina.fillAmount += 0.00001f;
+    }
+
     public void AbilityOff()
     {
+        SkillShotCursor.instance.Active(false);
+        AreaSkillCursor.instance.Active(false);
         abilityQ = false;
         abilityW = false;
         abilityE = false;
         abilityR = false;
-    }
-
-
-    void AumentarStamina()
-    {
-        barraStamina.fillAmount += 0.002f;
     }
 
     public void LookDestination(Vector3 newPosition)
@@ -168,30 +183,9 @@ public class PlayerController : MonoBehaviour {
         }
     }
 
-    public void MovingTo(Vector3 destination, bool moving)
+    void OnCollisionEnter(Collision collision)
     {
-        if (moving == true)
-        {
-            anim.SetFloat("Forward", 10.0f);
-            transform.Translate(new Vector3(0, 0, 0.5f));
-            if (Vector3.Distance(transform.position, destination) < 10.0f)
-            {
-                anim.SetFloat("Forward", 0.0f);
-                moving = false;
-            }
-        }
-    }
-
-    void OnTriggerEnter(Collider objectCollider)
-    {
-        if (objectCollider.gameObject.tag == "Enemy")
-        {
-            //Debug.Log("Entre en colisión");
-            barraVida.fillAmount -= 0.1f;
-            /*
-             *barraVida.fillAmount -= AtaqueEnemigo/VidadelPersonaje.
-            */ 
-             
-        }
+        if (collision.gameObject.tag == "Enemy")
+            barraVida.fillAmount -= 0.1f;  
     }
 }

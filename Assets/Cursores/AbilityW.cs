@@ -70,7 +70,7 @@ public class AbilityW : MonoBehaviour {
         if ((targetPosition != PlayerController.instance.transform.position) )
         {
             PlayerController.instance.LookDestination(targetPosition);
-            PlayerController.instance.MovingTo(targetPosition, PlayerController.instance.moving);
+            //PlayerController.instance.MovingTo(targetPosition, PlayerController.instance.moving);
             //actualPosition.transform.position=new Vector3(cursorW.transform.position.x, cursorW.transform.position.y, cursorW.transform.position.z);
             //Debug.Log("Utilizaste la Habilidad 2/W");
         }

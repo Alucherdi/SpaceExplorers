@@ -30,14 +30,12 @@ public class Assassin_Q : Ability_abstract
                 Debug.Log("Imposible utilizar la habilidad, poca stamina");
                 PlayerController.instance.AbilityOff();
             }
-        }
-        
-        
+        }  
     }
 
     public void PoisonedKnifes()
     {
-        Debug.Log("Utilizaste los cuchillos envenedado >:v");
+        Debug.Log("Utilizaste los cuchillos envenedados >:v");
         KnifeShooter.instance.KnifeShot();
     }
 }
