@@ -73,11 +73,13 @@ public class PlayerController : MonoBehaviour {
 
         if (moving == true)
         {
-            anim.SetFloat("Forward", 10.0f);
+            //anim.SetFloat("Forward", 10.0f);
+            anim.SetFloat("Run", 10.0f);
             transform.Translate(new Vector3(0, 0, 0.5f));
             if (Vector3.Distance(transform.position, newPosition) < 0.5f)
             {
-                anim.SetFloat("Forward", 0.0f);
+                //anim.SetFloat("Forward", 0.0f);
+                anim.SetFloat("Run", 0.0f);
                 moving = false;
             }
         }

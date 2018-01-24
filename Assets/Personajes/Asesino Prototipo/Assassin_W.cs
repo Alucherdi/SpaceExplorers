@@ -8,7 +8,7 @@ public class Assassin_W : Ability_abstract
 
     public override void launch()
     {
-        //SkillShotCursor.instance.Active(true);
+        
     }
 
     void Update()
@@ -18,6 +18,7 @@ public class Assassin_W : Ability_abstract
             if (PlayerController.instance.barraStamina.fillAmount >= costAbility / Wrapper.instace.character.stamina)
             {
                 SmokeBomb();
+                PlayerController.instance.LookDestination(SkillShotCursor.instance.newPosition);
                 PlayerController.instance.barraStamina.fillAmount -= costAbility / Wrapper.instace.character.stamina;
                 PlayerController.instance.AbilityOff();
             }
@@ -32,6 +33,6 @@ public class Assassin_W : Ability_abstract
     public void SmokeBomb()
     {
         Debug.Log("Utilizaste la bomba de humo para escapar =_=");
-        SmokeBombShooter.instance.BombShot();
+        PlayerController.instance.anim.SetTrigger("SpellW");
     }
 }

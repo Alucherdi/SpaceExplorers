@@ -28,6 +28,6 @@ public class Assassin_E : Ability_abstract
 
     public void ActiveCamouflage()
     {
-        PlayerController.instance.skinPlayer.enabled = false;
+        PlayerController.instance.anim.SetTrigger("SpellE");
     }
 }

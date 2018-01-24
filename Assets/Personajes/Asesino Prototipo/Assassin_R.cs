@@ -28,17 +28,15 @@ public class Assassin_R : Ability_abstract
                     if (hitEnemy.collider.CompareTag("Enemy"))
                     {
                         PlayerController.instance.newPosition = hitEnemy.point;
-                        transform.LookAt(new Vector3(PlayerController.instance.newPosition.x, PlayerController.instance.newPosition.y, PlayerController.instance.newPosition.z));
-
+                        transform.LookAt(new Vector3(PlayerController.instance.newPosition.x, 0.0f, PlayerController.instance.newPosition.z));
                         PlayerController.instance.moving = true;
 
                         activemurder = true;
-
+                        
                         AreaSkillCursor.instance.activeCursor = false;
                         PlayerController.instance.barraStamina.fillAmount -= costAbility / Wrapper.instace.character.stamina;
                         PlayerController.instance.AbilityOff();
                     }
-
                 }
             }
             else
@@ -54,10 +52,9 @@ public class Assassin_R : Ability_abstract
     {
         if (collision.gameObject.tag == "Enemy" && activemurder==true)
         {
-            PlayerController.instance.anim.SetFloat("Forward", 0.0f);
+            PlayerController.instance.anim.SetFloat("Run", 0.0f);
             PlayerController.instance.moving = false;
-            //Animación de asesinato
-            Debug.Log("Has asesinado al enemigo >:3");
+            PlayerController.instance.anim.SetTrigger("SpellR");
             activemurder = false;
         }
     }

@@ -36,6 +36,6 @@ public class Assassin_Q : Ability_abstract
     public void PoisonedKnifes()
     {
         Debug.Log("Utilizaste los cuchillos envenedados >:v");
-        KnifeShooter.instance.KnifeShot();
+        PlayerController.instance.anim.SetTrigger("SpellQ");
     }
 }
