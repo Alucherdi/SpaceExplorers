@@ -4,13 +4,21 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Assassin_Dash : Ability_abstract {
+
+    public static Assassin_Dash instance;
+
     int costAbility = 1;
 
-    bool dash;
+    public bool dash;
 
     public override void launch()
     {
         
+    }
+
+    void Start()
+    {
+        instance = this;
     }
 
     void Update()
@@ -54,9 +62,7 @@ public class Assassin_Dash : Ability_abstract {
 
     void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Enemy")
-        {
-            Debug.Log("Te debo dejar aturdido pero no se me ocurre como :'v");
-        }
+        if (collision.gameObject.tag == "Enemy" && dash == true)
+            dash = false;
     }
 }

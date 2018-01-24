@@ -7,6 +7,8 @@ public class Assassin_R : Ability_abstract
 {
     int costAbility = 150;
 
+    bool activemurder;
+
     public override void launch()
     {
         AreaSkillCursor.instance.Active(true);
@@ -30,6 +32,7 @@ public class Assassin_R : Ability_abstract
 
                         PlayerController.instance.moving = true;
 
+                        activemurder = true;
 
                         AreaSkillCursor.instance.activeCursor = false;
                         PlayerController.instance.barraStamina.fillAmount -= costAbility / Wrapper.instace.character.stamina;
@@ -49,12 +52,13 @@ public class Assassin_R : Ability_abstract
 
     void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Enemy")
+        if (collision.gameObject.tag == "Enemy" && activemurder==true)
         {
             PlayerController.instance.anim.SetFloat("Forward", 0.0f);
             PlayerController.instance.moving = false;
             //Animación de asesinato
             Debug.Log("Has asesinado al enemigo >:3");
+            activemurder = false;
         }
     }
 }

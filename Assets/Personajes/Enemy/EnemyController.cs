@@ -12,7 +12,6 @@ public class EnemyController : MonoBehaviour {
 
     //Esperar X tiempo
     public int number = 0;
-
     public bool stunned;
 
 	void Start () {
@@ -31,22 +30,34 @@ public class EnemyController : MonoBehaviour {
                 CancelInvoke("AumentarVida");
         }
 
-
+        //Envenenamiento
         if(characterState == EnemyState.PSN && number == 0)
         {
             enemyLifeImage.fillAmount -= 0.001f;
-            InvokeRepeating("PSN", 11.0f, 11.0f);
+            InvokeRepeating("Cuenta", 11.0f, 11.0f);
             //Daño de envenenamiento daño/vidadelpersonaje
             //tomar en cuenta resistencia igual
         }
 
-        if(number >= 11)
+        //Aturdido
+        if (Assassin_Dash.instance.dash == true)
+            stunned = true;
+
+        if(characterState == EnemyState.STUNNED)
         {
-            Debug.Log("No estoy envenenado");
-            CancelInvoke("PSN");
+            InvokeRepeating("Cuenta", 11.0f, 11.0f);
+        }
+
+        if (number >= 11)
+        {
+            Debug.Log("No estoy envenenado o aturdido");
+            CancelInvoke("Cuenta");
             number = 0;
+            stunned = false;
             characterState = EnemyState.NORMAL;
         }
+
+
     }
 
     void AumentarVida()
@@ -54,7 +65,7 @@ public class EnemyController : MonoBehaviour {
         enemyLifeImage.fillAmount += 0.00001f;
     }
 
-    void PSN()
+    void Cuenta()
     {
         number++;
     }
@@ -66,6 +77,12 @@ public class EnemyController : MonoBehaviour {
             enemyLifeImage.fillAmount -= 0.1f;
             Debug.Log("Estoy envenenado");
             characterState = EnemyState.PSN;
+        }
+
+        if (collision.gameObject.tag == "Player" && stunned==true)
+        {
+            Debug.Log("Estoy aturdio");
+            characterState = EnemyState.STUNNED;
         }
     }
 }

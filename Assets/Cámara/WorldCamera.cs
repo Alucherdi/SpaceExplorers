@@ -27,11 +27,11 @@ public Transform target;
 		}
 		// Up
 		if(Input.mousePosition.y >= 0 + delta){
-			transform.Translate (Vector3.up * Time.deltaTime * speed2, Space.World);
+			transform.Translate (Vector3.forward * Time.deltaTime * speed2, Space.World);
 		}
 		//Down
 		if(Input.mousePosition.y <= Screen.height - delta){
-			transform.Translate (Vector3.down * Time.deltaTime * speed2, Space.World);
+			transform.Translate (Vector3.back * Time.deltaTime * speed2, Space.World);
 		}
 
         if(Input.GetKeyDown(KeyCode.A))
