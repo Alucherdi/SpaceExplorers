@@ -12,20 +12,31 @@ MonoBehaviour:
   m_Name: Assassin
   m_EditorClassIdentifier: 
   characterName: Assassin_Proto
-  health: 400
-  stamina: 200
-  healthRegen: 10
-  staminaRegen: 10
-  multiplier: 20
-  physicalAttack: 80
-  phiysicalkResist: 80
-  attackSpeed: 80
-  energyAttack: 50
-  energyResist: 50
-  speed: 75
-  dash: 75
-  cooldownReduction: 10
-  launchQ_CD: 10
-  launchW_CD: 10
-  launchE_CD: 10
-  launchR_CD: 10
+  stats:
+    health: 400
+    stamina: 200
+    healthRegen: 10
+    staminaRegen: 10
+    physicalDamage: 80
+    energyDamage: 10
+    physicalResist: 80
+    energyResist: 50
+    movementSpeed: 75
+    attackSpeed: 75
+    cooldownReduction: 10
+    launchQcd: 10
+    launchWcd: 10
+    launchEcd: 30
+    launchRcd: 50
+  modifiers:
+    health: 400
+    stamina: 200
+    healthRegen: 10
+    staminaRegen: 10
+    physicalDamage: 80
+    energyDamage: 10
+    physicalResist: 80
+    energyResist: 50
+    movementSpeed: 75
+    attackSpeed: 75
+    cooldownReduction: 10

@@ -5,6 +5,8 @@ using UnityEngine;
 public class Assassin_W : Ability_abstract
 {
     int costAbility = 50;
+    public float cooldownW = 0;
+    public float cooldownWlimit;
 
     public override void launch()
     {
@@ -13,20 +15,35 @@ public class Assassin_W : Ability_abstract
 
     void Update()
     {
-        if (Input.GetMouseButtonUp(0) && PlayerController.instance.abilityW == true)
+        cooldownWlimit = PlayerController.instance.stats.stats.launchWcd - (PlayerController.instance.stats.stats.launchWcd * (PlayerController.instance.stats.stats.cooldownReduction / 100));
+
+        if(cooldownW==0)
         {
-            if (PlayerController.instance.barraStamina.fillAmount >= costAbility / Wrapper.instace.character.stamina)
+            if (Input.GetMouseButtonUp(0) && PlayerController.instance.abilityW == true)
             {
-                SmokeBomb();
-                PlayerController.instance.LookDestination(SkillShotCursor.instance.newPosition);
-                PlayerController.instance.barraStamina.fillAmount -= costAbility / Wrapper.instace.character.stamina;
-                PlayerController.instance.AbilityOff();
+                if (PlayerController.instance.barraStamina.fillAmount >= costAbility / PlayerController.instance.stats.stats.stamina)
+                {
+                    SmokeBomb();
+                    PlayerController.instance.LookDestination(SkillShotCursor.instance.newPosition);
+                    PlayerController.instance.barraStamina.fillAmount -= costAbility / PlayerController.instance.stats.stats.stamina;
+                    PlayerController.instance.AbilityOff();
+                }
+                else
+                {
+                    Debug.Log("Imposible utilizar la habilidad, poca stamina");
+                    PlayerController.instance.AbilityOff();
+                }
             }
-            else
-            {
-                Debug.Log("Imposible utilizar la habilidad, poca stamina");
-                PlayerController.instance.AbilityOff();
-            }
+        }
+        else
+        {
+            Debug.Log("Habilidad W no disponible aún");
+        }
+
+        if (cooldownW == cooldownWlimit)
+        {
+            CancelInvoke("CoolDown");
+            cooldownW = 0;
         }
     }
 
@@ -34,5 +51,11 @@ public class Assassin_W : Ability_abstract
     {
         Debug.Log("Utilizaste la bomba de humo para escapar =_=");
         PlayerController.instance.anim.SetTrigger("SpellW");
+        InvokeRepeating("CoolDown", 0.1f, 1.0f);
+    }
+
+    void CoolDown()
+    {
+        cooldownW++;
     }
 }

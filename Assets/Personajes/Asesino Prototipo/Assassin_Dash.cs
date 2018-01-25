@@ -25,7 +25,7 @@ public class Assassin_Dash : Ability_abstract {
     {
         if(PlayerController.instance.dash == true)
         {
-            if (PlayerController.instance.barraStamina.fillAmount >= costAbility / Wrapper.instace.character.stamina)
+            if (PlayerController.instance.barraStamina.fillAmount >= costAbility / PlayerController.instance.stats.stats.stamina)
             {
                 Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
                 RaycastHit hitFloor;
@@ -52,7 +52,7 @@ public class Assassin_Dash : Ability_abstract {
         if (dash == true)
         {
             transform.Translate(new Vector3(0, 0, 3.0f));
-            PlayerController.instance.barraStamina.fillAmount -= costAbility / Wrapper.instace.character.stamina;
+            PlayerController.instance.barraStamina.fillAmount -= costAbility / PlayerController.instance.stats.stats.stamina;
             if (Vector3.Distance(transform.position, PlayerController.instance.newPosition) < 3.0f)
             {
                 dash = false;

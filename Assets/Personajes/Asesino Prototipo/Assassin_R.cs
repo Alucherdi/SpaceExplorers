@@ -6,6 +6,8 @@ using UnityEngine.UI;
 public class Assassin_R : Ability_abstract
 {
     int costAbility = 150;
+    public float cooldownR = 0;
+    public float cooldownRlimit;
 
     bool activemurder;
 
@@ -16,35 +18,50 @@ public class Assassin_R : Ability_abstract
 
     void Update()
     {
-        if (Input.GetMouseButtonUp(0) && AreaSkillCursor.instance.activeCursor == true)
+        cooldownRlimit = PlayerController.instance.stats.stats.launchRcd - (PlayerController.instance.stats.stats.launchRcd * (PlayerController.instance.stats.stats.cooldownReduction / 100));
+
+        if(cooldownR==0)
         {
-            if (PlayerController.instance.barraStamina.fillAmount >= costAbility / Wrapper.instace.character.stamina)
+            if (Input.GetMouseButtonUp(0) && AreaSkillCursor.instance.activeCursor == true)
             {
-                Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-                RaycastHit hitEnemy;
-
-                if (Physics.Raycast(ray, out hitEnemy))
+                if (PlayerController.instance.barraStamina.fillAmount >= costAbility / PlayerController.instance.stats.stats.stamina)
                 {
-                    if (hitEnemy.collider.CompareTag("Enemy"))
-                    {
-                        PlayerController.instance.newPosition = hitEnemy.point;
-                        transform.LookAt(new Vector3(PlayerController.instance.newPosition.x, 0.0f, PlayerController.instance.newPosition.z));
-                        PlayerController.instance.moving = true;
+                    Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+                    RaycastHit hitEnemy;
 
-                        activemurder = true;
-                        
-                        AreaSkillCursor.instance.activeCursor = false;
-                        PlayerController.instance.barraStamina.fillAmount -= costAbility / Wrapper.instace.character.stamina;
-                        PlayerController.instance.AbilityOff();
+                    if (Physics.Raycast(ray, out hitEnemy))
+                    {
+                        if (hitEnemy.collider.CompareTag("Enemy"))
+                        {
+                            PlayerController.instance.newPosition = hitEnemy.point;
+                            transform.LookAt(new Vector3(PlayerController.instance.newPosition.x, 0.0f, PlayerController.instance.newPosition.z));
+                            PlayerController.instance.moving = true;
+
+                            activemurder = true;
+
+                            AreaSkillCursor.instance.activeCursor = false;
+                            PlayerController.instance.barraStamina.fillAmount -= costAbility / PlayerController.instance.stats.stats.stamina;
+                            PlayerController.instance.AbilityOff();
+                        }
                     }
                 }
+                else
+                {
+                    AreaSkillCursor.instance.activeCursor = false;
+                    Debug.Log("Imposible utilizar la habilidad, poca stamina");
+                }
             }
-            else
-            {
-                AreaSkillCursor.instance.activeCursor = false;
-                Debug.Log("Imposible utilizar la habilidad, poca stamina");
-                PlayerController.instance.AbilityOff();
-            }
+        }
+        else
+        {
+            AreaSkillCursor.instance.activeCursor = false;
+            Debug.Log("Habilidad R no disponible aún");
+        }
+
+        if (cooldownR == cooldownRlimit)
+        {
+            CancelInvoke("CoolDown");
+            cooldownR = 0;
         }
     }
 
@@ -56,6 +73,12 @@ public class Assassin_R : Ability_abstract
             PlayerController.instance.moving = false;
             PlayerController.instance.anim.SetTrigger("SpellR");
             activemurder = false;
+            InvokeRepeating("CoolDown", 0.1f, 1.0f);
         }
+    }
+
+    void CoolDown()
+    {
+        cooldownR++;
     }
 }

@@ -4,11 +4,13 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public enum CharacterState {NORMAL, PSN, STUNNED, BATTLE}
+
 public class PlayerController : MonoBehaviour {
 
     public static PlayerController instance;
 
     Wrapper wrapper;
+    public Stats stats;
     public Animator anim;
     /*Vector3 target; //Por si se ocupa un identificador al dar los click en la escena
     public GameObject targetPosition;*/
@@ -32,6 +34,7 @@ public class PlayerController : MonoBehaviour {
     {
         instance = this;
         wrapper = GetComponent<Wrapper>();
+        stats = GetComponent<Stats>();
         anim = GetComponent<Animator>();
 
         moving = false;
@@ -49,12 +52,10 @@ public class PlayerController : MonoBehaviour {
 
         if (Input.GetMouseButtonDown(1) || Input.GetMouseButton(1))
         {
-
             /*
             RaycastHit hitObstacles; //Para identificar si hay algun obstáculo
             RaycastHit hitEnemy; //Para identificar si hay algún enemigo
             */
-
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hitFloor;
 
@@ -95,7 +96,6 @@ public class PlayerController : MonoBehaviour {
             abilityE = false;
             abilityR = false;
             dash = false;
-
         }
 
         if (Input.GetKeyDown(KeyCode.W))
@@ -108,7 +108,6 @@ public class PlayerController : MonoBehaviour {
             abilityE = false;
             abilityR = false;
             dash = false;
-
         }
 
         if (Input.GetKeyDown(KeyCode.E))
@@ -147,6 +146,7 @@ public class PlayerController : MonoBehaviour {
             dash = true;
         }
 
+
         if(characterState==CharacterState.NORMAL)
         {
             /*Sistema para aumentar Vida*/
@@ -166,6 +166,7 @@ public class PlayerController : MonoBehaviour {
             InvokeRepeating("AumentarStamina", 5.0f, 0.1f);
     }
 
+
     void AumentarVida()
     {
         barraVida.fillAmount += 0.00001f;
@@ -175,6 +176,7 @@ public class PlayerController : MonoBehaviour {
     {
         barraStamina.fillAmount += 0.00001f;
     }
+
 
     public void AbilityOff()
     {
@@ -186,6 +188,7 @@ public class PlayerController : MonoBehaviour {
         abilityR = false;
         dash = false;
     }
+
 
     public void LookDestination(Vector3 newPosition)
     {
