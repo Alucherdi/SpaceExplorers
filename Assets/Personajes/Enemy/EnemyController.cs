@@ -40,13 +40,13 @@ public class EnemyController : MonoBehaviour {
         }
 
         //Aturdido
-        if (Assassin_Dash.instance.dash == true)
+        /*if (Assassin_Dash.instance.dash == true)
             stunned = true;
 
         if(characterState == EnemyState.STUNNED)
         {
             InvokeRepeating("Cuenta", 11.0f, 11.0f);
-        }
+        }*/
 
         if (number >= 11)
         {

@@ -37,10 +37,10 @@ public struct modifiers_char {
 	public float healthRegen; // Per second
 	public float staminaRegen; // Per second
 	public float physicalDamage; // Phisiscal damage
-	public int energyDamage; // Energy damage;
-	public int physicalResist; // Armor
-	public int energyResist; // Energetic armor
-	public int movementSpeed; // Movement speed
-	public int attackSpeed; // How fast can the char do the weapons attack
-	public int cooldownReduction; // % 
+	public float energyDamage; // Energy damage;
+	public float physicalResist; // Armor
+	public float energyResist; // Energetic armor
+	public float movementSpeed; // Movement speed
+	public float attackSpeed; // How fast can the char do the weapons attack
+	public float cooldownReduction; // % 
 }
