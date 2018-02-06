@@ -24,6 +24,9 @@ public class Assassin_E : Ability_abstract
         if ((Input.GetMouseButtonUp(0) || PlayerController.instance.barraStamina.fillAmount == 0)&& PlayerController.instance.abilityE == true)
             DisableCamouflage();
 
+        if (PlayerController.instance.moving == true)
+            PlayerController.instance.abilityE = true;
+
         if (cooldownE == cooldownElimit)
         {
             CancelInvoke("CoolDown");

@@ -25,8 +25,8 @@ MonoBehaviour:
     attackSpeed: 0
     cooldownReduction: 0
     launchQcd: 5
-    launchWcd: 50
-    launchEcd: 10
+    launchWcd: 10
+    launchEcd: 50
     launchRcd: 50
   modifiers:
     health: 0.5

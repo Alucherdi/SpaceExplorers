@@ -9,7 +9,7 @@ public class Assassin_R : Ability_abstract
     public float cooldownR = 0;
     public float cooldownRlimit;
 
-    bool activemurder;
+    bool activeMurder;
 
     public override void launch()
     {
@@ -37,7 +37,7 @@ public class Assassin_R : Ability_abstract
                             transform.LookAt(new Vector3(PlayerController.instance.newPosition.x, 0.0f, PlayerController.instance.newPosition.z));
                             PlayerController.instance.moving = true;
 
-                            activemurder = true;
+                            activeMurder = true;
 
                             AreaSkillCursor.instance.activeCursor = false;
                             PlayerController.instance.barraStamina.fillAmount -= costAbility / PlayerController.instance.stats.stats.stamina;
@@ -67,12 +67,12 @@ public class Assassin_R : Ability_abstract
 
     void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Enemy" && activemurder==true)
+        if (collision.gameObject.tag == "Enemy" && activeMurder==true)
         {
             PlayerController.instance.anim.SetFloat("Run", 0.0f);
             PlayerController.instance.moving = false;
             PlayerController.instance.anim.SetTrigger("SpellR");
-            activemurder = false;
+            activeMurder = false;
             InvokeRepeating("CoolDown", 0.1f, 1.0f);
         }
     }

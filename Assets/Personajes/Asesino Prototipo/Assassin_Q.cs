@@ -48,8 +48,7 @@ public class Assassin_Q : Ability_abstract
         {
             CancelInvoke("CoolDown");
             cooldownQ = 0;
-        }
-            
+        } 
     }
 
     public void PoisonedKnifes()

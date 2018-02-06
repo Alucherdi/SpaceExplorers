@@ -4,47 +4,59 @@ using UnityEngine;
 
 public class LightsaberController : MonoBehaviour {
 
-    Rigidbody rigidbody;
+    bool go;//Will Be Used To Change Direction Of Weapon
 
-    private void Start()
+    GameObject player;//Reference To The Main Character
+    public GameObject sword;//Reference To The Main Character's Weapon
+
+    Transform itemToRotate;//The Weapon That Is A Child Of The Empty Game Object
+
+    Vector3 locationInFrontOfPlayer;//Location In Front Of Player To Travel To
+
+    void Start()
     {
-        rigidbody = GetComponent<Rigidbody>();
+        go = false; //Set To Not Return Yet
+
+        player = GameObject.Find("Player");// The GameObject To Return To
+        sword = GameObject.Find("Lightsaber");//The Weapon The Character Is Holding In The Scene
+
+        sword.GetComponent<MeshRenderer>().enabled = false; //Turn Off The Mesh Render To Make The Weapon Invisible
+
+        itemToRotate = gameObject.transform.GetChild(0); //Find The Weapon That Is The Child Of The Empty Object      
+
+        //Adjust The Location Of The Player Accordingly, Here I Add To The Y position So That The Object Doesn't Go Too Low ...Also Pick A Location In Front Of The Player
+        locationInFrontOfPlayer = new Vector3(player.transform.position.x, player.transform.position.y + 1, player.transform.position.z) + player.transform.forward * 10f;
+
+        StartCoroutine(Boom());//Now Start The Coroutine
     }
+
+    IEnumerator Boom()
+    {
+        go = true;
+        yield return new WaitForSeconds(1.0f);
+        go = false;
+    }
+
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            StartCoroutine(Throw(18.0f, 1.0f, Camera.main.transform.forward, 2.0f));
-        }
-    }
+        itemToRotate.transform.Rotate(0, 0, Time.deltaTime * 500); //Rotar el "lightsaber"
 
-    IEnumerator Throw(float dist, float width, Vector3 direction, float time)
-    {
-        Vector3 pos = transform.position;
-        float height = transform.position.y;
-        Quaternion q = Quaternion.FromToRotation(Vector3.forward, direction);
-        float timer = 0.0f;
-        rigidbody.AddTorque(0.0f, 0.0f, 400.0f);
-        while (timer < time)
+        if (go)
         {
-            float t = Mathf.PI * 2.0f * timer / time - Mathf.PI / 2.0f;
-            float x = width * Mathf.Cos(t);
-            float z = dist * Mathf.Sin(t);
-            Vector3 v = new Vector3(x, height, z + dist);
-            rigidbody.MovePosition(pos + (q * v));
-            timer += Time.deltaTime;
-            yield return null;
+            transform.position = Vector3.MoveTowards(transform.position, locationInFrontOfPlayer, Time.deltaTime * 40); //Change The Position To The Location In Front Of The Player           
+            sword.GetComponent<MeshRenderer>().enabled = false;
         }
 
-        rigidbody.angularVelocity = Vector3.zero;
-        rigidbody.velocity = Vector3.zero;
-        rigidbody.rotation = Quaternion.identity;
-        rigidbody.MovePosition(pos);
+        if (!go)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, new Vector3(player.transform.position.x, player.transform.position.y + 1, player.transform.position.z), Time.deltaTime * 40); //Return To Player
+        }
+
+        if (!go && Vector3.Distance(player.transform.position, transform.position) < 1.5)
+        {
+            //Once It Is Close To The Player, Make The Player's Normal Weapon Visible, and Destroy The Clone
+            sword.GetComponent<MeshRenderer>().enabled = true;
+            Destroy(this.gameObject);
+        }
     }
 }
-/*
- 'dist' - distance of the throw.
- 'width' - width of the ellipse for the throw.
- 'direction' - vector indicating the direction of the throw
- 'time' - time the throw should take.
- */
