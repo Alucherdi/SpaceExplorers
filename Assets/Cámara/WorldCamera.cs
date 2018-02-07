@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class WorldCamera : MonoBehaviour
 {
-public Transform target;
+    public Transform target;
+    public GameObject targetCharacter;
 
     public float distance = 50.0f; //distancia de la camara al personaje
     public float height = 20.0f;
@@ -40,6 +41,15 @@ public Transform target;
             position += Quaternion.Euler(0.0f, 0.0f, 0.0f) * new Vector3(0.0f, height, -distance);
 
             transform.position = position;
+
+            if (CharacterSelection.instance.assassin == true)
+                targetCharacter = GameObject.Find("IvanChamp");
+            else if (CharacterSelection.instance.leo23 == true)
+                targetCharacter = GameObject.Find("Player");
+            else
+                targetCharacter = GameObject.Find("EmptyCharacter");
+
+            target = targetCharacter.transform;
             transform.LookAt(target); //Apunta hacia el personaje
         }      
     }
