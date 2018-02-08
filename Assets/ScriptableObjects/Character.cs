@@ -28,6 +28,7 @@ public struct stats_char {
 	public float launchWcd;
 	public float launchEcd;
 	public float launchRcd;
+    public float launchDcd;
 }
 
 [System.Serializable]

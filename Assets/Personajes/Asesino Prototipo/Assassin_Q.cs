@@ -41,7 +41,6 @@ public class Assassin_Q : Ability_abstract
         else
         {
             SkillShotCursor.instance.activeCursor = false;
-            Debug.Log("Habilidad Q no disponible aún");
         }
 
         if (cooldownQ == cooldownQlimit)

@@ -28,9 +28,10 @@ public class Stats : MonoBehaviour {
 		stats.launchQcd = GetComponent<Wrapper> ().character.stats.launchQcd;
 		stats.launchWcd = GetComponent<Wrapper> ().character.stats.launchWcd;
 		stats.launchRcd = GetComponent<Wrapper> ().character.stats.launchRcd;
+        stats.launchDcd = GetComponent<Wrapper>().character.stats.launchDcd;
 
-		// MOdifiers
-		modifiers.health = GetComponent<Wrapper> ().character.modifiers.health;
+        // MOdifiers
+        modifiers.health = GetComponent<Wrapper> ().character.modifiers.health;
 		modifiers.stamina = GetComponent<Wrapper> ().character.modifiers.stamina;
 		modifiers.healthRegen= GetComponent<Wrapper> ().character.modifiers.healthRegen;
 		modifiers.staminaRegen = GetComponent<Wrapper> ().character.modifiers.staminaRegen;
@@ -97,6 +98,7 @@ public class Stats : MonoBehaviour {
 		public float launchWcd;
 		public float launchEcd;
 		public float launchRcd;
+        public float launchDcd;
 
 	}
 

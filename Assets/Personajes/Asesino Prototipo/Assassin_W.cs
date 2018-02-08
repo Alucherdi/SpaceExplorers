@@ -35,10 +35,6 @@ public class Assassin_W : Ability_abstract
                 }
             }
         }
-        else
-        {
-            Debug.Log("Habilidad W no disponible aún");
-        }
 
         if (cooldownW == cooldownWlimit)
         {

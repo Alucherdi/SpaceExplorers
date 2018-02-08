@@ -8,6 +8,8 @@ public class Assassin_Dash : Ability_abstract {
     public static Assassin_Dash instance;
 
     int costAbility = 1;
+    public float cooldownDash = 0;
+    public float cooldownDashLimit;
 
     public bool dash;
 
@@ -23,30 +25,42 @@ public class Assassin_Dash : Ability_abstract {
 
     void Update()
     {
-        if(PlayerController.instance.dash == true)
+        cooldownDashLimit = PlayerController.instance.stats.stats.launchDcd - (PlayerController.instance.stats.stats.launchDcd * (PlayerController.instance.stats.stats.cooldownReduction / 100));
+
+        if(cooldownDash == 0)
         {
-            if (PlayerController.instance.barraStamina.fillAmount >= costAbility / PlayerController.instance.stats.stats.stamina)
+            if (PlayerController.instance.dash == true)
             {
-                Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-                RaycastHit hitFloor;
-
-                if (Physics.Raycast(ray, out hitFloor))
+                if (PlayerController.instance.barraStamina.fillAmount >= costAbility / PlayerController.instance.stats.stats.stamina)
                 {
-                    if (hitFloor.collider.CompareTag("Floor"))
-                    {
-                        PlayerController.instance.newPosition = hitFloor.point;
-                        transform.LookAt(new Vector3(PlayerController.instance.newPosition.x, PlayerController.instance.newPosition.y, PlayerController.instance.newPosition.z));
+                    Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+                    RaycastHit hitFloor;
 
-                        dash = true;
-                        PlayerController.instance.AbilityOff();
+                    if (Physics.Raycast(ray, out hitFloor))
+                    {
+                        if (hitFloor.collider.CompareTag("Floor"))
+                        {
+                            PlayerController.instance.newPosition = hitFloor.point;
+                            transform.LookAt(new Vector3(PlayerController.instance.newPosition.x, PlayerController.instance.newPosition.y, PlayerController.instance.newPosition.z));
+
+                            dash = true;
+                            InvokeRepeating("CoolDown", 0.1f, 1.0f);
+                            PlayerController.instance.AbilityOff();
+                        }
                     }
                 }
+                else
+                {
+                    Debug.Log("Imposible utilizar la habilidad, poca stamina");
+                    PlayerController.instance.AbilityOff();
+                }
             }
-            else
-            {
-                Debug.Log("Imposible utilizar la habilidad, poca stamina");
-                PlayerController.instance.AbilityOff();
-            }
+        }
+
+        if (cooldownDash == cooldownDashLimit)
+        {
+            CancelInvoke("CoolDown");
+            cooldownDash = 0;
         }
 
         if (dash == true)
@@ -64,5 +78,10 @@ public class Assassin_Dash : Ability_abstract {
     {
         if (collision.gameObject.tag == "Enemy" && dash == true)
             dash = false;
+    }
+
+    void CoolDown()
+    {
+        cooldownDash++;
     }
 }

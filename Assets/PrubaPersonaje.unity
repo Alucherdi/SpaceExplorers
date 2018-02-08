@@ -10014,6 +10014,7 @@ MonoBehaviour:
     launchWcd: 0
     launchEcd: 0
     launchRcd: 0
+    launchDcd: 0
   modifiers:
     health: 0
     stamina: 0
@@ -10038,6 +10039,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0431185bc1c1ca419b3d74316c4f463, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cooldownDash: 0
+  cooldownDashLimit: 0
   dash: 0
 --- !u!114 &1003440456
 MonoBehaviour:
@@ -11010,6 +11013,7 @@ MonoBehaviour:
     launchWcd: 0
     launchEcd: 0
     launchRcd: 0
+    launchDcd: 0
   modifiers:
     health: 0
     stamina: 0
@@ -12387,7 +12391,7 @@ Prefab:
     - target: {fileID: 224431340675579148, guid: 1e4f3d5c7e6ed4e4fafa2ecd0ec5efca,
         type: 2}
       propertyPath: m_AnchorMin.x
-      value: 0
+      value: 0.000000059604645
       objectReference: {fileID: 0}
     - target: {fileID: 224431340675579148, guid: 1e4f3d5c7e6ed4e4fafa2ecd0ec5efca,
         type: 2}
@@ -12492,7 +12496,7 @@ Prefab:
     - target: {fileID: 224731349745019720, guid: 1e4f3d5c7e6ed4e4fafa2ecd0ec5efca,
         type: 2}
       propertyPath: m_AnchorMin.y
-      value: 0.00000021583259
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224731349745019720, guid: 1e4f3d5c7e6ed4e4fafa2ecd0ec5efca,
         type: 2}
@@ -13097,7 +13101,7 @@ Prefab:
     - target: {fileID: 224597632156771008, guid: 1e4f3d5c7e6ed4e4fafa2ecd0ec5efca,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: -0.0000056063145
+      value: -0.000020865104
       objectReference: {fileID: 0}
     - target: {fileID: 114166533756834736, guid: 1e4f3d5c7e6ed4e4fafa2ecd0ec5efca,
         type: 2}

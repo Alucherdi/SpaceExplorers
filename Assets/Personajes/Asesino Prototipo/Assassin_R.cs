@@ -55,7 +55,6 @@ public class Assassin_R : Ability_abstract
         else
         {
             AreaSkillCursor.instance.activeCursor = false;
-            Debug.Log("Habilidad R no disponible aún");
         }
 
         if (cooldownR == cooldownRlimit)
