@@ -74,7 +74,7 @@ public class Inventory : MonoBehaviour {
 	/// 
 	void Update(){
 
-		if(Input.GetKeyDown(KeyCode.T)){
+		if(Input.GetKeyDown(KeyCode.A)){
 			if (backpack [0].itemName == "Empty") {
 				Debug.Log ("No hay item en el slot");
 			} else {
@@ -83,7 +83,7 @@ public class Inventory : MonoBehaviour {
 
 		}
 
-		if(Input.GetKeyDown(KeyCode.Y)){
+		if(Input.GetKeyDown(KeyCode.S)){
 			if (backpack [1].itemName == "Empty") {
 				Debug.Log ("No hay item en el slot");
 			} else {
@@ -91,7 +91,7 @@ public class Inventory : MonoBehaviour {
 			}
 		}
 
-		if(Input.GetKeyDown(KeyCode.U)){
+		if(Input.GetKeyDown(KeyCode.D)){
 			if (backpack [2].itemName == "Empty") {
 				Debug.Log ("No hay item en el slot");
 			} else {
@@ -99,7 +99,7 @@ public class Inventory : MonoBehaviour {
 			}
 		}
 
-		if(Input.GetKeyDown(KeyCode.I)){
+		if(Input.GetKeyDown(KeyCode.F)){
 			if (backpack [3].itemName == "Empty") {
 				Debug.Log ("No hay item en el slot");
 			} else {
@@ -107,7 +107,7 @@ public class Inventory : MonoBehaviour {
 			}
 		}
 
-		if(Input.GetKeyDown(KeyCode.O)){
+		if(Input.GetKeyDown(KeyCode.G)){
 			if (backpack [4].itemName == "Empty") {
 				Debug.Log ("No hay item en el slot");
 			} else {
@@ -115,7 +115,7 @@ public class Inventory : MonoBehaviour {
 			}
 		}
 
-		if(Input.GetKeyDown(KeyCode.P)){
+		if(Input.GetKeyDown(KeyCode.H)){
 			if (backpack [5].itemName == "Empty") {
 				Debug.Log ("No hay item en el slot");
 			} else {
