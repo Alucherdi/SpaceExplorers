@@ -70,6 +70,7 @@ public class Inventory : MonoBehaviour {
 	}
 
 
+
 	///// Wrapper 
 	/// 
 	void Update(){
@@ -79,6 +80,10 @@ public class Inventory : MonoBehaviour {
 				Debug.Log ("No hay item en el slot");
 			} else {
 				backpack [0].GetComponent<Item> ().active.launchActive ();	
+				backpack [0] = empty_slot;
+				if (onItemChangedCallback != null) {
+					onItemChangedCallback.Invoke ();
+				}
 			}
 
 		}
@@ -88,6 +93,10 @@ public class Inventory : MonoBehaviour {
 				Debug.Log ("No hay item en el slot");
 			} else {
 				backpack [1].GetComponent<Item> ().active.launchActive ();	
+				backpack [1] = empty_slot;
+				if (onItemChangedCallback != null) {
+					onItemChangedCallback.Invoke ();
+				}
 			}
 		}
 
@@ -96,6 +105,10 @@ public class Inventory : MonoBehaviour {
 				Debug.Log ("No hay item en el slot");
 			} else {
 				backpack [2].GetComponent<Item> ().active.launchActive ();	
+				backpack [2] = empty_slot;
+				if (onItemChangedCallback != null) {
+					onItemChangedCallback.Invoke ();
+				}
 			}
 		}
 
@@ -104,6 +117,10 @@ public class Inventory : MonoBehaviour {
 				Debug.Log ("No hay item en el slot");
 			} else {
 				backpack [3].GetComponent<Item> ().active.launchActive ();
+				backpack [3] = empty_slot;
+				if (onItemChangedCallback != null) {
+					onItemChangedCallback.Invoke ();
+				}
 			}
 		}
 
@@ -112,6 +129,10 @@ public class Inventory : MonoBehaviour {
 				Debug.Log ("No hay item en el slot");
 			} else {
 				backpack [4].GetComponent<Item> ().active.launchActive ();	
+				backpack [4] = empty_slot;
+				if (onItemChangedCallback != null) {
+					onItemChangedCallback.Invoke ();
+				}
 			}
 		}
 
@@ -120,6 +141,10 @@ public class Inventory : MonoBehaviour {
 				Debug.Log ("No hay item en el slot");
 			} else {
 				backpack [5].GetComponent<Item> ().active.launchActive ();	
+				backpack [5] = empty_slot;
+				if (onItemChangedCallback != null) {
+					onItemChangedCallback.Invoke ();
+				}
 			}
 		}
 
