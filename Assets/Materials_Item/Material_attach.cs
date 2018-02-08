@@ -50,7 +50,11 @@ public class Material_attach : MonoBehaviour {
 			} else  {
 				gameObject.GetComponent<MeshRenderer> ().enabled = false;
 				gameObject.GetComponent<BoxCollider> ().enabled = false;
-				Debug.Log ("Se ha terminado el objeto");
+                foreach (Transform children in this.transform)
+                {
+                    children.GetComponent<MeshRenderer>().enabled = false;
+                }
+                Debug.Log ("Se ha terminado el objeto");
 			}
 		}
 	}

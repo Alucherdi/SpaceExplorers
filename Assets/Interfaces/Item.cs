@@ -17,9 +17,10 @@ public abstract class Item : MonoBehaviour {
 		if(col.gameObject.CompareTag("Player")){
 			if (invent.addItem(this)) {
 				Debug.Log ("Item añadido");
-				//Destroy (gameObject);
-				gameObject.GetComponent<MeshRenderer> ().enabled = false;
-				gameObject.GetComponent<BoxCollider> ().enabled = false;
+                //Destroy (gameObject);
+                //gameObject.GetComponent<MeshRenderer> ().enabled = false
+                gameObject.GetComponent<SpriteRenderer>().enabled = false;
+                gameObject.GetComponent<BoxCollider> ().enabled = false;
 			} else {
 				Debug.Log ("Inventario lleno");
 			}
