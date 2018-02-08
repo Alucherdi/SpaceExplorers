@@ -2,16 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class Stats : MonoBehaviour {
 
-	//Inventory inventory;
+	Inventory inventory;
 	public stats_char stats;
 	public modifiers_char modifiers;
 
 	// Use this for initialization
 	void Start () {
 		// Statts
-		//inventory = GetComponent<Inventory> ();
+		inventory = GetComponent<Inventory> ();
 		stats.health = GetComponent<Wrapper> ().character.stats.health;
 		stats.stamina = GetComponent<Wrapper> ().character.stats.stamina;
 		stats.healthRegen = GetComponent<Wrapper> ().character.stats.healthRegen;
@@ -42,7 +43,14 @@ public class Stats : MonoBehaviour {
 		modifiers.cooldownReduction = GetComponent<Wrapper> ().character.modifiers.cooldownReduction;
 	}
 
-	/*public void AddStats(int n){
+	// Update is called once per frame
+	void Update () {
+
+	}
+
+
+
+	public void AddStats(int n){
 		stats.health += modifiers.health * inventory.backpack [n].item_stats.health;
 		stats.stamina += modifiers.stamina * inventory.backpack [n].item_stats.stamina;
 		stats.healthRegen += modifiers.healthRegen * inventory.backpack [n].item_stats.healthRegen;
@@ -55,9 +63,9 @@ public class Stats : MonoBehaviour {
 		stats.attackSpeed += modifiers.attackSpeed * inventory.backpack [n].item_stats.attackSpeed;
 		stats.cooldownReduction += modifiers.cooldownReduction * inventory.backpack [n].item_stats.cooldownReduction;
 		Debug.Log ("Actualizando stats (Add)");
-	}*/
+	}
 
-	/*public void RemoveStats(int n){
+	public void RemoveStats(int n){
 		stats.health -= modifiers.health * inventory.backpack [n].item_stats.health;
 		stats.stamina -= modifiers.stamina * inventory.backpack [n].item_stats.stamina;
 		stats.healthRegen -= modifiers.healthRegen * inventory.backpack [n].item_stats.healthRegen;
@@ -70,7 +78,7 @@ public class Stats : MonoBehaviour {
 		stats.attackSpeed -= modifiers.attackSpeed * inventory.backpack [n].item_stats.attackSpeed;
 		stats.cooldownReduction += modifiers.cooldownReduction * inventory.backpack [n].item_stats.cooldownReduction;
 		Debug.Log ("Actualizando stats (Remove)");
-	}*/
+	}
 
 	[System.Serializable]
 	public struct stats_char {
