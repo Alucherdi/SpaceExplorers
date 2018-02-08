@@ -14,13 +14,18 @@ public class Material_gui : MonoBehaviour {
 	public Text water;
 	public Text leaves;
 	public Text organic;
+
+	public GameObject player;
+	Inventory inventory;
 	void Start () {
+		inventory = player.GetComponent<Inventory> ();
 		//inventory = player.GetComponent<Inventory> ();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		
+		SetNumbers (inventory.materials.metal, inventory.materials.wood, inventory.materials.water
+			, inventory.materials.leaves, inventory.materials.organic);
 	}
 
 	public void SetNumbers(float xmetal, float xwood, float xwater, float xleaves, float xorganic){

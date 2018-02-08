@@ -32,6 +32,11 @@ public class Inventory : MonoBehaviour {
 		backpack.Add (empty_slot);
 		backpack.Add (empty_slot);
 		backpack.Add (empty_slot);
+		materials.wood = 999;
+		materials.leaves = 999;
+		materials.metal = 999;
+		materials.organic = 999;
+		materials.water = 999;
 
 	}
 

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Escudo_activa : Active_abstract {
 
@@ -17,6 +18,6 @@ public class Escudo_activa : Active_abstract {
 	}
 
 	public override void launchActive(){
-		Debug.Log ("Activa escudo");
+		GameObject.Find ("Shield").GetComponent<Image> ().fillAmount += .25f;
 	}
 }
