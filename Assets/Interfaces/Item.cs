@@ -7,8 +7,8 @@ using UnityEngine;
 public abstract class Item : MonoBehaviour {
 	
 	public string itemName;
-	public Active_abstract active;
-	public Pasive_abstract pasive;
+	//public Active_abstract active;
+	//public Pasive_abstract pasive;
 	public bonus item_stats;
 	public Sprite sprite;
 
@@ -25,6 +25,16 @@ public abstract class Item : MonoBehaviour {
 				Debug.Log ("Inventario lleno");
 			}
 		}
+	}
+
+	public virtual void Active()
+	{
+	
+	}
+
+	public virtual void Pasive()
+	{
+
 	}
 
 	public void Update(){

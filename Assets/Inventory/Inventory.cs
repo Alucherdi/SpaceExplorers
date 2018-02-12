@@ -79,7 +79,7 @@ public class Inventory : MonoBehaviour {
 			if (backpack [0].itemName == "Empty") {
 				Debug.Log ("No hay item en el slot");
 			} else {
-				backpack [0].GetComponent<Item> ().active.launchActive ();	
+				backpack [0].GetComponent<Item> ().Active();
 				backpack [0] = empty_slot;
 				if (onItemChangedCallback != null) {
 					onItemChangedCallback.Invoke ();
@@ -92,7 +92,7 @@ public class Inventory : MonoBehaviour {
 			if (backpack [1].itemName == "Empty") {
 				Debug.Log ("No hay item en el slot");
 			} else {
-				backpack [1].GetComponent<Item> ().active.launchActive ();	
+				backpack [1].GetComponent<Item> ().Active();	
 				backpack [1] = empty_slot;
 				if (onItemChangedCallback != null) {
 					onItemChangedCallback.Invoke ();
@@ -104,7 +104,7 @@ public class Inventory : MonoBehaviour {
 			if (backpack [2].itemName == "Empty") {
 				Debug.Log ("No hay item en el slot");
 			} else {
-				backpack [2].GetComponent<Item> ().active.launchActive ();	
+				backpack [2].GetComponent<Item> ().Active();	
 				backpack [2] = empty_slot;
 				if (onItemChangedCallback != null) {
 					onItemChangedCallback.Invoke ();
@@ -116,7 +116,7 @@ public class Inventory : MonoBehaviour {
 			if (backpack [3].itemName == "Empty") {
 				Debug.Log ("No hay item en el slot");
 			} else {
-				backpack [3].GetComponent<Item> ().active.launchActive ();
+				backpack [3].GetComponent<Item> ().Active();
 				backpack [3] = empty_slot;
 				if (onItemChangedCallback != null) {
 					onItemChangedCallback.Invoke ();
@@ -128,7 +128,7 @@ public class Inventory : MonoBehaviour {
 			if (backpack [4].itemName == "Empty") {
 				Debug.Log ("No hay item en el slot");
 			} else {
-				backpack [4].GetComponent<Item> ().active.launchActive ();	
+				backpack [4].GetComponent<Item> ().Active();	
 				backpack [4] = empty_slot;
 				if (onItemChangedCallback != null) {
 					onItemChangedCallback.Invoke ();
@@ -140,7 +140,7 @@ public class Inventory : MonoBehaviour {
 			if (backpack [5].itemName == "Empty") {
 				Debug.Log ("No hay item en el slot");
 			} else {
-				backpack [5].GetComponent<Item> ().active.launchActive ();	
+				backpack [5].GetComponent<Item> ().Active();	
 				backpack [5] = empty_slot;
 				if (onItemChangedCallback != null) {
 					onItemChangedCallback.Invoke ();

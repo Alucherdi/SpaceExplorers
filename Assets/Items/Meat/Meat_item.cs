@@ -8,11 +8,15 @@ public class Meat_item : Item {
 	void Start () {
 		itemName = "Meat";
 		item_stats.energyResist = 10;
-		this.active = new Meat_active ();
+		//this.active = new Meat_active ();
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		
+	}
+
+	public override void Active(){
+		Debug.Log ("Activa meat");
 	}
 }
