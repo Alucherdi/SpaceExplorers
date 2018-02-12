@@ -512,7 +512,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!136 &82712919
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -588,11 +588,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b818ab9082472d4c9bcf34851e5af37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stats: {fileID: 0}
+  anim: {fileID: 0}
+  newPosition: {x: 0, y: 0, z: 0}
   moving: 0
   abilityQ: 0
   abilityW: 0
   abilityE: 0
   abilityR: 0
+  dash: 0
+  barraVida: {fileID: 0}
+  barraStamina: {fileID: 0}
+  skinPlayer: {fileID: 0}
+  maincamera: {fileID: 0}
 --- !u!1 &82992293
 GameObject:
   m_ObjectHideFlags: 0
@@ -1993,6 +2001,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b091302ad24837458474ee1ef240dd2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  activeCursor: 0
+  newPosition: {x: 0, y: 0, z: 0}
+  areaSkillImage: {fileID: 0}
+  cursorSkillIamge: {fileID: 0}
 --- !u!114 &520972381
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2004,8 +2016,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf7c1e8001c302048b393c95a9128b5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activeAbility: 0
-  abilityQImage: {fileID: 551635078}
+  newPosition: {x: 0, y: 0, z: 0}
+  activeCursor: 0
+  skillShotCursorImage: {fileID: 0}
 --- !u!1 &526589585
 GameObject:
   m_ObjectHideFlags: 0
@@ -5511,8 +5524,6 @@ GameObject:
   - component: {fileID: 1293746403}
   - component: {fileID: 1293746402}
   - component: {fileID: 1293746405}
-  - component: {fileID: 1293746401}
-  - component: {fileID: 1293746400}
   - component: {fileID: 1293746398}
   m_Layer: 0
   m_Name: ThirdPersonController
@@ -5520,7 +5531,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1293746398
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5529,14 +5540,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1293746397}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2b818ab9082472d4c9bcf34851e5af37, type: 3}
+  m_Script: {fileID: 11500000, guid: 74b303542eb0dd54bab9a96327c6038e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moving: 0
-  abilityQ: 0
-  abilityW: 0
-  abilityE: 0
-  abilityR: 0
 --- !u!4 &1293746399
 Transform:
   m_ObjectHideFlags: 0
@@ -5553,38 +5559,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1293746400
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11469404, guid: 7737647c22c1fc64a88d5cd030c352ce,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1293746397}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ce7a80d520cacc042b5fe14f373d8173, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MovingTurnSpeed: 360
-  m_StationaryTurnSpeed: 180
-  m_JumpPower: 6
-  m_GravityMultiplier: 2
-  m_RunCycleLegOffset: 0.2
-  m_MoveSpeedMultiplier: 1
-  m_AnimSpeedMultiplier: 1
-  m_GroundCheckDistance: 0.3
---- !u!114 &1293746401
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11444856, guid: 7737647c22c1fc64a88d5cd030c352ce,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1293746397}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 521b611700410be45810047f0a74e899, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!136 &1293746402
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -6248,7 +6222,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1537819834}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fb5b9ae35aa046d4a8493f2ccee279b7, type: 3}
   m_Name: 
@@ -6311,6 +6285,7 @@ GameObject:
   - component: {fileID: 1552683345}
   - component: {fileID: 1552683344}
   - component: {fileID: 1552683346}
+  - component: {fileID: 1552683347}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -6387,12 +6362,13 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1552683339}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8f3f76a797c3a614b9734d96a326227a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 82712922}
+  target: {fileID: 1293746399}
+  targetCharacter: {fileID: 0}
   distance: 50
   height: 20
   speed: 100
@@ -6404,12 +6380,13 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1552683339}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4090fc25a7881c848a6b55c1e71bfd1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 82712922}
+  target: {fileID: 1293746399}
+  targetCharacter: {fileID: 0}
   distance: 50
   height: 20
 --- !u!114 &1552683346
@@ -6418,11 +6395,28 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1552683339}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9960e44fe43fcd34e99f94f0a88934e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1552683347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1552683339}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f33512f0647c6694d82fe934357704c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Target: {fileID: 1293746399}
+  Distancia: 10
+  Altura: 5
+  CambioDeAltura: 2
+  CambioDeRotacion: 0
+  LookAtPlayer: 1
 --- !u!1 &1590133604
 GameObject:
   m_ObjectHideFlags: 0
@@ -7246,11 +7240,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b818ab9082472d4c9bcf34851e5af37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stats: {fileID: 0}
+  anim: {fileID: 0}
+  newPosition: {x: 0, y: 0, z: 0}
   moving: 0
   abilityQ: 0
   abilityW: 0
   abilityE: 0
   abilityR: 0
+  dash: 0
+  barraVida: {fileID: 0}
+  barraStamina: {fileID: 0}
+  skinPlayer: {fileID: 0}
+  maincamera: {fileID: 0}
 --- !u!54 &2020472626
 Rigidbody:
   m_ObjectHideFlags: 0

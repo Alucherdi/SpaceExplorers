@@ -65,7 +65,8 @@ public class PlayerController : MonoBehaviour {
                 if (hitFloor.collider.CompareTag("Floor"))
                 {
                     newPosition = hitFloor.point;
-                    transform.LookAt(new Vector3(newPosition.x, newPosition.y, newPosition.z));
+                    transform.LookAt(new Vector3(newPosition.x, 0.0f, newPosition.z));
+                    //transform.LookAt(new Vector3(newPosition.x, newPosition.y, newPosition.z));
 
                     moving = true;
                     AbilityOff();
@@ -199,7 +200,8 @@ public class PlayerController : MonoBehaviour {
             if (hitFloor.collider.CompareTag("Floor"))
             {
                 newPosition = hitFloor.point;
-                transform.LookAt(new Vector3(newPosition.x, newPosition.y, newPosition.z));
+                transform.LookAt(new Vector3(newPosition.x, 0.0f, newPosition.z));
+//                transform.LookAt(new Vector3(newPosition.x, newPosition.y, newPosition.z));
             }
         }
     }
