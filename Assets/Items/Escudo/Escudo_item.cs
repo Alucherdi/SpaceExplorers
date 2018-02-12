@@ -8,11 +8,16 @@ public class Escudo_item : Item {
 	void Start () {
 		item_stats.attackSpeed = 22f;
 		itemName = "Escudo";
-		this.active = new Escudo_activa ();
+		//this.active = new Escudo_activa ();
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		
 	}
+
+	public override void Active(){
+		Debug.Log ("Activa escudo");
+	}
+
 }
