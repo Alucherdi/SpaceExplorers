@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Leo23_W : Ability_abstract
 {
-    int costAbility = 50;
+    float costAbility = 50;
     public float cooldownW = 0;
     public float cooldownWLimit;
 
@@ -54,7 +54,7 @@ public class Leo23_W : Ability_abstract
             Debug.Log("Habilidad W no disponible aún");
         }
 
-        if (cooldownW == cooldownWLimit)
+        if (cooldownW >= cooldownWLimit)
         {
             CancelInvoke("CoolDown");
             cooldownW = 0;

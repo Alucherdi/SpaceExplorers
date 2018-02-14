@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Assassin_E : Ability_abstract
 {
-    int costAbility = 1;
+    float costAbility = 1;
     public float cooldownE = 0;
     public float cooldownElimit;
 
@@ -27,7 +27,7 @@ public class Assassin_E : Ability_abstract
         if (PlayerController.instance.moving == true)
             PlayerController.instance.abilityE = true;
 
-        if (cooldownE == cooldownElimit)
+        if (cooldownE >= cooldownElimit)
         {
             CancelInvoke("CoolDown");
             cooldownE = 0;

@@ -9,24 +9,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cb97cbf6083783f44bad99c04bf02097, type: 3}
-  m_Name: Leo23
+  m_Name: Kaleb Dune
   m_EditorClassIdentifier: 
-  characterName: Leo23
+  characterName: Kaleb Dune
   stats:
     health: 400
     stamina: 200
     healthRegen: 10
     staminaRegen: 10
     physicalDamage: 80
-    energyDamage: 20
+    energyDamage: 10
     physicalResist: 80
     energyResist: 50
     movementSpeed: 75
-    attackSpeed: 0
-    cooldownReduction: 10
+    attackSpeed: 75
+    cooldownReduction: 20
     launchQcd: 5
-    launchWcd: 10
-    launchEcd: 25
+    launchWcd: 30
+    launchEcd: 10
     launchRcd: 50
     launchDcd: 10
   modifiers:

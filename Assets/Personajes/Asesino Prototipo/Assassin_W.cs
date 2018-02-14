@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Assassin_W : Ability_abstract
 {
-    int costAbility = 50;
+    float costAbility = 50;
     public float cooldownW = 0;
     public float cooldownWlimit;
 
@@ -36,7 +36,7 @@ public class Assassin_W : Ability_abstract
             }
         }
 
-        if (cooldownW == cooldownWlimit)
+        if (cooldownW >= cooldownWlimit)
         {
             CancelInvoke("CoolDown");
             cooldownW = 0;

@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Leo23_Dash : Ability_abstract
+public class Kaleb_Dash : Ability_abstract
 {
-    public static Leo23_Dash instance;
+
+    public static Kaleb_Dash instance;
 
     float costAbility = 1;
     public float cooldownDash = 0;

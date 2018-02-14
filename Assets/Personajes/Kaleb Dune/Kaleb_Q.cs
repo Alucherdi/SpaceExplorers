@@ -2,38 +2,35 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Leo23_Q : Ability_abstract
+public class Kaleb_Q : Ability_abstract
 {
-    float costAbility = 20;
+    float costAbility = 25;
     public float cooldownQ = 0;
     public float cooldownQlimit;
-    public GameObject boomer;
 
     public override void launch()
     {
-        
+        SkillShotCursor.instance.Active(true);
     }
-	
-	void Update () {
 
+	void Update () {
         cooldownQlimit = PlayerController.instance.stats.stats.launchQcd - (PlayerController.instance.stats.stats.launchQcd * (PlayerController.instance.stats.stats.cooldownReduction / 100));
-        
-        if(cooldownQ == 0)
+
+        if (cooldownQ == 0)
         {
-            if (Input.GetMouseButtonUp(0) && PlayerController.instance.abilityQ == true)
+            if (Input.GetMouseButtonUp(0) && SkillShotCursor.instance.activeCursor == true)
             {
                 if (PlayerController.instance.barraStamina.fillAmount >= costAbility / PlayerController.instance.stats.stats.stamina)
                 {
                     SkillShotCursor.instance.activeCursor = false;
-                    GameObject clone;
-                    clone = Instantiate(boomer, new Vector3(transform.position.x, transform.position.y + 1, transform.position.z), transform.rotation) as GameObject;
                     PlayerController.instance.LookDestination(SkillShotCursor.instance.newPosition);
-                    InvokeRepeating("CoolDown", 0.1f, 1.0f);
+                    Bullet();
                     PlayerController.instance.barraStamina.fillAmount -= costAbility / PlayerController.instance.stats.stats.stamina;
                     PlayerController.instance.AbilityOff();
                 }
                 else
                 {
+                    SkillShotCursor.instance.activeCursor = false;
                     Debug.Log("Imposible utilizar la habilidad, poca stamina");
                     PlayerController.instance.AbilityOff();
                 }
@@ -41,7 +38,7 @@ public class Leo23_Q : Ability_abstract
         }
         else
         {
-            Debug.Log("Habilidad Q no disponible aún");
+            SkillShotCursor.instance.activeCursor = false;
         }
 
         if (cooldownQ >= cooldownQlimit)
@@ -49,6 +46,14 @@ public class Leo23_Q : Ability_abstract
             CancelInvoke("CoolDown");
             cooldownQ = 0;
         }
+    }
+
+    public void Bullet()
+    {
+        Debug.Log("Disparaste una bala");
+        //Animacion
+        BulletShooter.instance.BulletShot();
+        InvokeRepeating("CoolDown", 0.1f, 1.0f);
     }
 
     void CoolDown()

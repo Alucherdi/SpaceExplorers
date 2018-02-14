@@ -7,7 +7,7 @@ public class Assassin_Dash : Ability_abstract {
 
     public static Assassin_Dash instance;
 
-    int costAbility = 1;
+    float costAbility = 1;
     public float cooldownDash = 0;
     public float cooldownDashLimit;
 
@@ -57,7 +57,7 @@ public class Assassin_Dash : Ability_abstract {
             }
         }
 
-        if (cooldownDash == cooldownDashLimit)
+        if (cooldownDash >= cooldownDashLimit)
         {
             CancelInvoke("CoolDown");
             cooldownDash = 0;

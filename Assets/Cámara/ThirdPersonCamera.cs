@@ -6,7 +6,7 @@ public class ThirdPersonCamera : MonoBehaviour {
 
     //Vista de la cámara al personaje
     public Transform target;
-    public GameObject targetCharacter;
+    //public GameObject targetCharacter;
 
     public float distance = 50.0f; //distancia de la camara al personaje
     public float height = 20.0f;
@@ -18,14 +18,16 @@ public class ThirdPersonCamera : MonoBehaviour {
 
         transform.position = position;
 
-        if (CharacterSelection.instance.assassin == true)
+        /*if (CharacterSelection.instance.assassin == true)
             targetCharacter = GameObject.Find("IvanChamp");
         else if (CharacterSelection.instance.leo23 == true)
             targetCharacter = GameObject.Find("Player");
+        //else if (CharacterSelection.instance.kaleb == true)
+            //targetCharacter = GameObject.Find("Kaleb_Dune");
         else
-            targetCharacter = GameObject.Find("EmptyCharacter");
+            targetCharacter = GameObject.Find("EmptyCharacter");*/
 
-        target = targetCharacter.transform;
+        //target = targetCharacter.transform;
 
         transform.LookAt(target); //Apunta hacia el personaje
     }

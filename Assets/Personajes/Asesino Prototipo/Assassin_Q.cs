@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Assassin_Q : Ability_abstract
 {
-    int costAbility = 25;
+    float costAbility = 25;
     public float cooldownQ=0;
     public float cooldownQlimit;
 
@@ -43,7 +43,7 @@ public class Assassin_Q : Ability_abstract
             SkillShotCursor.instance.activeCursor = false;
         }
 
-        if (cooldownQ == cooldownQlimit)
+        if (cooldownQ >= cooldownQlimit)
         {
             CancelInvoke("CoolDown");
             cooldownQ = 0;

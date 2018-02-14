@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Leo23_E : Ability_abstract
 {
-    int costAbility = 1;
+    float costAbility = 1;
     public float cooldownE = 0;
     public float cooldownELimit;
 
@@ -26,7 +26,7 @@ public class Leo23_E : Ability_abstract
         if (PlayerController.instance.moving == true)
             PlayerController.instance.abilityE = true;
 
-        if (cooldownE == cooldownELimit)
+        if (cooldownE >= cooldownELimit)
         {
             CancelInvoke("CoolDown");
             cooldownE = 0;

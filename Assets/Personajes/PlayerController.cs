@@ -31,6 +31,8 @@ public class PlayerController : MonoBehaviour {
 
     private CharacterState characterState;
 
+    public int waitTime;
+
     void Start()
     {
         instance = this;
@@ -65,8 +67,8 @@ public class PlayerController : MonoBehaviour {
                 if (hitFloor.collider.CompareTag("Floor"))
                 {
                     newPosition = hitFloor.point;
-                    transform.LookAt(new Vector3(newPosition.x, 0.0f, newPosition.z));
-                    //transform.LookAt(new Vector3(newPosition.x, newPosition.y, newPosition.z));
+                    //transform.LookAt(new Vector3(newPosition.x, 0.0f, newPosition.z));
+                    transform.LookAt(new Vector3(newPosition.x, newPosition.y, newPosition.z));
 
                     moving = true;
                     AbilityOff();
@@ -84,68 +86,67 @@ public class PlayerController : MonoBehaviour {
                 moving = false;
             }
         }
-        
+
         //Activar Abilidades
-        if (Input.GetKeyDown(KeyCode.Q))
+        if (waitTime == 0)
         {
-            SkillShotCursor.instance.Active(false);
-            AreaSkillCursor.instance.Active(false);
-            wrapper.launchQ();
-            abilityQ = true;
-            abilityW = false;
-            abilityE = false;
-            abilityR = false;
-            dash = false;
-        }
+            if (Input.GetKeyDown(KeyCode.Q))
+            {
+                SkillShotCursor.instance.Active(false);
+                AreaSkillCursor.instance.Active(false);
+                wrapper.launchQ();
+                abilityQ = true;
+                abilityW = false;
+                abilityE = false;
+                abilityR = false;
+                dash = false;
+            }
+            else if (Input.GetKeyDown(KeyCode.W))
+            {
+                SkillShotCursor.instance.Active(false);
+                AreaSkillCursor.instance.Active(false);
+                wrapper.launchW();
+                abilityW = true;
+                abilityQ = false;
+                abilityE = false;
+                abilityR = false;
+                dash = false;
+            }
+            else if (Input.GetKeyDown(KeyCode.E))
+            {
+                SkillShotCursor.instance.Active(false);
+                AreaSkillCursor.instance.Active(false);
+                wrapper.launchE();
+                abilityE = true;
+                abilityQ = false;
+                abilityW = false;
+                abilityR = false;
+                dash = false;
+            }
+            else if (Input.GetKeyDown(KeyCode.R))
+            {
+                SkillShotCursor.instance.Active(false);
+                AreaSkillCursor.instance.Active(false);
+                wrapper.launchR();
+                abilityR = true;
+                abilityQ = false;
+                abilityW = false;
+                abilityE = false;
+                dash = false;
+            }
 
-        if (Input.GetKeyDown(KeyCode.W))
-        {
-            SkillShotCursor.instance.Active(false);
-            AreaSkillCursor.instance.Active(false);
-            wrapper.launchW();
-            abilityW = true;
-            abilityQ = false;
-            abilityE = false;
-            abilityR = false;
-            dash = false;
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                SkillShotCursor.instance.Active(false);
+                AreaSkillCursor.instance.Active(false);
+                wrapper.launchDash();
+                abilityR = false;
+                abilityQ = false;
+                abilityW = false;
+                abilityE = false;
+                dash = true;
+            }
         }
-
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            SkillShotCursor.instance.Active(false);
-            AreaSkillCursor.instance.Active(false);
-            wrapper.launchE();
-            abilityE = true;
-            abilityQ = false;
-            abilityW = false;
-            abilityR = false;
-            dash = false;
-        }
-
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            SkillShotCursor.instance.Active(false);
-            AreaSkillCursor.instance.Active(false);
-            wrapper.launchR();
-            abilityR = true;
-            abilityQ = false;
-            abilityW = false;
-            abilityE = false;
-            dash = false;
-        }
-
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            SkillShotCursor.instance.Active(false);
-            AreaSkillCursor.instance.Active(false);
-            wrapper.launchDash();
-            abilityR = false;
-            abilityQ = false;
-            abilityW = false;
-            abilityE = false;
-            dash = true;
-        }
-
 
         if(characterState==CharacterState.NORMAL)
         {
@@ -164,6 +165,13 @@ public class PlayerController : MonoBehaviour {
 
         if (barraStamina.fillAmount <= 0.9)
             InvokeRepeating("AumentarStamina", 5.0f, 0.1f);
+
+        //Aumentartiempo de espera
+        if (waitTime >= 3)
+        {
+            CancelInvoke("WaitTime");
+            waitTime = 0;
+        }
     }
 
 
@@ -180,6 +188,7 @@ public class PlayerController : MonoBehaviour {
 
     public void AbilityOff()
     {
+        InvokeRepeating("WaitTime", 0.1f, 1.0f);
         SkillShotCursor.instance.Active(false);
         AreaSkillCursor.instance.Active(false);
         abilityQ = false;
@@ -189,6 +198,10 @@ public class PlayerController : MonoBehaviour {
         dash = false;
     }
 
+    void WaitTime()
+    {
+        waitTime++;
+    }
 
     public void LookDestination(Vector3 newPosition)
     {
@@ -200,9 +213,35 @@ public class PlayerController : MonoBehaviour {
             if (hitFloor.collider.CompareTag("Floor"))
             {
                 newPosition = hitFloor.point;
-                transform.LookAt(new Vector3(newPosition.x, 0.0f, newPosition.z));
-//                transform.LookAt(new Vector3(newPosition.x, newPosition.y, newPosition.z));
+                //transform.LookAt(new Vector3(newPosition.x, 0.0f, newPosition.z));
+                transform.LookAt(new Vector3(newPosition.x, newPosition.y, newPosition.z));
             }
         }
     }
 }
+
+//Implementar CoolDown General de las habiidades (?)
+/*
+if (cooldown == 0)
+    habilidades habilitadas
+*
+* 
+* 
+* 
+//Dentro del Abilities Off
+InvokeRepeating("AumentarEspera",0.1f,1.0f)
+*
+* 
+//Dentro de Update
+if(cooldown >=3)
+{
+    CancelInvoke("AumentaEspera");
+    cooldown = 0;
+}
+* 
+* 
+//Funcion aparte
+void AumentarEspera{
+    cooldown++;
+}
+*/
