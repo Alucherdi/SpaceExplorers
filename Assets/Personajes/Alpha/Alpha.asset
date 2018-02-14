@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf1c4da6e654fbb4a9fc8d3a8177969b, type: 3}
+  m_Name: Alpha
+  m_EditorClassIdentifier: 
+  characterName: 
+  stats:
+    health: 0
+    stamina: 0
+    healthRegen: 0
+    staminaRegen: 0
+    physicalDamage: 0
+    energyDamage: 0
+    physicalResist: 0
+    energyResist: 0
+    movementSpeed: 0
+    attackSpeed: 0
+    cooldownReduction: 0
+    launchQcd: 0
+    launchWcd: 0
+    launchEcd: 0
+    launchRcd: 0
+  modifiers:
+    health: 0
+    stamina: 0
+    healthRegen: 0
+    staminaRegen: 0
+    physicalDamage: 0
+    energyDamage: 0
+    physicalResist: 0
+    energyResist: 0
+    movementSpeed: 0
+    attackSpeed: 0
+    cooldownReduction: 0

@@ -11,11 +11,12 @@ public class PlayerController : MonoBehaviour {
     public GameObject targetPosition;
     Vector3 newPosition;
     bool moving;
+	Wrapper wrapper;
 
     void Start()
     {
         anim = GetComponent<Animator>();
-
+		wrapper = GetComponent<Wrapper> ();
         moving = false;
     }
 
@@ -52,6 +53,25 @@ public class PlayerController : MonoBehaviour {
                 moving = false;
             }
         }
+
+
+		if(Input.GetKeyDown(KeyCode.Q)){
+			Debug.Log ("QQQ");
+			wrapper.launchQ ();
+		}
+
+		if(Input.GetKeyDown(KeyCode.W)){
+			wrapper.launchW ();
+		}
+
+
+		if(Input.GetKeyDown(KeyCode.E)){
+			wrapper.launchE ();
+		}
+
+		if(Input.GetKeyDown(KeyCode.R)){
+			wrapper.launchR ();
+		}
     }
 
     void OnTriggerEnter(Collider objectCollider)
@@ -65,87 +85,6 @@ public class PlayerController : MonoBehaviour {
         if (objectCollider.gameObject.tag == "Enemy")
             anim.SetBool("Crouch", false);
     }
+
 }
 
-
-/*
-public class PlayerController : MonoBehaviour {
-
-    NavMeshAgent agent;
-    Animator anim;
-
-    Vector3 target;
-
-
-    void Start()
-    {
-        agent = GetComponent<NavMeshAgent>();
-        anim = GetComponent<Animator>();
-    }
-
-    void Update()
-    {
-
-        if (Input.GetMouseButtonDown(1) || Input.GetMouseButton(1))
-        {
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            RaycastHit hitFloor;
-            RaycastHit hitEnemy;
-            
-            if(Physics.Raycast(ray, out hitFloor))
-            {
-                target = hitFloor.point;
-                SetPosition();
-            }
-
-            if(Physics.Raycast(ray, out hitEnemy))
-            {
-                target = hitEnemy.point;
-                SetPosition();
-            }
-        }
-
-        anim.SetFloat("Forward", agent.velocity.magnitude/agent.speed);
-        
-    }
-
-    void SetPosition()
-    {
-        agent.SetDestination(target);
-    }
-
-    void OnTriggerEnter(Collider objectCollider)
-    {
-        if (objectCollider.gameObject.tag == "Enemy")
-            anim.SetBool("Crouch", true);
-    }
-
-    void OnTriggerExit(Collider objectCollider)
-    {
-        if (objectCollider.gameObject.tag == "Enemy")
-            anim.SetBool("Crouch", false);
-    }
-}
-
-
-*/
-
-
-/*target = hitFloor.point;
-                    SetPosition();*/
-/*if (Physics.Raycast(ojosPosition.transform.position, newPosition - ojosPosition.transform.position, out hitObstacles, Vector3.Distance(transform.position, newPosition)))
-{
-    if (hitObstacles.collider.CompareTag("Obstaculo"))
-    {
-        obsPosition.transform.position = hitObstacles.point;
-        Debug.Log("Imposible Acceder");
-    }
-    else
-    {
-        moving = true;
-    }
-}
-else
-{
-    moving = true;
-}*/
