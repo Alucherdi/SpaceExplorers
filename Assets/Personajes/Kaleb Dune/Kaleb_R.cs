@@ -19,37 +19,89 @@ public class Kaleb_R : Ability_abstract
 
     public override void launch()
     {
-
+        
     }
 
     void Start () {
         bulletPanel.SetActive(false);
-	}
+    }
 	
 	void Update () {
-		
-        if(cooldownR >= cooldownRlimit)
+
+        cooldownRlimit = PlayerController.instance.stats.stats.launchRcd - (PlayerController.instance.stats.stats.launchRcd * (PlayerController.instance.stats.stats.cooldownReduction / 100));
+
+        if (cooldownR == 0)
+        {
+            if (Input.GetMouseButtonUp(0) && PlayerController.instance.abilityR==true)
+            {
+                if (PlayerController.instance.barraStamina.fillAmount >= costAbility / PlayerController.instance.stats.stats.stamina)
+                {
+                    PlayerController.instance.LookDestination(SkillShotCursor.instance.newPosition);      
+                    SpecialShot();
+                    bullets--;
+                    InvokeRepeating("WaitShot",0.1f, 1.0f);
+                }
+                else
+                {
+                    Debug.Log("Imposible utilizar la habilidad, poca stamina");
+                    PlayerController.instance.AbilityOff();
+                }
+            }
+
+            //Activar/Desactivar Panel
+            if (PlayerController.instance.abilityR == true)
+                bulletPanel.SetActive(true);
+            else
+                bulletPanel.SetActive(false);
+        }
+
+        //Cuenta de las balas
+        if (bullets == 3)
+            EnableBulletImages();
+        else if (bullets == 2)
+            firstshootImage.enabled = false;
+        else if (bullets == 1)
+            secondshootImage.enabled = false;
+        else if (bullets == 0)
+            EndSkill();
+
+
+        if (cooldownR >= cooldownRlimit)
         {
             CancelInvoke("CoolDown");
             cooldownR = 0;
             bullets = 3;
         }
 
-        if(wait >=2)
-        {
-            CancelInvoke("WaitShot");
-            wait = 0;
-        }
+        if (wait >=8) 
+            EndSkill();       
+    }
 
-        if(bullets==0)
-            InvokeRepeating("CoolDown", 0.1f, 1.0f);
+    void EndSkill()
+    {
+        bulletPanel.SetActive(false);
+
+        CancelInvoke("WaitShot");
+        wait = 0;
+
+        InvokeRepeating("CoolDown", 0.1f, 1.0f);
+
+        PlayerController.instance.AbilityOff();
+
+    }
+
+    void EnableBulletImages()
+    {
+        firstshootImage.enabled = true;
+        secondshootImage.enabled = true;
+        thirdshootImage.enabled = true;
     }
 
     public void SpecialShot()
     {
         Debug.Log("Disparaste una bala especial");
         //Animacion
-        //BulletShooter.instance.BulletShot();
+        SpecilBulletShooter.instance.SBulletShot();
     }
 
     void CoolDown()
