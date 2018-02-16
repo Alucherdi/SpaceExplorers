@@ -38,7 +38,7 @@ public class Assassin_E : Ability_abstract
     {
         PlayerController.instance.skinPlayer.enabled = true;
         InvokeRepeating("CoolDown", 0.1f, 1.0f);
-        PlayerController.instance.AbilityOff();
+        
     }
 
     public void ActiveCamouflage()

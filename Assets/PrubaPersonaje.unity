@@ -6909,8 +6909,8 @@ Transform:
   m_PrefabParentObject: {fileID: 400000, guid: e194d39a231e29a489a36758f9fb175e, type: 3}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 591611540}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 175, y: -0, z: 125}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 175, y: 0, z: 125}
   m_LocalScale: {x: 2.5, y: 2.5, z: 2.5}
   m_Children:
   - {fileID: 1110542095}
@@ -7003,9 +7003,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 591611540}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c5e1485327a5e6740a92f775f6546f4c, type: 3}
+  m_Script: {fileID: 11500000, guid: ecf320ea90ac5934a81192ae09191618, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cooldownE: 0
+  cooldownElimit: 0
+  playerKaleb: {fileID: 0}
+  jump: 0
+  jumpingTime: 0
 --- !u!114 &591611546
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22026,7 +22031,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f3f76a797c3a614b9734d96a326227a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 591611541}
+  target: {fileID: 0}
   distance: 50
   height: 30
   speed: 100
@@ -22043,7 +22048,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4090fc25a7881c848a6b55c1e71bfd1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 591611541}
+  target: {fileID: 0}
   distance: 50
   height: 30
 --- !u!114 &1825290483

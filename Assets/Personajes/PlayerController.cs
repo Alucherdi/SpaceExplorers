@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour {
     Wrapper wrapper;
     public Stats stats;
     public Animator anim;
+    public AnimatorStateInfo currentState;
     /*Vector3 target; //Por si se ocupa un identificador al dar los click en la escena
     public GameObject targetPosition;*/
     public Vector3 newPosition;
@@ -52,6 +53,7 @@ public class PlayerController : MonoBehaviour {
 
     void Update()
     {
+        currentState = anim.GetCurrentAnimatorStateInfo(0);
 
         if (Input.GetMouseButtonDown(1) || Input.GetMouseButton(1))
         {
@@ -219,29 +221,3 @@ public class PlayerController : MonoBehaviour {
         }
     }
 }
-
-//Implementar CoolDown General de las habiidades (?)
-/*
-if (cooldown == 0)
-    habilidades habilitadas
-*
-* 
-* 
-* 
-//Dentro del Abilities Off
-InvokeRepeating("AumentarEspera",0.1f,1.0f)
-*
-* 
-//Dentro de Update
-if(cooldown >=3)
-{
-    CancelInvoke("AumentaEspera");
-    cooldown = 0;
-}
-* 
-* 
-//Funcion aparte
-void AumentarEspera{
-    cooldown++;
-}
-*/

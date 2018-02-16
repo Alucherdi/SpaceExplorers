@@ -55,6 +55,9 @@ public class Kaleb_R : Ability_abstract
                 bulletPanel.SetActive(false);
         }
 
+        if (wait >= 8)
+            EndSkill();
+
         //Cuenta de las balas
         if (bullets == 3)
             EnableBulletImages();
@@ -63,18 +66,14 @@ public class Kaleb_R : Ability_abstract
         else if (bullets == 1)
             secondshootImage.enabled = false;
         else if (bullets == 0)
-            EndSkill();
-
+            thirdshootImage.enabled = false;
 
         if (cooldownR >= cooldownRlimit)
         {
             CancelInvoke("CoolDown");
             cooldownR = 0;
             bullets = 3;
-        }
-
-        if (wait >=8) 
-            EndSkill();       
+        }    
     }
 
     void EndSkill()
@@ -86,6 +85,7 @@ public class Kaleb_R : Ability_abstract
 
         InvokeRepeating("CoolDown", 0.1f, 1.0f);
 
+        PlayerController.instance.barraStamina.fillAmount -= costAbility / PlayerController.instance.stats.stats.stamina;
         PlayerController.instance.AbilityOff();
 
     }
