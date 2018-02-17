@@ -6,12 +6,13 @@ using UnityEngine.AI;
 
 public class PlayerController : MonoBehaviour {
 
-    Animator anim;
+    public Animator anim;
     Vector3 target;
     public GameObject targetPosition;
     Vector3 newPosition;
-    bool moving;
+    public bool moving;
 	Wrapper wrapper;
+	//public Gun gun;
 
     void Start()
     {
@@ -23,36 +24,39 @@ public class PlayerController : MonoBehaviour {
     void Update()
     {
 
-        if (Input.GetMouseButtonDown(1) || Input.GetMouseButton(1))
-        {
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            RaycastHit hitFloor;
-            /*RaycastHit hitObstacles;
-            RaycastHit hitEnemy;*/
+		/// Stop moving provicional
+		/// Quitar if alpha E
+		/// 
+		if (GetComponent<AlphaE> ().drawGun == false) {
+			if (Input.GetMouseButtonDown (1) || Input.GetMouseButton (1)) {
+				Ray ray = Camera.main.ScreenPointToRay (Input.mousePosition);
+				RaycastHit hitFloor;
+				/*RaycastHit hitObstacles;
+	            RaycastHit hitEnemy;*/
 
-            if (Physics.Raycast(ray, out hitFloor))
-            {
-                if (hitFloor.collider.CompareTag("Floor"))
-                {
-                    newPosition = hitFloor.point;
-                    //targetPosition.transform.position = newPosition;
-                    transform.LookAt(new Vector3(newPosition.x, newPosition.y, newPosition.z));
+				if (Physics.Raycast (ray, out hitFloor)) {
+					if (hitFloor.collider.CompareTag ("Floor")) {
+						newPosition = hitFloor.point;
+						//targetPosition.transform.position = newPosition;
+						transform.LookAt (new Vector3 (newPosition.x, newPosition.y, newPosition.z));
 
-                    moving = true;
-                }
-            }
-        }
+						moving = true;
+					}
+				}
+			}
 
-        if (moving == true)
-        {
-            anim.SetFloat("Forward", 10.0f);
-            transform.Translate(new Vector3(0, 0, 0.5f));
-            if (Vector3.Distance(transform.position, newPosition) < 0.5f)
-            {
-                anim.SetFloat("Forward", 0.0f);
-                moving = false;
-            }
-        }
+			if (moving == true) {
+				anim.SetFloat ("Forward", 10.0f);
+				transform.Translate (new Vector3 (0, 0, 0.5f));
+				if (Vector3.Distance (transform.position, newPosition) < 0.5f) {
+					anim.SetFloat ("Forward", 0.0f);
+					moving = false;
+				}
+			}
+		} else {
+			anim.SetFloat ("Forward", 0.0f);
+			moving = false;
+		}
 
 
 		if(Input.GetKeyDown(KeyCode.Q)){
