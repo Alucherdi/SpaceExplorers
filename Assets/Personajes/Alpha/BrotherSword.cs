@@ -18,4 +18,16 @@ public class BrotherSword : MonoBehaviour {
 	public void SwordAttack(){
 		anim.SetTrigger ("AlphaQ");
 	}
+
+	void OnTriggerEnter(Collider other){
+		if (other.gameObject.CompareTag ("Enemy")) {
+			// Do damage
+			Debug.Log ("Hit espada");
+
+			// Do extra damage
+				if(other.gameObject.GetComponent<WhenBeHit>().freeze){
+					Debug.Log ("Hit espada aumentado");
+				}
+		}
+	}
 }

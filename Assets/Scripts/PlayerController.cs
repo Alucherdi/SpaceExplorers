@@ -11,11 +11,13 @@ public class PlayerController : MonoBehaviour {
     public GameObject targetPosition;
     Vector3 newPosition;
     public bool moving;
+	public bool stay; // No mouse input 2 move
 	Wrapper wrapper;
 	//public Gun gun;
 
     void Start()
     {
+		stay =false;
         anim = GetComponent<Animator>();
 		wrapper = GetComponent<Wrapper> ();
         moving = false;
@@ -26,8 +28,11 @@ public class PlayerController : MonoBehaviour {
 
 		/// Stop moving provicional
 		/// Quitar if alpha E
-		/// 
-		if (GetComponent<AlphaE> ().drawGun == false) {
+		/// Puede ser un booleando que indice
+		/// Sin movimiento
+		/// Se puede aplicar cuando stes stun para que
+		/// Los inputs no entren en ese caso
+		if (!stay) {
 			if (Input.GetMouseButtonDown (1) || Input.GetMouseButton (1)) {
 				Ray ray = Camera.main.ScreenPointToRay (Input.mousePosition);
 				RaycastHit hitFloor;
@@ -39,7 +44,6 @@ public class PlayerController : MonoBehaviour {
 						newPosition = hitFloor.point;
 						//targetPosition.transform.position = newPosition;
 						transform.LookAt (new Vector3 (newPosition.x, newPosition.y, newPosition.z));
-
 						moving = true;
 					}
 				}

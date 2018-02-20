@@ -20,11 +20,10 @@ public class BulletController : MonoBehaviour {
 		Debug.Log ("I hit something");
 		Debug.Log (other.gameObject.tag);
 		if (other.gameObject.CompareTag ("Enemy")) {
-			
 			Debug.Log ("I hit an enemy");
-			other.gameObject.GetComponent<WhenBeHit> ().samuraiStack = 1;
-			if (other.gameObject.GetComponent<WhenBeHit> ().samuraiStack  >= 4) {
-					Debug.Log ("Stunned");
+			other.gameObject.GetComponent<WhenBeHit> ().samuraiStack += 1;
+			if (other.gameObject.GetComponent<WhenBeHit> ().samuraiStack  >= 3) {
+				other.gameObject.GetComponent<WhenBeHit> ().Freeze ();
 				other.gameObject.GetComponent<WhenBeHit> ().samuraiStack = 0;
 			}
 		}

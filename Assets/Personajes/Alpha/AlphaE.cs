@@ -10,8 +10,10 @@ public class AlphaE : Ability_abstract {
 	Camera mainCamera;
 	public bool drawGun;
 	public GameObject laser;
+	PlayerController pjController;
 	void Start () {
 		drawGun = false;
+		pjController = GetComponent<PlayerController> ();
 		inventory = GetComponent<Inventory> ();
 		gun = inventory.gun;
 		mainCamera = FindObjectOfType<Camera> ();
@@ -42,7 +44,6 @@ public class AlphaE : Ability_abstract {
 			if (groundPlane.Raycast (cameraRay, out rayLength)) {
 				Vector3 pointToLook = cameraRay.GetPoint (rayLength);
 				Debug.DrawLine (cameraRay.origin, pointToLook, Color.blue);
-
 				transform.LookAt (new Vector3 (pointToLook.x, transform.position.y, pointToLook.z));
 			}
 
@@ -54,11 +55,18 @@ public class AlphaE : Ability_abstract {
 	public override void launch(){
 		// Hond unhold gun
 		drawGun = !drawGun;
+	//	pjController.stay = false;
 		if (gun != null) {
 			Debug.Log ("gun is not null");
 		} else {
 			Debug.Log ("gun is null");
 		}
 		Debug.Log ("E");
+
+		if (GetComponent<AlphaW> ().drawShield == true || drawGun == true) {
+			pjController.stay = true;
+		} else {
+			pjController.stay = false;
+		}
 	}
 }
