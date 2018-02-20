@@ -48,10 +48,6 @@ public class Leo23_R : Ability_abstract
                 }
             }
         }
-        else
-        {
-            Debug.Log("Habilidad R no disponible aún");
-        }
 
         if (cooldownR >= cooldownRLimit)
         {

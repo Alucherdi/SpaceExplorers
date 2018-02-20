@@ -8,9 +8,9 @@ public class Kaleb_E : Ability_abstract
     public float cooldownE = 0;
     public float cooldownElimit;
 
-    public GameObject playerKaleb;
     public bool jump;
     public float jumpingTime = 0;
+    public bool move;
 
     public override void launch()
     {
@@ -20,8 +20,6 @@ public class Kaleb_E : Ability_abstract
     void Start()
     {
         jump = false;
-
-        playerKaleb = GameObject.Find("Kaleb_Dune");
     }
 
     void Update()
@@ -39,15 +37,45 @@ public class Kaleb_E : Ability_abstract
                 Realizar AirAttack();
                 
             */
+
+            if (Input.GetMouseButtonUp(0))
+            {
+                if (PlayerController.instance.barraStamina.fillAmount >= costAbility / PlayerController.instance.stats.stats.stamina)
+                {
+                    Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+                    RaycastHit hitFloor;
+
+                    if (Physics.Raycast(ray, out hitFloor))
+                    {
+                        if (hitFloor.collider.CompareTag("Floor"))
+                        {
+                            PlayerController.instance.newPosition = hitFloor.point;
+                            transform.LookAt(new Vector3(PlayerController.instance.newPosition.x, PlayerController.instance.newPosition.y, PlayerController.instance.newPosition.z));
+                            move = true;
+
+                            AirAttack();
+                        }
+                    }
+                }
+                else
+                {
+                    AreaSkillCursor.instance.activeCursor = false;
+                    Debug.Log("Imposible utilizar la habilidad, poca stamina");
+                }
+            }
+        }
+
+        if (move == true)
+        {
+            PlayerController.instance.transform.Translate(new Vector3(0, 0, 0.5f));
+            if (Vector3.Distance(PlayerController.instance.transform.position, PlayerController.instance.newPosition) < 0.5f)
+            {
+                move = false;
+            }
         }
 
         if (jumpingTime >= 10)
-        {
-            CancelInvoke("JumpingTime");
-            jump = false;
-            jumpingTime = 0;
             EndSkill();
-        }
 
         if (cooldownE >= cooldownElimit)
         {
@@ -59,6 +87,10 @@ public class Kaleb_E : Ability_abstract
 
     public void EndSkill()
     {
+        CancelInvoke("JumpingTime");
+        jump = false;
+        jumpingTime = 0;
+
         InvokeRepeating("CoolDown", 0.1f, 1.0f);
         PlayerController.instance.barraStamina.fillAmount -= costAbility / PlayerController.instance.stats.stats.stamina;
         PlayerController.instance.AbilityOff();
@@ -79,6 +111,8 @@ public class Kaleb_E : Ability_abstract
     public void AirAttack()
     {
         //Animacion de caida, terminando EndSkill();
+
+        EndSkill();
     }
 
     void CoolDown()
