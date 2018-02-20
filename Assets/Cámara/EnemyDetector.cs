@@ -47,7 +47,7 @@ public class EnemyDetector : MonoBehaviour {
 
     void Update()
     {
-        blueScaleAmount = Mathf.Clamp(0.0f, 0.0f, 0.0f); //Acota el valor de la escala
+        blueScaleAmount = Mathf.Clamp(blueScaleAmount, 0.0f, 1.0f); //Acota el valor de la escala
     }
 
     void OnDisable()

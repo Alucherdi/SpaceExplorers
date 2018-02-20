@@ -7156,6 +7156,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cooldownW: 0
   cooldownWlimit: 0
+  wait: 0
 --- !u!114 &591611547
 MonoBehaviour:
   m_ObjectHideFlags: 0

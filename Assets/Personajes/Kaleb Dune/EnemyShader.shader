@@ -1,6 +1,6 @@
 ﻿Shader "MyShaders/EnemyShader" {
 	Properties{
-		_MainTex("Textura Base", 2D) = "blue"{}
+		_MainTex("Textura Base", 2D) = "white"{}
 	_LuminosityAmount("Luminosidad", Range(0.0,10)) = 1.0
 	}
 	SubShader{
