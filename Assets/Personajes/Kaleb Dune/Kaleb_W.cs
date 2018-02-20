@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Kaleb_W : Ability_abstract
 {
-    float costAbility = 5;
+    float costAbility = 1;
     public float cooldownW = 0;
     public float cooldownWlimit;
 
@@ -21,7 +21,7 @@ public class Kaleb_W : Ability_abstract
         if (PlayerController.instance.maincamera.GetComponent<EnemyDetector>().enabled == true)
             PlayerController.instance.barraStamina.fillAmount -= costAbility / PlayerController.instance.stats.stats.stamina;
 
-        if ((Input.GetMouseButtonUp(0) || PlayerController.instance.barraStamina.fillAmount == 0) && PlayerController.instance.abilityE == true)
+        if ((Input.GetMouseButtonUp(0) || PlayerController.instance.barraStamina.fillAmount == 0) && PlayerController.instance.abilityW == true)
             DisableSpell();
 
         if (cooldownW >= cooldownWlimit)

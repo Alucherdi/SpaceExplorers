@@ -3,29 +3,28 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
                     
-public enum States {START,GAME,RESTART,BACK_MENU,GAME_OVER,EXIT,TUTORIAL}
-
-// START, GAME, RETURN_MENU, OPTIONS, EXIT
+public enum States {START,LOGGIN,LOBBY,GAME,BACK_MENU,VICTORY,GAME_OVER,EXIT}
 
 public class GameState : MonoBehaviour
 {
     public static GameState gamestate;
 
-    public static GameState instance;
     public States currentState;
 
+    public delegate void LogginEvent();
+    public LogginEvent loggin;
+    public delegate void LobbyEvent();
+    public LobbyEvent lobby;
     public delegate void GameEvent();
     public GameEvent game;
-    public delegate void RestartEvent();
-    public RestartEvent restart;
     public delegate void BackMenuEvent();
     public BackMenuEvent backmenu;
+    public delegate void VictoryEvent();
+    public VictoryEvent victory;
     public delegate void GameOverEvent();
-    public GameOverEvent gameOver;
+    public GameOverEvent gameover;
     public delegate void ExitEvent();
-    public ExitEvent exitGame;
-    public delegate void TutoEvent();
-    public ExitEvent tuto;
+    public ExitEvent exit;
 
     void Awake()
     {
@@ -43,15 +42,15 @@ public class GameState : MonoBehaviour
 
     void Start ()
     {
-        instance = this;
         currentState = States.START;
 
+        loggin += Loggin;
+        lobby += Lobby;
         game += Game;
-        restart += GameRestart;
         backmenu += BackMenu;
-        gameOver += GameOver;
-        exitGame += ExitGame;
-        tuto += VerTuto;
+        victory += Victory;
+        gameover += GameOver;
+        exit += ExitGame;
 	}
 	
     public void ChangeState(States newState)
@@ -60,42 +59,47 @@ public class GameState : MonoBehaviour
 
         switch(currentState)
         {
-            case States.GAME:
-                game();
+            case States.LOGGIN:
+                loggin();
                 break;
 
-            case States.RESTART:
-                restart();
+            case States.LOBBY:
+                lobby();
+                break;
+
+            case States.GAME:
+                game();
                 break;
 
             case States.BACK_MENU:
                 backmenu();
                 break;
 
+            case States.VICTORY:
+                victory();
+                break;
+
             case States.GAME_OVER:
-                gameOver();
+                gameover();
                 break;
 
             case States.EXIT:
-                exitGame();
+                exit();
                 break;
-			case States.TUTORIAL:
-				VerTuto();
-				break;
         }
     }
-    
-	public void Game()
+
+    public void Loggin()
     {
 
     }
 
-	public void VerTuto()
-	{
+    public void Lobby()
+    {
 
-	}
+    }
 
-    public void GameRestart()
+    public void Game()
     {
 
     }
@@ -105,22 +109,12 @@ public class GameState : MonoBehaviour
 
     }
 
+    public void Victory()
+    {
+
+    }
+
     public void GameOver()
-    {
-
-    }
-
-    public void MenuMusic()
-    {
-
-    }
-
-    public void Credits()
-    {
-
-    }
-
-    public void GameMusic()
     {
 
     }

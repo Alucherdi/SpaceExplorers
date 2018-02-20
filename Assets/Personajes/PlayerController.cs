@@ -29,6 +29,7 @@ public class PlayerController : MonoBehaviour {
 
     public SkinnedMeshRenderer skinPlayer;
     public Camera maincamera;
+    public Camera cameratwo;
 
     private CharacterState characterState;
 

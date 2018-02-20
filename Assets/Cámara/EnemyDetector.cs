@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyDetector : MonoBehaviour {
 
     public Shader currentShader;
-    public float blueScaleAmount = -1.0f;
+    public float blueScaleAmount = 1.0f;
     private Material currentMaterial;
 
     Material material
@@ -47,7 +47,7 @@ public class EnemyDetector : MonoBehaviour {
 
     void Update()
     {
-        blueScaleAmount = Mathf.Clamp(0.0f, 0.0f, blueScaleAmount); //Acota el valor de la escala
+        blueScaleAmount = Mathf.Clamp(0.0f, 0.0f, 0.0f); //Acota el valor de la escala
     }
 
     void OnDisable()

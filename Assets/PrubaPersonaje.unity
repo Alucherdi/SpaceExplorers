@@ -7205,6 +7205,7 @@ MonoBehaviour:
   barraStamina: {fileID: 36521520}
   skinPlayer: {fileID: 2118380040}
   maincamera: {fileID: 1825290478}
+  cameratwo: {fileID: 0}
   waitTime: 0
 --- !u!195 &591611550
 NavMeshAgent:
@@ -11999,6 +12000,7 @@ MonoBehaviour:
   barraStamina: {fileID: 1768974858}
   skinPlayer: {fileID: 2059630725}
   maincamera: {fileID: 1825290478}
+  cameratwo: {fileID: 0}
   waitTime: 0
 --- !u!136 &1003440462
 CapsuleCollider:
@@ -13091,6 +13093,7 @@ MonoBehaviour:
   barraStamina: {fileID: 1805813326}
   skinPlayer: {fileID: 122744930}
   maincamera: {fileID: 1825290478}
+  cameratwo: {fileID: 0}
   waitTime: 0
 --- !u!114 &1107141868
 MonoBehaviour:
