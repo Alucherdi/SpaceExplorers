@@ -71,8 +71,8 @@ public class PlayerController : MonoBehaviour
             if (Physics.Raycast(ray, out hit, 100, movementMask))
             {
                 //
+                navMeshAgent.SetDestination(hit.point);
                 newPosition = hit.point;
-                transform.LookAt(new Vector3(newPosition.x, newPosition.y, newPosition.z));
 
                 moving = true;
                 AbilityOff();
@@ -82,7 +82,6 @@ public class PlayerController : MonoBehaviour
         if (moving == true)
         {
             anim.SetFloat("Run", 10.0f);
-            transform.Translate(new Vector3(0, 0, 0.5f));
             if (Vector3.Distance(transform.position, newPosition) < 0.5f)
             {
                 anim.SetFloat("Run", 0.0f);

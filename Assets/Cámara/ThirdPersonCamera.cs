@@ -4,12 +4,18 @@ using UnityEngine;
 
 public class ThirdPersonCamera : MonoBehaviour {
 
+    public static ThirdPersonCamera instance;
     //Vista de la cámara al personaje
     public Transform target;
     //public GameObject targetCharacter;
 
     public float distance = 50.0f; //distancia de la camara al personaje
     public float height = 20.0f;
+
+    void Start()
+    {
+        instance = this;
+    }
 
     void Update()
     {

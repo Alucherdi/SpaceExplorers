@@ -4,9 +4,15 @@ using UnityEngine;
 
 public class CamerasController : MonoBehaviour {
 
+    public static CamerasController instance;
     public Camera playerCamera;
-	
-	void Update () {
+
+    void Start()
+    {
+        instance = this;
+    }
+
+    void Update () {
 
         //Habilita el script de la cámara a utilizar
         if (Input.GetKeyDown(KeyCode.Y))
