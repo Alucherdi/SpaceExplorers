@@ -27,5 +27,6 @@ public class BulletController : MonoBehaviour {
 				other.gameObject.GetComponent<WhenBeHit> ().samuraiStack = 0;
 			}
 		}
+		Destroy (gameObject);
 	}
 }
