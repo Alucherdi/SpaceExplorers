@@ -7034,7 +7034,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &591611541
 Transform:
   m_ObjectHideFlags: 0
@@ -7193,6 +7193,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b818ab9082472d4c9bcf34851e5af37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  movementMask:
+    serializedVersion: 2
+    m_Bits: 0
   stats: {fileID: 0}
   anim: {fileID: 0}
   newPosition: {x: 0, y: 0, z: 0}
@@ -7206,7 +7209,6 @@ MonoBehaviour:
   barraStamina: {fileID: 36521520}
   skinPlayer: {fileID: 2118380040}
   maincamera: {fileID: 1825290478}
-  cameratwo: {fileID: 0}
   waitTime: 0
 --- !u!195 &591611550
 NavMeshAgent:
@@ -11850,7 +11852,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1003440454
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11988,6 +11990,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b818ab9082472d4c9bcf34851e5af37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  movementMask:
+    serializedVersion: 2
+    m_Bits: 1536
   stats: {fileID: 0}
   anim: {fileID: 0}
   newPosition: {x: 0, y: 0, z: 0}
@@ -12001,7 +12006,6 @@ MonoBehaviour:
   barraStamina: {fileID: 1768974858}
   skinPlayer: {fileID: 2059630725}
   maincamera: {fileID: 1825290478}
-  cameratwo: {fileID: 0}
   waitTime: 0
 --- !u!136 &1003440462
 CapsuleCollider:
@@ -12031,7 +12035,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 126
   m_CollisionDetection: 0
 --- !u!95 &1003440464
 Animator:
@@ -12060,15 +12064,15 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 1000
-  m_Acceleration: 100
+  m_Speed: 50
+  m_Acceleration: 200
   avoidancePriority: 50
-  m_AngularSpeed: 120
+  m_AngularSpeed: 1000
   m_StoppingDistance: 0
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
-  m_Height: 2
+  m_Height: 4.5
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
@@ -13081,6 +13085,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b818ab9082472d4c9bcf34851e5af37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  movementMask:
+    serializedVersion: 2
+    m_Bits: 0
   stats: {fileID: 0}
   anim: {fileID: 0}
   newPosition: {x: 0, y: 0, z: 0}
@@ -13094,7 +13101,6 @@ MonoBehaviour:
   barraStamina: {fileID: 1805813326}
   skinPlayer: {fileID: 122744930}
   maincamera: {fileID: 1825290478}
-  cameratwo: {fileID: 0}
   waitTime: 0
 --- !u!114 &1107141868
 MonoBehaviour:
@@ -20982,7 +20988,7 @@ GameObject:
   - component: {fileID: 1698825252}
   - component: {fileID: 1698825251}
   - component: {fileID: 1698825250}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Terrain
   m_TagString: Floor
   m_Icon: {fileID: 0}
@@ -22365,7 +22371,7 @@ Camera:
     height: 1
   near clip plane: 1
   far clip plane: 750
-  field of view: 60
+  field of view: 37
   orthographic: 1
   orthographic size: 15
   m_Depth: -1
@@ -22418,7 +22424,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f3f76a797c3a614b9734d96a326227a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 591611541}
+  target: {fileID: 867303025}
   distance: 50
   height: 30
   speed: 100
@@ -22435,7 +22441,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4090fc25a7881c848a6b55c1e71bfd1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 591611541}
+  target: {fileID: 867303025}
   distance: 50
   height: 30
 --- !u!114 &1825290483

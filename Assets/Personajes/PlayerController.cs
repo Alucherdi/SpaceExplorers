@@ -1,20 +1,27 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 using UnityEngine.UI;
 
-public enum CharacterState {NORMAL, PSN, STUNNED, BATTLE}
+public enum CharacterState { NORMAL, PSN, STUNNED, BATTLE }
 
-public class PlayerController : MonoBehaviour {
+public class PlayerController : MonoBehaviour
+{
 
     public static PlayerController instance;
+    private CharacterState characterState;
 
+    //Movimiento
+    Rigidbody rb;
+    NavMeshAgent navMeshAgent;
+    public LayerMask movementMask;
+
+    //Variables
     Wrapper wrapper;
     public Stats stats;
     public Animator anim;
     public AnimatorStateInfo currentState;
-    /*Vector3 target; //Por si se ocupa un identificador al dar los click en la escena
-    public GameObject targetPosition;*/
     public Vector3 newPosition;
     public bool moving;
 
@@ -29,15 +36,16 @@ public class PlayerController : MonoBehaviour {
 
     public SkinnedMeshRenderer skinPlayer;
     public Camera maincamera;
-    public Camera cameratwo;
-
-    private CharacterState characterState;
 
     public int waitTime;
 
     void Start()
     {
         instance = this;
+
+        rb = GetComponent<Rigidbody>();
+        navMeshAgent = GetComponent<NavMeshAgent>();
+
         wrapper = GetComponent<Wrapper>();
         stats = GetComponent<Stats>();
         anim = GetComponent<Animator>();
@@ -58,24 +66,16 @@ public class PlayerController : MonoBehaviour {
 
         if (Input.GetMouseButtonDown(1) || Input.GetMouseButton(1))
         {
-            /*
-            RaycastHit hitObstacles; //Para identificar si hay algun obstáculo
-            RaycastHit hitEnemy; //Para identificar si hay algún enemigo
-            */
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            RaycastHit hitFloor;
-
-            if (Physics.Raycast(ray, out hitFloor))
+            RaycastHit hit;
+            if (Physics.Raycast(ray, out hit, 100, movementMask))
             {
-                if (hitFloor.collider.CompareTag("Floor"))
-                {
-                    newPosition = hitFloor.point;
-                    //transform.LookAt(new Vector3(newPosition.x, 0.0f, newPosition.z));
-                    transform.LookAt(new Vector3(newPosition.x, newPosition.y, newPosition.z));
+                //
+                newPosition = hit.point;
+                transform.LookAt(new Vector3(newPosition.x, newPosition.y, newPosition.z));
 
-                    moving = true;
-                    AbilityOff();
-                }
+                moving = true;
+                AbilityOff();
             }
         }
 
@@ -151,7 +151,7 @@ public class PlayerController : MonoBehaviour {
             }
         }
 
-        if(characterState==CharacterState.NORMAL)
+        if (characterState == CharacterState.NORMAL)
         {
             /*Sistema para aumentar Vida*/
             if (barraVida.fillAmount >= 0.75)
@@ -177,7 +177,6 @@ public class PlayerController : MonoBehaviour {
         }
     }
 
-
     void AumentarVida()
     {
         barraVida.fillAmount += 0.00001f;
@@ -187,7 +186,6 @@ public class PlayerController : MonoBehaviour {
     {
         barraStamina.fillAmount += 0.00001f;
     }
-
 
     public void AbilityOff()
     {
@@ -216,7 +214,6 @@ public class PlayerController : MonoBehaviour {
             if (hitFloor.collider.CompareTag("Floor"))
             {
                 newPosition = hitFloor.point;
-                //transform.LookAt(new Vector3(newPosition.x, 0.0f, newPosition.z));
                 transform.LookAt(new Vector3(newPosition.x, newPosition.y, newPosition.z));
             }
         }
