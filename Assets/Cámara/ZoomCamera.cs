@@ -5,16 +5,9 @@ using UnityEngine;
 public class ZoomCamera : MonoBehaviour {
 
 	void Update () {
-
-        //"Zoom" utilizando la vista Ortográfica
-        if (Input.GetAxis("Mouse ScrollWheel") > 0 && GetComponent<Camera>().orthographicSize > 4)
-            GetComponent<Camera>().orthographicSize--;
-        if (Input.GetAxis("Mouse ScrollWheel") < 0 && GetComponent<Camera>().orthographicSize < 20)
-            GetComponent<Camera>().orthographicSize++;
-
         //Zoom utilizando vista en Perspectiva
         //Distancia minima 25
-        //Distancia maxima 100
+        //Distancia maxima 50 (inicial)
         if (CamerasController.instance.playerCamera.GetComponent<ThirdPersonCamera>().enabled == true)
         {
             if (Input.GetAxis("Mouse ScrollWheel") > 0 && ThirdPersonCamera.instance.distance > 25)

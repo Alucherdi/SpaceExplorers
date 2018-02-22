@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
                     
-public enum States {START,LOGGIN,LOBBY,GAME,BACK_MENU,VICTORY,GAME_OVER,EXIT}
+public enum States {START,LOGIN,LOBBY,GAME,BACK_MENU,VICTORY,GAME_OVER,EXIT}
+//CreateMatch, Characterselection, Saladeespera?
 
 public class GameState : MonoBehaviour
 {
@@ -11,8 +12,8 @@ public class GameState : MonoBehaviour
 
     public States currentState;
 
-    public delegate void LogginEvent();
-    public LogginEvent loggin;
+    public delegate void LoginEvent();
+    public LoginEvent login;
     public delegate void LobbyEvent();
     public LobbyEvent lobby;
     public delegate void GameEvent();
@@ -44,7 +45,7 @@ public class GameState : MonoBehaviour
     {
         currentState = States.START;
 
-        loggin += Loggin;
+        login += Login;
         lobby += Lobby;
         game += Game;
         backmenu += BackMenu;
@@ -59,8 +60,8 @@ public class GameState : MonoBehaviour
 
         switch(currentState)
         {
-            case States.LOGGIN:
-                loggin();
+            case States.LOGIN:
+                login();
                 break;
 
             case States.LOBBY:
@@ -89,7 +90,7 @@ public class GameState : MonoBehaviour
         }
     }
 
-    public void Loggin()
+    public void Login()
     {
 
     }
