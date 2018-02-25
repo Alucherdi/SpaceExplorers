@@ -11,7 +11,7 @@ public class Brother : MonoBehaviour {
 	public float speed;
 	public List<GameObject> enemies;
 	public List<bool> enemiesCheck;
-	public float interval = 0.5f; // Para determinar el tiempo que tiene para actuar el ulti
+	public float interval = 1.0f; // Para determinar el tiempo que tiene para actuar el ulti
 	public float current; //
 	public GameObject playerToFollow;
 	public bool move;
@@ -32,6 +32,7 @@ public class Brother : MonoBehaviour {
 		move = CheckClose ();
 		*/
 		started = false;
+		current = Time.time;
 		//ArtificialStart ();
 	}
 
@@ -43,7 +44,7 @@ public class Brother : MonoBehaviour {
 		cach = false;
 		follow = false;
 		search = true;
-		move = CheckClose ();
+		//move = CheckClose ();
 		started = true; // Esto se hace despues del primer frame
 		// Y se borran los enemigos y los checks
 	}
@@ -93,7 +94,7 @@ public class Brother : MonoBehaviour {
 
 	void OnTriggerEnter(Collider other){
 		
-		if (other.gameObject.CompareTag ("Enemy")) {
+		if (  other.gameObject.CompareTag("Enemy") && other.gameObject.name == playerToFollow.name ) {
 				cach = true;
 				follow = false;
 				search = true;
@@ -104,6 +105,6 @@ public class Brother : MonoBehaviour {
 	}
 
 	public void VanishBrother(){
-		Destroy (gameObject);
+		Destroy (this.gameObject);
 	}
 }
