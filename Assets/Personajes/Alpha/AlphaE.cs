@@ -25,12 +25,12 @@ public class AlphaE : Ability_abstract {
 			laser.GetComponent<MeshRenderer> ().enabled = true;
 			//Debug.Log ("Weapond unholded");
 			if (Input.GetMouseButtonDown (0)) {
-				gun.performShot ();
+				gun.CmdperformShot ();
 
 			} 
 
 			if (Input.GetMouseButtonUp (0)) {
-				gun.performShot ();
+				gun.CmdperformShot ();
 
 			} 
 

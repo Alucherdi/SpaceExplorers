@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Networking;
 
 
-public class PlayerController : MonoBehaviour {
+public class PlayerController : NetworkBehaviour {
 
     public Animator anim;
     Vector3 target;
@@ -25,7 +26,10 @@ public class PlayerController : MonoBehaviour {
 
     void Update()
     {
-
+		
+		if(!isLocalPlayer){
+			return;
+		}
 		/// Stop moving provicional
 		/// Quitar if alpha E
 		/// Puede ser un booleando que indice
@@ -93,6 +97,10 @@ public class PlayerController : MonoBehaviour {
         if (objectCollider.gameObject.tag == "Enemy")
             anim.SetBool("Crouch", false);
     }
+
+	public override void OnStartLocalPlayer(){
+		//GetComponent<MeshRenderer> ().material.color = Color.blue;
+	}
 
 }
 

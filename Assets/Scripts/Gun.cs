@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
 
-public class Gun : MonoBehaviour {
+public class Gun : NetworkBehaviour {
 
 	// Use this for initialization
 	public Transform shootpoint;
@@ -29,12 +30,15 @@ public class Gun : MonoBehaviour {
 		}
 	}
 		
-
-	public void performShot(){
+	[Command]
+	public void CmdperformShot(){
 		if (shotAllowed) {
 			Debug.Log ("Perform shot");
 			BulletController newBullet = Instantiate (bullet, shootpoint.position, shootpoint.rotation) as BulletController;
 			newBullet.speed = bulletSpeed;
+
+			// Spawn bullet clients
+			NetworkServer.Spawn(newBullet.gameObject);
 			shotAllowed = false;
 		}
 	}
