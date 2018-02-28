@@ -50,5 +50,10 @@ public class PlayerController2D : MonoBehaviour {
                 moving = false;
             }
         }
+        else
+        {
+            anim.SetFloat("Run", 0.0f);
+            moving = false;
+        }
     }
 }
