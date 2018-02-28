@@ -15,6 +15,7 @@ public class PlayerController2D : MonoBehaviour {
     public Vector3 newPosition;
     public bool moving;
 
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -32,6 +33,13 @@ public class PlayerController2D : MonoBehaviour {
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
+
+            //Cambiar vista de sprite
+            if(Input.mousePosition.x < Screen.width * 0.5)
+                GetComponent<SpriteRenderer>().flipX = false;
+            else
+                GetComponent<SpriteRenderer>().flipX = true;
+
             if (Physics.Raycast(ray, out hit, 100, movementMask))
             {
                 navMeshAgent.SetDestination(hit.point);
@@ -44,16 +52,11 @@ public class PlayerController2D : MonoBehaviour {
         if (moving == true)
         {
             anim.SetFloat("Run", 10.0f);
-            if (Vector3.Distance(transform.position, newPosition) < 0.5f)
+            if (Vector3.Distance(transform.position, newPosition) < 5.0f)
             {
                 anim.SetFloat("Run", 0.0f);
                 moving = false;
             }
-        }
-        else
-        {
-            anim.SetFloat("Run", 0.0f);
-            moving = false;
         }
     }
 }
