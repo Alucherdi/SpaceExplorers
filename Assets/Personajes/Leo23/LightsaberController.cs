@@ -17,7 +17,7 @@ public class LightsaberController : MonoBehaviour {
     {
         go = false; //Set To Not Return Yet
 
-        player = GameObject.Find("Player");// The GameObject To Return To
+        player = GameObject.Find("Leo23");// The GameObject To Return To
         sword = GameObject.Find("Lightsaber");//The Weapon The Character Is Holding In The Scene
 
         sword.GetComponent<MeshRenderer>().enabled = false; //Turn Off The Mesh Render To Make The Weapon Invisible

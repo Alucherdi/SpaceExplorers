@@ -206,15 +206,12 @@ public class PlayerController : MonoBehaviour
     public void LookDestination(Vector3 newPosition)
     {
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        RaycastHit hitFloor;
+        RaycastHit hit;
 
-        if (Physics.Raycast(ray, out hitFloor))
+        if (Physics.Raycast(ray, out hit, 100, movementMask))
         {
-            if (hitFloor.collider.CompareTag("Floor"))
-            {
-                newPosition = hitFloor.point;
-                transform.LookAt(new Vector3(newPosition.x, newPosition.y, newPosition.z));
-            }
+            navMeshAgent.SetDestination(hit.point);
+            newPosition = hit.point;
         }
     }
 }

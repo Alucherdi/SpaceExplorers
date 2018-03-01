@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
                     
-public enum States {START,LOGIN,LOBBY,GAME,BACK_MENU,VICTORY,GAME_OVER,EXIT}
-//CreateMatch, Characterselection, Saladeespera?
+public enum States {START,LOG_IN,LOBBY,IN_GAME,BACK_MENU,VICTORY,GAME_OVER,EXIT}
+//Characterselection, Saladeespera, Opciones?
+//LOG_OUT, SEARCH_MATCH
 
 public class GameState : MonoBehaviour
 {
@@ -60,7 +61,7 @@ public class GameState : MonoBehaviour
 
         switch(currentState)
         {
-            case States.LOGIN:
+            case States.LOG_IN:
                 login();
                 break;
 
@@ -68,7 +69,7 @@ public class GameState : MonoBehaviour
                 lobby();
                 break;
 
-            case States.GAME:
+            case States.IN_GAME:
                 game();
                 break;
 

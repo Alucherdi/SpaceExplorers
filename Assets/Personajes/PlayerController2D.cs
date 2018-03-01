@@ -5,6 +5,7 @@ using UnityEngine.AI;
 
 public class PlayerController2D : MonoBehaviour {
 
+
     Rigidbody rb;
     NavMeshAgent navMeshAgent;
     public LayerMask movementMask;
