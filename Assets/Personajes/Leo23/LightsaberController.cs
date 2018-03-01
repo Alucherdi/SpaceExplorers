@@ -20,7 +20,7 @@ public class LightsaberController : MonoBehaviour {
         player = GameObject.Find("Leo23");// The GameObject To Return To
         sword = GameObject.Find("Lightsaber");//The Weapon The Character Is Holding In The Scene
 
-        sword.GetComponent<MeshRenderer>().enabled = false; //Turn Off The Mesh Render To Make The Weapon Invisible
+        sword.GetComponent<SpriteRenderer>().enabled = false; //Turn Off The Mesh Render To Make The Weapon Invisible
 
         itemToRotate = gameObject.transform.GetChild(0); //Find The Weapon That Is The Child Of The Empty Object      
 
@@ -44,7 +44,7 @@ public class LightsaberController : MonoBehaviour {
         if (go)
         {
             transform.position = Vector3.MoveTowards(transform.position, locationInFrontOfPlayer, Time.deltaTime * 40); //Change The Position To The Location In Front Of The Player           
-            sword.GetComponent<MeshRenderer>().enabled = false;
+            sword.GetComponent<SpriteRenderer>().enabled = false;
         }
 
         if (!go)
@@ -55,7 +55,7 @@ public class LightsaberController : MonoBehaviour {
         if (!go && Vector3.Distance(player.transform.position, transform.position) < 1.5)
         {
             //Once It Is Close To The Player, Make The Player's Normal Weapon Visible, and Destroy The Clone
-            sword.GetComponent<MeshRenderer>().enabled = true;
+            sword.GetComponent<SpriteRenderer>().enabled = true;
             Destroy(this.gameObject);
         }
     }

@@ -26,7 +26,7 @@ public class Leo23_Q : Ability_abstract
                 {
                     SkillShotCursor.instance.activeCursor = false;
                     GameObject clone;
-                    clone = Instantiate(boomer, new Vector3(transform.position.x, transform.position.y + 1, transform.position.z), transform.rotation) as GameObject;
+                    clone = Instantiate(boomer, new Vector3(transform.position.x, transform.position.y + 1.0f, transform.position.z), transform.rotation) as GameObject;
                     PlayerController.instance.LookDestination(SkillShotCursor.instance.newPosition);
                     InvokeRepeating("CoolDown", 0.1f, 1.0f);
                     PlayerController.instance.barraStamina.fillAmount -= costAbility / PlayerController.instance.stats.stats.stamina;

@@ -82,7 +82,7 @@ public class PlayerController : MonoBehaviour
         if (moving == true)
         {
             anim.SetFloat("Run", 10.0f);
-            if (Vector3.Distance(transform.position, newPosition) < 0.5f)
+            if (Vector3.Distance(transform.position, newPosition) < 5.0f)
             {
                 anim.SetFloat("Run", 0.0f);
                 moving = false;
