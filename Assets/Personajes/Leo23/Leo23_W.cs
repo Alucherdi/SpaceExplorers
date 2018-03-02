@@ -28,11 +28,16 @@ public class Leo23_W : Ability_abstract
                     Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
                     RaycastHit hitEnemy;
 
+                    if (Input.mousePosition.x < Screen.width * 0.5)
+                        GetComponent<SpriteRenderer>().flipX = false;
+                    else
+                        GetComponent<SpriteRenderer>().flipX = true;
+
                     if (Physics.Raycast(ray, out hitEnemy))
                     {
                         if (hitEnemy.collider.CompareTag("Enemy"))
                         {
-                            PlayerController.instance.newPosition = hitEnemy.point;
+                            PlayerController.instance.navMeshAgent.SetDestination(hitEnemy.point);
                             transform.LookAt(new Vector3(PlayerController.instance.newPosition.x, 0.0f, PlayerController.instance.newPosition.z));
                             PlayerController.instance.moving = true;
 

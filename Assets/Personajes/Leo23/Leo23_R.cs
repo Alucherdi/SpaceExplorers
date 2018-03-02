@@ -31,7 +31,7 @@ public class Leo23_R : Ability_abstract
                     {
                         if (hitEnemy.collider.CompareTag("Enemy"))
                         {
-                            PlayerController.instance.newPosition = hitEnemy.point;
+                            PlayerController.instance.navMeshAgent.SetDestination(hitEnemy.point);
                             transform.LookAt(new Vector3(PlayerController.instance.newPosition.x, 0.0f, PlayerController.instance.newPosition.z));
                             PlayerController.instance.moving = true;
 

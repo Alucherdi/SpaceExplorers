@@ -70,7 +70,8 @@ public class Assassin_R : Ability_abstract
         {
             PlayerController.instance.anim.SetFloat("Run", 0.0f);
             PlayerController.instance.moving = false;
-            PlayerController.instance.anim.SetTrigger("SpellR");
+            //PlayerController.instance.anim.SetTrigger("SpellR");
+            Debug.Log("Has asesinado al enemigo >:3");
             activeMurder = false;
             InvokeRepeating("CoolDown", 0.1f, 1.0f);
         }

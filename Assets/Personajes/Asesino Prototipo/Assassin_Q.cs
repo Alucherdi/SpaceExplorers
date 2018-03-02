@@ -26,7 +26,7 @@ public class Assassin_Q : Ability_abstract
                 {
                     SkillShotCursor.instance.activeCursor = false;
                     PoisonedKnifes();
-                    PlayerController.instance.LookDestination(SkillShotCursor.instance.newPosition);
+                    //PlayerController.instance.LookDestination(SkillShotCursor.instance.newPosition);
                     PlayerController.instance.barraStamina.fillAmount -= costAbility / PlayerController.instance.stats.stats.stamina;
                     PlayerController.instance.AbilityOff();
                 }
@@ -53,7 +53,8 @@ public class Assassin_Q : Ability_abstract
     public void PoisonedKnifes()
     {
         Debug.Log("Utilizaste los cuchillos envenedados >:v");
-        PlayerController.instance.anim.SetTrigger("SpellQ");
+        //PlayerController.instance.anim.SetTrigger("SpellQ");
+        KnifeShooter.instance.KnifeShot();
         InvokeRepeating("CoolDown", 0.1f, 1.0f);
     }
 

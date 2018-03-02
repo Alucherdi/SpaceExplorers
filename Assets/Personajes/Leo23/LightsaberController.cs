@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class LightsaberController : MonoBehaviour {
 
+    public static LightsaberController instance;
     bool go;//Will Be Used To Change Direction Of Weapon
+    public bool throwobject;
 
     GameObject player;//Reference To The Main Character
     public GameObject sword;//Reference To The Main Character's Weapon
@@ -15,9 +17,12 @@ public class LightsaberController : MonoBehaviour {
 
     void Start()
     {
-        go = false; //Set To Not Return Yet
+        instance = this;
 
-        player = GameObject.Find("Leo23");// The GameObject To Return To
+        go = false; //Set To Not Return Yet
+        throwobject = false;
+
+        player = GameObject.Find("CubeSword");// The GameObject To Return To
         sword = GameObject.Find("Lightsaber");//The Weapon The Character Is Holding In The Scene
 
         sword.GetComponent<SpriteRenderer>().enabled = false; //Turn Off The Mesh Render To Make The Weapon Invisible
@@ -33,7 +38,7 @@ public class LightsaberController : MonoBehaviour {
     IEnumerator Boom()
     {
         go = true;
-        yield return new WaitForSeconds(1.0f);
+        yield return new WaitForSeconds(0.5f);
         go = false;
     }
 
@@ -43,7 +48,7 @@ public class LightsaberController : MonoBehaviour {
 
         if (go)
         {
-            transform.position = Vector3.MoveTowards(transform.position, locationInFrontOfPlayer, Time.deltaTime * 40); //Change The Position To The Location In Front Of The Player           
+            transform.position = Vector3.MoveTowards(transform.position, locationInFrontOfPlayer, Time.deltaTime * 40); //Change The Position To The Location In Front Of The Player
             sword.GetComponent<SpriteRenderer>().enabled = false;
         }
 
@@ -56,6 +61,7 @@ public class LightsaberController : MonoBehaviour {
         {
             //Once It Is Close To The Player, Make The Player's Normal Weapon Visible, and Destroy The Clone
             sword.GetComponent<SpriteRenderer>().enabled = true;
+            throwobject = true;
             Destroy(this.gameObject);
         }
     }

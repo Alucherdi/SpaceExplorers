@@ -44,7 +44,8 @@ public class Assassin_E : Ability_abstract
     public void ActiveCamouflage()
     {
         if (cooldownE == 0)
-            PlayerController.instance.anim.SetTrigger("SpellE");
+            //PlayerController.instance.anim.SetTrigger("SpellE");
+            PlayerController.instance.skinPlayer.enabled = false;
         else
             Debug.Log("Habilidad E no disponible aún");
     }

@@ -14,7 +14,7 @@ public class PlayerController : MonoBehaviour
 
     //Movimiento
     Rigidbody rb;
-    NavMeshAgent navMeshAgent;
+    public NavMeshAgent navMeshAgent;
     public LayerMask movementMask;
 
     //Variables
@@ -34,7 +34,7 @@ public class PlayerController : MonoBehaviour
     public Image barraVida;
     public Image barraStamina;
 
-    public SkinnedMeshRenderer skinPlayer;
+    public SpriteRenderer skinPlayer;//Cambiar
     public Camera maincamera;
 
     public int waitTime;
@@ -68,6 +68,13 @@ public class PlayerController : MonoBehaviour
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
+
+            //Cambiar vista de sprite
+            if (Input.mousePosition.x < Screen.width * 0.5)
+                GetComponent<SpriteRenderer>().flipX = false;
+            else
+                GetComponent<SpriteRenderer>().flipX = true;
+
             if (Physics.Raycast(ray, out hit, 100, movementMask))
             {
                 //
@@ -160,13 +167,16 @@ public class PlayerController : MonoBehaviour
                 InvokeRepeating("AumentarVida", 5.0f, 0.1f);
         }
 
+        if(abilityQ == false || abilityW == false || abilityE == false || abilityR == false)
+        {
+            /*Sistema para aumentar STAMINA*/
+            if (barraStamina.fillAmount == 1.0)
+                CancelInvoke("AumentarStamina");
 
-        /*Sistema para aumentar STAMINA*/
-        if (barraStamina.fillAmount == 1.0)
-            CancelInvoke("AumentarStamina");
+            if (barraStamina.fillAmount <= 0.9)
+                InvokeRepeating("AumentarStamina", 5.0f, 0.1f);
+        }
 
-        if (barraStamina.fillAmount <= 0.9)
-            InvokeRepeating("AumentarStamina", 5.0f, 0.1f);
 
         //Aumentartiempo de espera
         if (waitTime >= 3)
