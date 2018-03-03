@@ -15,7 +15,7 @@ public class Assassin_Dash : Ability_abstract {
 
     public override void launch()
     {
-        
+
     }
 
     void Start()
@@ -27,26 +27,30 @@ public class Assassin_Dash : Ability_abstract {
     {
         cooldownDashLimit = PlayerController.instance.stats.stats.launchDcd - (PlayerController.instance.stats.stats.launchDcd * (PlayerController.instance.stats.stats.cooldownReduction / 100));
 
-        if(cooldownDash == 0)
+        if (cooldownDash == 0)
         {
             if (PlayerController.instance.dash == true)
             {
                 if (PlayerController.instance.barraStamina.fillAmount >= costAbility / PlayerController.instance.stats.stats.stamina)
                 {
                     Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-                    RaycastHit hitFloor;
+                    RaycastHit hit;
 
-                    if (Physics.Raycast(ray, out hitFloor))
+                    //Cambiar vista de sprite
+                    if (Input.mousePosition.x < Screen.width * 0.5)
+                        GetComponent<SpriteRenderer>().flipX = false;
+                    else
+                        GetComponent<SpriteRenderer>().flipX = true;
+
+                    if (Physics.Raycast(ray, out hit, 100, PlayerController.instance.movementMask))
                     {
-                        if (hitFloor.collider.CompareTag("Floor"))
-                        {
-                            PlayerController.instance.newPosition = hitFloor.point;
-                            transform.LookAt(new Vector3(PlayerController.instance.newPosition.x, PlayerController.instance.newPosition.y, PlayerController.instance.newPosition.z));
+                        PlayerController.instance.navMeshAgent.SetDestination(hit.point);
+                        PlayerController.instance.newPosition = hit.point;
+                        transform.LookAt(new Vector3(PlayerController.instance.newPosition.x, PlayerController.instance.newPosition.y, PlayerController.instance.newPosition.z));
 
-                            dash = true;
-                            InvokeRepeating("CoolDown", 0.1f, 1.0f);
-                            PlayerController.instance.AbilityOff();
-                        }
+                        dash = true;
+                        InvokeRepeating("CoolDown", 0.1f, 1.0f);
+                        PlayerController.instance.AbilityOff();
                     }
                 }
                 else
@@ -65,9 +69,9 @@ public class Assassin_Dash : Ability_abstract {
 
         if (dash == true)
         {
-            transform.Translate(new Vector3(0, 0, 3.0f));
+            //transform.Translate(new Vector3(0, 0, 3.0f));
             PlayerController.instance.barraStamina.fillAmount -= costAbility / PlayerController.instance.stats.stats.stamina;
-            if (Vector3.Distance(transform.position, PlayerController.instance.newPosition) < 3.0f)
+            if (Vector3.Distance(transform.position, PlayerController.instance.newPosition) < 5.0f)
             {
                 dash = false;
             }
@@ -85,3 +89,4 @@ public class Assassin_Dash : Ability_abstract {
         cooldownDash++;
     }
 }
+

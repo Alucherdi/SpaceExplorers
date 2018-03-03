@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LookCameraSword : MonoBehaviour {
+public class LookCameraWeapons : MonoBehaviour {
 
     public GameObject pointView;
     public Transform target;

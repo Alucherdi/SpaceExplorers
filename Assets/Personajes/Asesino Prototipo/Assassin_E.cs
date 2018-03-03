@@ -18,7 +18,7 @@ public class Assassin_E : Ability_abstract
     {
         cooldownElimit = PlayerController.instance.stats.stats.launchEcd - (PlayerController.instance.stats.stats.launchEcd * (PlayerController.instance.stats.stats.cooldownReduction / 100));
 
-        if (PlayerController.instance.skinPlayer.enabled == false)
+        if (PlayerController.instance.spritePlayer.enabled == false)
             PlayerController.instance.barraStamina.fillAmount -= costAbility / PlayerController.instance.stats.stats.stamina;
 
         if ((Input.GetMouseButtonUp(0) || PlayerController.instance.barraStamina.fillAmount == 0)&& PlayerController.instance.abilityE == true)
@@ -36,7 +36,7 @@ public class Assassin_E : Ability_abstract
 
     public void DisableCamouflage()
     {
-        PlayerController.instance.skinPlayer.enabled = true;
+        PlayerController.instance.spritePlayer.enabled = true;
         InvokeRepeating("CoolDown", 0.1f, 1.0f);
         
     }
@@ -45,7 +45,7 @@ public class Assassin_E : Ability_abstract
     {
         if (cooldownE == 0)
             //PlayerController.instance.anim.SetTrigger("SpellE");
-            PlayerController.instance.skinPlayer.enabled = false;
+            PlayerController.instance.spritePlayer.enabled = false;
         else
             Debug.Log("Habilidad E no disponible aún");
     }

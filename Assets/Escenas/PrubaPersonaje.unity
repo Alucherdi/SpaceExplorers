@@ -7773,7 +7773,7 @@ MonoBehaviour:
   dash: 0
   barraVida: {fileID: 895577613}
   barraStamina: {fileID: 36521520}
-  skinPlayer: {fileID: 2118380040}
+  spritePlayer: {fileID: 0}
   maincamera: {fileID: 1825290478}
   waitTime: 0
 --- !u!195 &591611550
@@ -12067,7 +12067,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &935251319
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12094,7 +12094,7 @@ MonoBehaviour:
   dash: 0
   barraVida: {fileID: 1005944540}
   barraStamina: {fileID: 1605646628}
-  skinPlayer: {fileID: 0}
+  spritePlayer: {fileID: 0}
   maincamera: {fileID: 1825290478}
   waitTime: 0
 --- !u!114 &935251320
@@ -13249,7 +13249,7 @@ MonoBehaviour:
   dash: 0
   barraVida: {fileID: 1687017034}
   barraStamina: {fileID: 1768974858}
-  skinPlayer: {fileID: 2059630725}
+  spritePlayer: {fileID: 0}
   maincamera: {fileID: 1825290478}
   waitTime: 0
 --- !u!136 &1003440462
@@ -14892,7 +14892,7 @@ MonoBehaviour:
   dash: 0
   barraVida: {fileID: 577771599}
   barraStamina: {fileID: 1805813326}
-  skinPlayer: {fileID: 122744930}
+  spritePlayer: {fileID: 0}
   maincamera: {fileID: 1825290478}
   waitTime: 0
 --- !u!114 &1107141868
@@ -15344,7 +15344,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1133787034
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15489,7 +15489,7 @@ MonoBehaviour:
   dash: 0
   barraVida: {fileID: 724127265}
   barraStamina: {fileID: 120934170}
-  skinPlayer: {fileID: 0}
+  spritePlayer: {fileID: 0}
   maincamera: {fileID: 1825290478}
   waitTime: 0
 --- !u!114 &1133787042
@@ -15512,7 +15512,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 1133787033}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.35
+  m_Radius: 0.25
   m_Speed: 50
   m_Acceleration: 200
   avoidancePriority: 50

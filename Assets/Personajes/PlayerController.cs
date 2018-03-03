@@ -34,7 +34,7 @@ public class PlayerController : MonoBehaviour
     public Image barraVida;
     public Image barraStamina;
 
-    public SpriteRenderer skinPlayer;//Cambiar
+    public SpriteRenderer spritePlayer;//Cambiar
     public Camera maincamera;
 
     public int waitTime;
@@ -45,6 +45,7 @@ public class PlayerController : MonoBehaviour
 
         rb = GetComponent<Rigidbody>();
         navMeshAgent = GetComponent<NavMeshAgent>();
+        spritePlayer = GetComponent<SpriteRenderer>();
 
         wrapper = GetComponent<Wrapper>();
         stats = GetComponent<Stats>();
@@ -71,9 +72,9 @@ public class PlayerController : MonoBehaviour
 
             //Cambiar vista de sprite
             if (Input.mousePosition.x < Screen.width * 0.5)
-                GetComponent<SpriteRenderer>().flipX = false;
+                spritePlayer.flipX = false;
             else
-                GetComponent<SpriteRenderer>().flipX = true;
+                spritePlayer.flipX = true;
 
             if (Physics.Raycast(ray, out hit, 100, movementMask))
             {
