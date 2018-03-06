@@ -10,7 +10,7 @@ public class Wrapper : MonoBehaviour {
 	void Start()
 	{
 		abilities = GetComponents<Ability_abstract> ();
-
+		Debug.Log (abilities.Length);
 		/*
 		abilitiesh = new Hashtable ();
 		abilitiesh.Add ("Q", abilities [0]);

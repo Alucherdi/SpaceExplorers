@@ -102,6 +102,7 @@ public class PlayerController : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Q))
             {
+				Debug.Log ("Q");;
                 SkillShotCursor.instance.Active(false);
                 AreaSkillCursor.instance.Active(false);
                 wrapper.launchQ();
