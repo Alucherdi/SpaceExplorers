@@ -23,7 +23,6 @@ public class Kaleb_Q : Ability_abstract
                 if (PlayerController.instance.barraStamina.fillAmount >= costAbility / PlayerController.instance.stats.stats.stamina)
                 {
                     SkillShotCursor.instance.activeCursor = false;
-                    PlayerController.instance.LookDestination(SkillShotCursor.instance.newPosition);
                     Bullet();
                     PlayerController.instance.barraStamina.fillAmount -= costAbility / PlayerController.instance.stats.stats.stamina;
                     PlayerController.instance.AbilityOff();

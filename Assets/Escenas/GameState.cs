@@ -3,9 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
                     
-public enum States {START,LOG_IN,LOBBY,IN_GAME,BACK_MENU,VICTORY,GAME_OVER,EXIT}
-//Characterselection, Saladeespera, Opciones?
-//LOG_OUT, SEARCH_MATCH
+public enum States {START,LOG_IN,LOBBY,SEARCH_MATCH,IN_GAME,BACK_MENU,VICTORY,GAME_OVER,EXIT,LOG_OUT}
 
 public class GameState : MonoBehaviour
 {
@@ -17,6 +15,8 @@ public class GameState : MonoBehaviour
     public LoginEvent login;
     public delegate void LobbyEvent();
     public LobbyEvent lobby;
+    public delegate void SearchMatchEvent();
+    public SearchMatchEvent searchmatch;
     public delegate void GameEvent();
     public GameEvent game;
     public delegate void BackMenuEvent();
@@ -27,6 +27,8 @@ public class GameState : MonoBehaviour
     public GameOverEvent gameover;
     public delegate void ExitEvent();
     public ExitEvent exit;
+    public delegate void LogoutEvent();
+    public LogoutEvent logout;
 
     void Awake()
     {
@@ -48,11 +50,13 @@ public class GameState : MonoBehaviour
 
         login += Login;
         lobby += Lobby;
+        searchmatch += SearchMatch;
         game += Game;
         backmenu += BackMenu;
         victory += Victory;
         gameover += GameOver;
         exit += ExitGame;
+        logout += Logout;
 	}
 	
     public void ChangeState(States newState)
@@ -67,6 +71,10 @@ public class GameState : MonoBehaviour
 
             case States.LOBBY:
                 lobby();
+                break;
+
+            case States.SEARCH_MATCH:
+                searchmatch();
                 break;
 
             case States.IN_GAME:
@@ -88,6 +96,10 @@ public class GameState : MonoBehaviour
             case States.EXIT:
                 exit();
                 break;
+
+            case States.LOG_OUT:
+                logout();
+                break;
         }
     }
 
@@ -97,6 +109,11 @@ public class GameState : MonoBehaviour
     }
 
     public void Lobby()
+    {
+
+    }
+
+    public void SearchMatch()
     {
 
     }
@@ -117,6 +134,11 @@ public class GameState : MonoBehaviour
     }
 
     public void GameOver()
+    {
+
+    }
+
+    public void Logout()
     {
 
     }

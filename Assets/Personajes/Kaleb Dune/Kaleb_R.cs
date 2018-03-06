@@ -36,7 +36,7 @@ public class Kaleb_R : Ability_abstract
             {
                 if (PlayerController.instance.barraStamina.fillAmount >= costAbility / PlayerController.instance.stats.stats.stamina)
                 {
-                    PlayerController.instance.LookDestination(SkillShotCursor.instance.newPosition);      
+                    //PlayerController.instance.LookDestination(SkillShotCursor.instance.newPosition);      
                     SpecialShot();
                     bullets--;
                     InvokeRepeating("WaitShot",0.1f, 1.0f);

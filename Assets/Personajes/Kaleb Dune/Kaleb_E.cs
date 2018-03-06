@@ -43,18 +43,21 @@ public class Kaleb_E : Ability_abstract
                 if (PlayerController.instance.barraStamina.fillAmount >= costAbility / PlayerController.instance.stats.stats.stamina)
                 {
                     Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-                    RaycastHit hitFloor;
+                    RaycastHit hit;
 
-                    if (Physics.Raycast(ray, out hitFloor))
+                    if (Input.mousePosition.x < Screen.width * 0.5)
+                        GetComponent<SpriteRenderer>().flipX = false;
+                    else
+                        GetComponent<SpriteRenderer>().flipX = true;
+
+                    if (Physics.Raycast(ray, out hit, 100, PlayerController.instance.movementMask))
                     {
-                        if (hitFloor.collider.CompareTag("Floor"))
-                        {
-                            PlayerController.instance.newPosition = hitFloor.point;
-                            transform.LookAt(new Vector3(PlayerController.instance.newPosition.x, PlayerController.instance.newPosition.y, PlayerController.instance.newPosition.z));
-                            move = true;
+                        PlayerController.instance.navMeshAgent.SetDestination(hit.point);
+                        PlayerController.instance.newPosition = hit.point;
+                        transform.LookAt(new Vector3(PlayerController.instance.newPosition.x, PlayerController.instance.newPosition.y, PlayerController.instance.newPosition.z));
+                        move = true;
 
-                            AirAttack();
-                        }
+                        AirAttack();
                     }
                 }
                 else
@@ -67,8 +70,8 @@ public class Kaleb_E : Ability_abstract
 
         if (move == true)
         {
-            PlayerController.instance.transform.Translate(new Vector3(0, 0, 0.5f));
-            if (Vector3.Distance(PlayerController.instance.transform.position, PlayerController.instance.newPosition) < 0.5f)
+            //PlayerController.instance.transform.Translate(new Vector3(0, 0, 0.5f));
+            if (Vector3.Distance(PlayerController.instance.transform.position, PlayerController.instance.newPosition) < 5.0f)
             {
                 move = false;
             }
