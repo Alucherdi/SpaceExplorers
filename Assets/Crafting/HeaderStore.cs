@@ -52,9 +52,10 @@ public class HeaderStore : MonoBehaviour {
 		Debug.Log("Se va a crear el item");
 		Debug.Log (itemm);
 		ItemStore cost = itemsStore [(int) itemm].GetComponent<ItemStore> ();
-		if(checkCurrency(inventory, cost))
-		{
-			parts = (float) (1.0 / craftTime);
+		if (checkCurrency (inventory, cost)) {
+			parts = (float)(1.0 / craftTime);
+		} else {
+			Debug.Log ("No hay dinero ");
 		}
 
 	}

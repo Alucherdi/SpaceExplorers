@@ -19,6 +19,7 @@ public class PlayerController : MonoBehaviour
 
     //Variables
     Wrapper wrapper;
+	ItemWrapper itemWrapper;
     public Stats stats;
     public Animator anim;
     public AnimatorStateInfo currentState;
@@ -48,6 +49,7 @@ public class PlayerController : MonoBehaviour
         spritePlayer = GetComponent<SpriteRenderer>();
 
         wrapper = GetComponent<Wrapper>();
+		itemWrapper = GetComponent<ItemWrapper> ();
         stats = GetComponent<Stats>();
         anim = GetComponent<Animator>();
 
@@ -157,6 +159,28 @@ public class PlayerController : MonoBehaviour
                 dash = true;
             }
         }
+
+		// Item wrapper
+		if(itemWrapper != null){
+			if (Input.GetKeyDown (KeyCode.A)) {
+				itemWrapper.launchSlot0 ();
+			}
+			if (Input.GetKeyDown (KeyCode.S)) {
+				itemWrapper.launchSlot1 ();
+			}
+			if (Input.GetKeyDown (KeyCode.D)) {
+				itemWrapper.launchSlot2 ();
+			}
+			if (Input.GetKeyDown (KeyCode.F)) {
+				itemWrapper.launchSlot3 ();
+			}
+			if (Input.GetKeyDown (KeyCode.G)) {
+				itemWrapper.launchSlot4 ();
+			}
+			if (Input.GetKeyDown (KeyCode.H)) {
+				itemWrapper.launchSlot5 ();
+			}
+		}
 
         if (characterState == CharacterState.NORMAL)
         {
