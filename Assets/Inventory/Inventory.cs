@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Inventory : MonoBehaviour {
 
+    public static Inventory instance;
 
 	/// <summary>
 	/// / Queda pendiente el ordenamiento
@@ -23,6 +24,8 @@ public class Inventory : MonoBehaviour {
 	Empty_slot empty_slot;
 
 	public void Start(){
+        instance = this;
+
 		stats = GetComponent<Stats> ();
 		empty_slot = gameObject.AddComponent<Empty_slot> ();
 		empty_slot.itemName = "Empty";

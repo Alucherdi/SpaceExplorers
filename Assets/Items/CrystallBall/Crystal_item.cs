@@ -14,7 +14,8 @@ public class Crystal_item : Item {
 		
 	}
 
-	public override void Active(){
+	public override void Active(int slot)
+    {
 		Debug.Log ("Activa cristal");
 	}
 }

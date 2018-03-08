@@ -11,10 +11,10 @@ public class Belt_item : Item {
 	
 	// Update is called once per frame
 	void Update () {
-		
+        
 	}
 
-	public override void Active(){
+	public override void Active(int slot){
 		Debug.Log ("Activa belt");
 	}
 }

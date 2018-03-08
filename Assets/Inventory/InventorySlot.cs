@@ -37,6 +37,6 @@ public class InventorySlot : MonoBehaviour {
 	}
 
 	public void UseItem(){
-		inventory.backpack [slotNumber].Active ();
+		inventory.backpack [slotNumber].Active(slotNumber);
 	}
 }

@@ -14,7 +14,8 @@ public class StaminaPotion_item : Item {
 		
 	}
 
-	public override void Active(){
+	public override void Active(int slot)
+    {
 		Debug.Log ("Activa stamina pot");
 	}
 }

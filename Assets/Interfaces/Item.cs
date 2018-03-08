@@ -27,7 +27,7 @@ public abstract class Item : MonoBehaviour {
 		}
 	}
 
-	public virtual void Active()
+	public virtual void Active(int slot)
 	{
 	
 	}
@@ -36,11 +36,6 @@ public abstract class Item : MonoBehaviour {
 	{
 
 	}
-
-	public void Update(){
-		//Debug.Log ("Nope");
-	}
-
 }
 
 [System.Serializable]

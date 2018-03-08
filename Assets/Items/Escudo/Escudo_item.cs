@@ -16,7 +16,8 @@ public class Escudo_item : Item {
 		
 	}
 
-	public override void Active(){
+	public override void Active(int slot)
+    {
 		Debug.Log ("Activa escudo");
 	}
 

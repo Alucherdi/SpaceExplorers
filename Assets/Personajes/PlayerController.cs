@@ -162,22 +162,22 @@ public class PlayerController : MonoBehaviour
 
 		// Item wrapper
 		if(itemWrapper != null){
-			if (Input.GetKeyDown (KeyCode.A)) {
+			if (Input.GetKeyDown (KeyCode.Alpha1)) {
 				itemWrapper.launchSlot0 ();
 			}
-			if (Input.GetKeyDown (KeyCode.S)) {
+			if (Input.GetKeyDown (KeyCode.Alpha2)) {
 				itemWrapper.launchSlot1 ();
 			}
-			if (Input.GetKeyDown (KeyCode.D)) {
+			if (Input.GetKeyDown (KeyCode.Alpha3)) {
 				itemWrapper.launchSlot2 ();
 			}
-			if (Input.GetKeyDown (KeyCode.F)) {
+			if (Input.GetKeyDown (KeyCode.Alpha4)) {
 				itemWrapper.launchSlot3 ();
 			}
-			if (Input.GetKeyDown (KeyCode.G)) {
+			if (Input.GetKeyDown (KeyCode.Alpha5)) {
 				itemWrapper.launchSlot4 ();
 			}
-			if (Input.GetKeyDown (KeyCode.H)) {
+			if (Input.GetKeyDown (KeyCode.Alpha6)) {
 				itemWrapper.launchSlot5 ();
 			}
 		}
