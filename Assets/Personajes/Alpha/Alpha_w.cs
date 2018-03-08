@@ -5,17 +5,69 @@ using UnityEngine;
 public class Alpha_w : Ability_abstract {
 
 	// Use this for initialization
+	public GameObject shieldHitbox;
+	Camera mainCamera;
+	PlayerController pjController;
+	public GameObject spawnSword;
+
+	// Cooldown de abilidad
+	float costAbility = 25;
+	public float cooldownQ=0;
+	public float cooldownQlimit;
+
 	void Start () {
-		
+		shieldHitbox.GetComponent<MeshRenderer> ().enabled = false;
+		mainCamera = FindObjectOfType<Camera> ();
+		pjController = GetComponent<PlayerController> ();
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		
+		cooldownQlimit = PlayerController.instance.stats.stats.launchWcd - (PlayerController.instance.stats.stats.launchWcd * (PlayerController.instance.stats.stats.cooldownReduction/100));
+		if (cooldownQ == 0)
+		{
+			if (Input.GetMouseButtonUp(0) && SkillShotCursor.instance.activeCursor == true)
+			{
+				if (PlayerController.instance.barraStamina.fillAmount >= costAbility / PlayerController.instance.stats.stats.stamina)
+				{
+					shieldHitbox.GetComponent<Shield_htbxcd> ().Active ();
+					SkillShotCursor.instance.activeCursor = false;
+					Debug.Log ("Has sacado la spada prro ");
+					//PoisonedKnifes();
+					//PlayerController.instance.LookDestination(SkillShotCursor.instance.newPosition);
+					PlayerController.instance.barraStamina.fillAmount -= costAbility / PlayerController.instance.stats.stats.stamina;
+					PlayerController.instance.AbilityOff();
+
+
+				}
+				else
+				{
+
+					SkillShotCursor.instance.activeCursor = false;
+					Debug.Log("Imposible utilizar la habilidad, poca stamina");
+					PlayerController.instance.AbilityOff();
+
+				}
+			}
+		}
+		else
+		{
+			SkillShotCursor.instance.activeCursor = false;
+		}
+
+		if (cooldownQ >= cooldownQlimit)
+		{
+			CancelInvoke("CoolDown");
+			cooldownQ = 0;
+		} 	
+
+
 	}
 
 
 	public override void launch (){
 		Debug.Log ("Alpha w");
+		//SkillShotCursor.instance.Active(true);
 	}
 }

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Sword_htbxcd : MonoBehaviour {
+public class Shield_htbxcd : MonoBehaviour {
 	// Scrip encargado de desrenderizar
 	// El hitbox de la espada después de cierto tiempo
 
@@ -37,6 +37,8 @@ public class Sword_htbxcd : MonoBehaviour {
 	}
 
 	public void OnTriggerEnter(Collider other){
-		Debug.Log ("Hit espada");
+		// If bullet
+		// Cancela hit
+		Debug.Log ("Cancelu Dameju");
 	}
 }

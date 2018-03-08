@@ -7,7 +7,6 @@ public class Alpha_q : Ability_abstract {
 	// Use this for initialization
 	public GameObject swordHitbox;
 	Camera mainCamera;
-	public bool drawHitbox;
 	PlayerController pjController;
 	public GameObject spawnSword;
 
@@ -18,7 +17,6 @@ public class Alpha_q : Ability_abstract {
 
 	void Start () {
 		swordHitbox.GetComponent<MeshRenderer> ().enabled = false;
-		drawHitbox = false;
 		mainCamera = FindObjectOfType<Camera> ();
 		pjController = GetComponent<PlayerController> ();
 
@@ -37,7 +35,7 @@ public class Alpha_q : Ability_abstract {
 					SkillShotCursor.instance.activeCursor = false;
 					Debug.Log ("Has sacado la spada prro ");
 					//PoisonedKnifes();
-					PlayerController.instance.LookDestination(SkillShotCursor.instance.newPosition);
+					//PlayerController.instance.LookDestination(SkillShotCursor.instance.newPosition);
 					PlayerController.instance.barraStamina.fillAmount -= costAbility / PlayerController.instance.stats.stats.stamina;
 					PlayerController.instance.AbilityOff();
 
