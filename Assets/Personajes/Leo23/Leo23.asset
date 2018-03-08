@@ -24,11 +24,11 @@ MonoBehaviour:
     movementSpeed: 75
     attackSpeed: 0
     cooldownReduction: 10
-    launchQcd: 5
-    launchWcd: 10
-    launchEcd: 25
-    launchRcd: 50
-    launchDcd: 10
+    launchQcd: 2
+    launchWcd: 2
+    launchEcd: 2
+    launchRcd: 2
+    launchDcd: 2
   modifiers:
     health: 0.5
     stamina: 0.5

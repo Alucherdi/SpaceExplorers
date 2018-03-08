@@ -12,10 +12,12 @@ public class Alpha_q : Ability_abstract {
 
 	// Cooldown de abilidad
 	float costAbility = 25;
-	public float cooldownQ=0;
+	public float cooldownQ=25;
 	public float cooldownQlimit;
+	public bool active = false;
 
 	void Start () {
+		active = false;
 		swordHitbox.GetComponent<MeshRenderer> ().enabled = false;
 		mainCamera = FindObjectOfType<Camera> ();
 		pjController = GetComponent<PlayerController> ();
@@ -25,7 +27,7 @@ public class Alpha_q : Ability_abstract {
 	// Update is called once per frame
 	void Update () {
 		cooldownQlimit = PlayerController.instance.stats.stats.launchQcd - (PlayerController.instance.stats.stats.launchQcd * (PlayerController.instance.stats.stats.cooldownReduction/100));
-		if (cooldownQ == 0)
+		if (cooldownQ == 0 && active )
 		{
 			if (Input.GetMouseButtonUp(0) && SkillShotCursor.instance.activeCursor == true)
 			{
@@ -33,12 +35,12 @@ public class Alpha_q : Ability_abstract {
 				{
 					swordHitbox.GetComponent<Sword_htbxcd> ().Active ();
 					SkillShotCursor.instance.activeCursor = false;
-					Debug.Log ("Has sacado la spada prro ");
+					Debug.Log ("lanzamiento alpha Q (espada)");
 					//PoisonedKnifes();
 					//PlayerController.instance.LookDestination(SkillShotCursor.instance.newPosition);
 					PlayerController.instance.barraStamina.fillAmount -= costAbility / PlayerController.instance.stats.stats.stamina;
 					PlayerController.instance.AbilityOff();
-
+					active = false;
 
 				}
 				else
@@ -47,13 +49,14 @@ public class Alpha_q : Ability_abstract {
 					SkillShotCursor.instance.activeCursor = false;
 					Debug.Log("Imposible utilizar la habilidad, poca stamina");
 					PlayerController.instance.AbilityOff();
-
+					active = false;
 				}
 			}
 		}
 		else
 		{
 			SkillShotCursor.instance.activeCursor = false;
+			active = false;
 		}
 
 		if (cooldownQ >= cooldownQlimit)
@@ -67,6 +70,8 @@ public class Alpha_q : Ability_abstract {
 
 	public override void launch (){
 		Debug.Log ("Alpha q");
+		cooldownQ=0;
 		SkillShotCursor.instance.Active(true);
+		active = true;
 	}
 }
