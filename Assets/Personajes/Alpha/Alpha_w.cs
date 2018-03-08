@@ -12,8 +12,9 @@ public class Alpha_w : Ability_abstract {
 
 	// Cooldown de abilidad
 	float costAbility = 25;
-	public float cooldownQ=0;
-	public float cooldownQlimit;
+	public float cooldownW=0;
+	public float cooldownWlimit;
+	bool alphaWActive;
 
 	void Start () {
 		shieldHitbox.GetComponent<MeshRenderer> ().enabled = false;
@@ -24,42 +25,46 @@ public class Alpha_w : Ability_abstract {
 	// Update is called once per frame
 	void Update () {
 		
-		cooldownQlimit = PlayerController.instance.stats.stats.launchWcd - (PlayerController.instance.stats.stats.launchWcd * (PlayerController.instance.stats.stats.cooldownReduction/100));
-		if (cooldownQ == 0)
+		cooldownWlimit = PlayerController.instance.stats.stats.launchWcd - (PlayerController.instance.stats.stats.launchWcd * (PlayerController.instance.stats.stats.cooldownReduction/100));
+		if (cooldownW == 0)
 		{
-			if (Input.GetMouseButtonUp(0) && SkillShotCursor.instance.activeCursor == true)
+			
+			if (alphaWActive)
 			{
+
 				if (PlayerController.instance.barraStamina.fillAmount >= costAbility / PlayerController.instance.stats.stats.stamina)
 				{
 					shieldHitbox.GetComponent<Shield_htbxcd> ().Active ();
-					SkillShotCursor.instance.activeCursor = false;
-					Debug.Log ("Has sacado la spada prro ");
+					//SkillShotCursor.instance.activeCursor = false;
+					alphaWActive = false;
+					Debug.Log ("Has sacado el escudo prro ");
 					//PoisonedKnifes();
 					//PlayerController.instance.LookDestination(SkillShotCursor.instance.newPosition);
 					PlayerController.instance.barraStamina.fillAmount -= costAbility / PlayerController.instance.stats.stats.stamina;
 					PlayerController.instance.AbilityOff();
-
-
 				}
 				else
 				{
 
-					SkillShotCursor.instance.activeCursor = false;
+					//SkillShotCursor.instance.activeCursor = false;
 					Debug.Log("Imposible utilizar la habilidad, poca stamina");
 					PlayerController.instance.AbilityOff();
 
 				}
+
 			}
+
 		}
 		else
 		{
-			SkillShotCursor.instance.activeCursor = false;
+			//SkillShotCursor.instance.activeCursor = false;
+			alphaWActive = false;
 		}
 
-		if (cooldownQ >= cooldownQlimit)
+		if (cooldownW >= cooldownWlimit)
 		{
 			CancelInvoke("CoolDown");
-			cooldownQ = 0;
+			cooldownW = 0;
 		} 	
 
 
@@ -69,5 +74,7 @@ public class Alpha_w : Ability_abstract {
 	public override void launch (){
 		Debug.Log ("Alpha w");
 		//SkillShotCursor.instance.Active(true);
+		alphaWActive = true;
+
 	}
 }

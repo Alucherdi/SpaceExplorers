@@ -8062,6 +8062,48 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ba6f720d28b8c28449d461d7470b6df1, type: 2}
   m_IsPrefabParent: 0
+--- !u!1001 &803374342
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4934226758608506, guid: e852942ba3ed8924f81202ee676cd1c9, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 176.44
+      objectReference: {fileID: 0}
+    - target: {fileID: 4934226758608506, guid: e852942ba3ed8924f81202ee676cd1c9, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 2.8245
+      objectReference: {fileID: 0}
+    - target: {fileID: 4934226758608506, guid: e852942ba3ed8924f81202ee676cd1c9, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 132.5939
+      objectReference: {fileID: 0}
+    - target: {fileID: 4934226758608506, guid: e852942ba3ed8924f81202ee676cd1c9, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4934226758608506, guid: e852942ba3ed8924f81202ee676cd1c9, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4934226758608506, guid: e852942ba3ed8924f81202ee676cd1c9, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4934226758608506, guid: e852942ba3ed8924f81202ee676cd1c9, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4934226758608506, guid: e852942ba3ed8924f81202ee676cd1c9, type: 2}
+      propertyPath: m_RootOrder
+      value: 15
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: e852942ba3ed8924f81202ee676cd1c9, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &811625161 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1510083392796942, guid: 1e4f3d5c7e6ed4e4fafa2ecd0ec5efca,
@@ -9003,8 +9045,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 868327938}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.7, y: 0, z: 34.5}
-  m_LocalScale: {x: 69.75798, y: 0.999999, z: 28.339447}
+  m_LocalPosition: {x: 0.78, y: 0, z: 46.19}
+  m_LocalScale: {x: 72.72173, y: 0.99999887, z: 61.356037}
   m_Children: []
   m_Father: {fileID: 1673654016}
   m_RootOrder: 0
@@ -18503,6 +18545,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 033a7f11a08c92841ab27cb5c676dcd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cooldownE: 0
+  cooldownElimit: 0
 --- !u!114 &1605938169
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18516,8 +18560,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shieldHitbox: {fileID: 985976066}
   spawnSword: {fileID: 1673654015}
-  cooldownQ: 0
-  cooldownQlimit: 0
+  cooldownW: 0
+  cooldownWlimit: 0
 --- !u!114 &1605938170
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19368,8 +19412,9 @@ GameObject:
   - component: {fileID: 1673654019}
   - component: {fileID: 1673654018}
   - component: {fileID: 1673654017}
+  - component: {fileID: 1673654021}
   m_Layer: 0
-  m_Name: CubeKnife
+  m_Name: CubeBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19462,6 +19507,20 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1673654015}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1673654021
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1673654015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a124ab24190213458f7f07a7bf5ab04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 1508435341206286, guid: c23ff8a9fbd62984eb0f31682c7df12a,
+    type: 2}
+  bulletForce: 50
 --- !u!1 &1674554529
 GameObject:
   m_ObjectHideFlags: 0
