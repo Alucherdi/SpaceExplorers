@@ -39,8 +39,13 @@ public class PlayerController : MonoBehaviour
 
     public int waitTime;
 
+	// check cursor status
+	public bool cursorStatus;
+
+
     void Start()
     {
+		
         instance = this;
 
         rb = GetComponent<Rigidbody>();
@@ -63,6 +68,8 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+		cursorStatus = SkillShotCursor.instance.activeCursor;
+
         currentState = anim.GetCurrentAnimatorStateInfo(0);
 
         if (Input.GetMouseButtonDown(1) || Input.GetMouseButton(1))
@@ -89,7 +96,7 @@ public class PlayerController : MonoBehaviour
 
         if (moving == true)
         {
-            anim.SetFloat("Run", 10.0f);
+            //anim.SetFloat("Run", 10.0f);
             if (Vector3.Distance(transform.position, newPosition) < 5.0f)
             {
                 anim.SetFloat("Run", 0.0f);

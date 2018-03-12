@@ -17,6 +17,8 @@ public class SkillShotCursor : MonoBehaviour {
 
     void Update()
     {
+
+		//Debug.Log (this.gameObject.name);
         if (activeCursor == true)
             skillShotCursorImage.enabled = true;
         else

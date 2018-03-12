@@ -9,25 +9,19 @@ public class Alpha_e : Ability_abstract {
 	public float cooldownElimit;
 	public bool active = false;
 
-	public override void launch()
-	{
-		active = true;
-		cooldownE=0;
-		SkillShotCursor.instance.Active(true);
-	}
 
 	void Update()
 	{
 		cooldownElimit = PlayerController.instance.stats.stats.launchEcd - (PlayerController.instance.stats.stats.launchEcd * (PlayerController.instance.stats.stats.cooldownReduction/100));
 
-		if (cooldownE == 0 && active )
+		if (cooldownE == 0)
 		{
-			if (Input.GetMouseButtonUp(0) && SkillShotCursor.instance.activeCursor == true)
+			if (Input.GetMouseButtonUp(0) && Cursor_e.instance.activeCursor == true)
 			{
 				if (PlayerController.instance.barraStamina.fillAmount >= costAbility / PlayerController.instance.stats.stats.stamina)
 				{
 					Debug.Log ("lanzamiento alpha e");
-					SkillShotCursor.instance.activeCursor = false;
+					Cursor_e.instance.activeCursor = false;
 					PoisonedKnifes();
 					//PlayerController.instance.LookDestination(SkillShotCursor.instance.newPosition);
 					PlayerController.instance.barraStamina.fillAmount -= costAbility / PlayerController.instance.stats.stats.stamina;
@@ -36,7 +30,7 @@ public class Alpha_e : Ability_abstract {
 				}
 				else
 				{
-					SkillShotCursor.instance.activeCursor = false;
+					Cursor_e.instance.activeCursor = false;
 					Debug.Log("Imposible utilizar la habilidad, poca stamina");
 					PlayerController.instance.AbilityOff();
 					active = false;
@@ -46,9 +40,9 @@ public class Alpha_e : Ability_abstract {
 		else
 		{
 			//Debug.Log ("Se apaga el cursor");
-			SkillShotCursor.instance.activeCursor = false;
+			Cursor_e.instance.activeCursor = false;
 			active = false;
-
+			Debug.Log ("Desaparece porque aun no llega el cd e");
 		}
 
 		if (cooldownE >= cooldownElimit)
@@ -62,12 +56,21 @@ public class Alpha_e : Ability_abstract {
 	{
 		Debug.Log("Utilizaste los cuchillos envenedados >:v");
 		//PlayerController.instance.anim.SetTrigger("SpellQ");
-		KnifeShooter.instance.KnifeShot();
+		BulletShooter.instance.BulletShot();
 		InvokeRepeating("CoolDown", 0.1f, 1.0f);
 	}
 
 	void CoolDown()
 	{
 		cooldownE++;
+	}
+
+
+	public override void launch()
+	{
+		active = true;
+		cooldownE=0;
+		Debug.Log ("Se esta presionando e");
+		Cursor_e.instance.Active(true);
 	}
 }

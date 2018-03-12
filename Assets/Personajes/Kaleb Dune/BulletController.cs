@@ -6,6 +6,7 @@ public class BulletController : MonoBehaviour {
 
     void OnCollisionEnter(Collision collision)
     {
+		
         Destroy(this.gameObject);
     }
 }

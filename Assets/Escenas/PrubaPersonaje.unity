@@ -5576,6 +5576,104 @@ Transform:
   m_Father: {fileID: 875355675}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &531614087
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 531614092}
+  - component: {fileID: 531614091}
+  - component: {fileID: 531614090}
+  - component: {fileID: 531614089}
+  - component: {fileID: 531614088}
+  m_Layer: 0
+  m_Name: Enemy
+  m_TagString: Enemy
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &531614088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 531614087}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c3b625d72be6a24f91f04dac35eed0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  samuraiStack: 0
+  freeze: 0
+--- !u!23 &531614089
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 531614087}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 1
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!135 &531614090
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 531614087}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!33 &531614091
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 531614087}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &531614092
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 531614087}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 173.64, y: 2.5, z: 126.32}
+  m_LocalScale: {x: 7.0466433, y: 7.046641, z: 7.046641}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 16
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &541689147
 Prefab:
   m_ObjectHideFlags: 0
@@ -6281,6 +6379,7 @@ MonoBehaviour:
   spritePlayer: {fileID: 0}
   maincamera: {fileID: 1825290478}
   waitTime: 0
+  cursorStatus: 0
 --- !u!195 &591611550
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -8100,6 +8199,10 @@ Prefab:
     - target: {fileID: 4934226758608506, guid: e852942ba3ed8924f81202ee676cd1c9, type: 2}
       propertyPath: m_RootOrder
       value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1925837375533208, guid: e852942ba3ed8924f81202ee676cd1c9, type: 2}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e852942ba3ed8924f81202ee676cd1c9, type: 2}
@@ -9925,6 +10028,7 @@ MonoBehaviour:
   spritePlayer: {fileID: 0}
   maincamera: {fileID: 1825290478}
   waitTime: 0
+  cursorStatus: 0
 --- !u!114 &935251320
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12447,6 +12551,7 @@ MonoBehaviour:
   spritePlayer: {fileID: 0}
   maincamera: {fileID: 1825290478}
   waitTime: 0
+  cursorStatus: 0
 --- !u!114 &1133787042
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18547,6 +18652,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cooldownE: 0
   cooldownElimit: 0
+  active: 0
 --- !u!114 &1605938169
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18577,6 +18683,7 @@ MonoBehaviour:
   spawnSword: {fileID: 0}
   cooldownQ: 0
   cooldownQlimit: 0
+  active: 0
 --- !u!114 &1605938171
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18618,6 +18725,7 @@ MonoBehaviour:
   spritePlayer: {fileID: 0}
   maincamera: {fileID: 1825290478}
   waitTime: 0
+  cursorStatus: 0
 --- !u!114 &1605938173
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19518,7 +19626,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a124ab24190213458f7f07a7bf5ab04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 1508435341206286, guid: c23ff8a9fbd62984eb0f31682c7df12a,
+  bulletPrefab: {fileID: 1133919019994696, guid: 28b9cd10305074e4b8820685262dac61,
     type: 2}
   bulletForce: 50
 --- !u!1 &1674554529
@@ -19531,6 +19639,8 @@ GameObject:
   - component: {fileID: 1674554530}
   - component: {fileID: 1674554532}
   - component: {fileID: 1674554531}
+  - component: {fileID: 1674554534}
+  - component: {fileID: 1674554533}
   m_Layer: 0
   m_Name: Abilities
   m_TagString: Untagged
@@ -19583,6 +19693,34 @@ MonoBehaviour:
   newPosition: {x: 0, y: 0, z: 0}
   activeCursor: 0
   skillShotCursorImage: {fileID: 783238116}
+--- !u!114 &1674554533
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1674554529}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6cdf4560eb2b4c448e070ac41abfb71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  newPosition: {x: 0, y: 0, z: 0}
+  activeCursor: 0
+  skillShotCursorImage: {fileID: 631397157}
+--- !u!114 &1674554534
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1674554529}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a68d0ed20a3b231418df506eaa093ae2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  newPosition: {x: 0, y: 0, z: 0}
+  activeCursor: 0
+  skillShotCursorImage: {fileID: 631397157}
 --- !u!1 &1674898410
 GameObject:
   m_ObjectHideFlags: 0

@@ -27,14 +27,14 @@ public class Alpha_q : Ability_abstract {
 	// Update is called once per frame
 	void Update () {
 		cooldownQlimit = PlayerController.instance.stats.stats.launchQcd - (PlayerController.instance.stats.stats.launchQcd * (PlayerController.instance.stats.stats.cooldownReduction/100));
-		if (cooldownQ == 0 && active )
+		if (cooldownQ == 0)
 		{
-			if (Input.GetMouseButtonUp(0) && SkillShotCursor.instance.activeCursor == true)
+			if (Input.GetMouseButtonUp(0) && Cursor_q.instance.activeCursor == true)
 			{
 				if (PlayerController.instance.barraStamina.fillAmount >= costAbility / PlayerController.instance.stats.stats.stamina)
 				{
 					swordHitbox.GetComponent<Sword_htbxcd> ().Active ();
-					SkillShotCursor.instance.activeCursor = false;
+					Cursor_q.instance.activeCursor = false;
 					Debug.Log ("lanzamiento alpha Q (espada)");
 					//PoisonedKnifes();
 					//PlayerController.instance.LookDestination(SkillShotCursor.instance.newPosition);
@@ -46,7 +46,7 @@ public class Alpha_q : Ability_abstract {
 				else
 				{
 
-					SkillShotCursor.instance.activeCursor = false;
+					Cursor_q.instance.activeCursor = false;
 					Debug.Log("Imposible utilizar la habilidad, poca stamina");
 					PlayerController.instance.AbilityOff();
 					active = false;
@@ -55,8 +55,9 @@ public class Alpha_q : Ability_abstract {
 		}
 		else
 		{
-			SkillShotCursor.instance.activeCursor = false;
+			Cursor_q.instance.activeCursor = false;
 			active = false;
+			Debug.Log ("Desaparece porque aun no llega el cd q");
 		}
 
 		if (cooldownQ >= cooldownQlimit)
@@ -71,7 +72,7 @@ public class Alpha_q : Ability_abstract {
 	public override void launch (){
 		Debug.Log ("Alpha q");
 		cooldownQ=0;
-		SkillShotCursor.instance.Active(true);
+		Cursor_q.instance.Active(true);
 		active = true;
 	}
 }
