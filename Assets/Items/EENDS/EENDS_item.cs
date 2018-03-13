@@ -12,15 +12,27 @@ public class EENDS_item : Item{
     public bool active = false;
     public int itemLife = 3;
 
+    public GameObject player;
+    public GameObject destination;
+    public Vector3 teleportPosition;
+
     public override void Active(int slot)
     {
         slotNumber = slot;
         active = true;
     }
 
+    void Start()
+    {
+        player = GameObject.FindWithTag("Player");
+        destination = GameObject.Find("Teleport");
+    }
+
     void Update()
     {
-        if(cooldown == 0 && active == true)
+        teleportPosition = destination.transform.position;
+
+        if (cooldown == 0 && active == true)
             ActiveEENDS();
 
         if(cooldown >= activeCD)
@@ -37,7 +49,8 @@ public class EENDS_item : Item{
     void ActiveEENDS()
     {
         itemLife--;
-
+        player.transform.position = teleportPosition;
+        PlayerController.instance.navMeshAgent.SetDestination(teleportPosition);
         InvokeRepeating("CoolDown", 0.1f, 1.0f);
         active = false;
     }
