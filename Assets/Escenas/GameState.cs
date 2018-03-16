@@ -17,8 +17,8 @@ public class GameState : MonoBehaviour
     public LobbyEvent lobby;
     public delegate void SearchMatchEvent();
     public SearchMatchEvent searchmatch;
-    public delegate void GameEvent();
-    public GameEvent game;
+    public delegate void InGameEvent();
+    public InGameEvent ingame;
     public delegate void BackMenuEvent();
     public BackMenuEvent backmenu;
     public delegate void VictoryEvent();
@@ -51,7 +51,7 @@ public class GameState : MonoBehaviour
         login += Login;
         lobby += Lobby;
         searchmatch += SearchMatch;
-        game += Game;
+        ingame += InGame;
         backmenu += BackMenu;
         victory += Victory;
         gameover += GameOver;
@@ -78,7 +78,7 @@ public class GameState : MonoBehaviour
                 break;
 
             case States.IN_GAME:
-                game();
+                ingame();
                 break;
 
             case States.BACK_MENU:
@@ -118,9 +118,11 @@ public class GameState : MonoBehaviour
 
     }
 
-    public void Game()
+    public void InGame()
     {
-
+        Time.timeScale = 1;
+        Loader.instance.LoadScene(2);
+        SceneManager.LoadScene(2);
     }
 
     public void BackMenu()

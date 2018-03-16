@@ -21,7 +21,7 @@ public class AreaSkillCursor : MonoBehaviour {
 
         if (activeCursor == true)
         {
-            areaSkillImage.enabled = true;
+            //areaSkillImage.enabled = true;
             cursorSkillIamge.enabled = true;
         }
         else

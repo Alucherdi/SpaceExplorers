@@ -22,6 +22,7 @@ public class CharacterMenuController : MonoBehaviour {
     {
         characterImage.sprite = champsImages[0];
         champText.text = "Leo23"; 
+        
     }
 
     public void EkSelection()
