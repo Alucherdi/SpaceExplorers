@@ -58,7 +58,7 @@ public class GameState : MonoBehaviour
         exit += ExitGame;
         logout += Logout;
 	}
-	
+
     public void ChangeState(States newState)
     {
         currentState = newState;

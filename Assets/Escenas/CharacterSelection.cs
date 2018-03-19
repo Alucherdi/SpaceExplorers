@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class CharacterSelection : MonoBehaviour {
@@ -8,26 +9,20 @@ public class CharacterSelection : MonoBehaviour {
     public static CharacterSelection instance;
 
     public GameObject characterPanel;
+    public Button confirmButton;
 
-    public GameObject champSelected;
     public string champname;
 
     void Start()
     {
         instance = this;
-    }
 
-    void Update()
-    {
-        if(CharacterMenuController.instance.characterImage.sprite == CharacterMenuController.instance.champsImages[0])
-            champname = "Leo23";
+        confirmButton.interactable = false;
     }
 
     public void NewGame()
     {
         characterPanel.SetActive(false);
         GameState.gamestate.ChangeState(States.IN_GAME);
-        champSelected = GameObject.FindWithTag(champname);
-        champSelected.SetActive(true);
     }
 }
