@@ -9,127 +9,150 @@ public class MenuController : MonoBehaviour {
 
     public GameObject menuPanel;
 
-    public GameObject shopPanel; //Tienda para venta de moneda del juego, skins para personajes/armas
+    public GameObject accountPanel;
 
-    public GameObject rewardsPanel; //Premios que se pueden conseguir en la temporada
+    public GameObject configPanel;
 
-    public GameObject newsPanel; //Noticias del juego, actualización etc.
+    public GameObject newsPanel;
 
-    public GameObject profilePanel; //Estadísticas del jugador, partidas/victoria/top5
+    public GameObject rewardsPanel;
 
-    public GameObject optionsPanel; //Opciones de audio
+    public GameObject charactersPanel;
 
-    public GameObject lobbyPanel; //Selección de Personajes y modo de juego... compañeros...
+    public GameObject shopPanel;
 
-    public GameObject gameoverPanel; //Letreró de partida terminada (victoria o no) estadísticas del jugador en la partida
+    public GameObject gameoverPanel;
+
+    public GameObject logoutPanel;
 
 	void Start () {
-
         instance = this;
 
         menuPanel.SetActive(true);
-        shopPanel.SetActive(false);
-        rewardsPanel.SetActive(false);
+        accountPanel.SetActive(false);
+        configPanel.SetActive(false);
         newsPanel.SetActive(false);
-        profilePanel.SetActive(false);
-        optionsPanel.SetActive(false);
-        lobbyPanel.SetActive(false);
+        rewardsPanel.SetActive(false);
+        charactersPanel.SetActive(false);
+        shopPanel.SetActive(false);
         gameoverPanel.SetActive(false);
+        logoutPanel.SetActive(false);
 	}
 
-    public void Shop()
+    public void MyAccount()
     {
         menuPanel.SetActive(false);
-        shopPanel.SetActive(true);
-        rewardsPanel.SetActive(false);
+        accountPanel.SetActive(true);
+        configPanel.SetActive(false);
         newsPanel.SetActive(false);
-        profilePanel.SetActive(false);
-        optionsPanel.SetActive(false);
-        lobbyPanel.SetActive(false);
-        gameoverPanel.SetActive(false);
-    }
-
-    public void Rewards()
-    {
-        menuPanel.SetActive(false);
-        shopPanel.SetActive(false);
-        rewardsPanel.SetActive(true);
-        newsPanel.SetActive(false);
-        profilePanel.SetActive(false);
-        optionsPanel.SetActive(false);
-        lobbyPanel.SetActive(false);
-        gameoverPanel.SetActive(false);
-    }
-
-    public void News()
-    {
-        menuPanel.SetActive(false);
-        shopPanel.SetActive(false);
         rewardsPanel.SetActive(false);
-        newsPanel.SetActive(true);
-        profilePanel.SetActive(false);
-        optionsPanel.SetActive(false);
-        lobbyPanel.SetActive(false);
-        gameoverPanel.SetActive(false);
-    }
-
-    public void Profile()
-    {
-        menuPanel.SetActive(false);
+        charactersPanel.SetActive(false);
         shopPanel.SetActive(false);
-        rewardsPanel.SetActive(false);
-        newsPanel.SetActive(false);
-        profilePanel.SetActive(true);
-        optionsPanel.SetActive(false);
-        lobbyPanel.SetActive(false);
         gameoverPanel.SetActive(false);
+        logoutPanel.SetActive(false);
     }
 
     public void Options()
     {
         menuPanel.SetActive(false);
-        shopPanel.SetActive(false);
-        rewardsPanel.SetActive(false);
+        accountPanel.SetActive(false);
+        configPanel.SetActive(true);
         newsPanel.SetActive(false);
-        profilePanel.SetActive(false);
-        optionsPanel.SetActive(true);
-        lobbyPanel.SetActive(false);
+        rewardsPanel.SetActive(false);
+        charactersPanel.SetActive(false);
+        shopPanel.SetActive(false);
         gameoverPanel.SetActive(false);
+        logoutPanel.SetActive(false);
     }
 
-    public void Lobby()
+    public void News()
     {
         menuPanel.SetActive(false);
-        shopPanel.SetActive(false);
+        accountPanel.SetActive(false);
+        configPanel.SetActive(false);
+        newsPanel.SetActive(true);
         rewardsPanel.SetActive(false);
-        newsPanel.SetActive(false);
-        profilePanel.SetActive(false);
-        optionsPanel.SetActive(false);
-        lobbyPanel.SetActive(true);
+        charactersPanel.SetActive(false);
+        shopPanel.SetActive(false);
         gameoverPanel.SetActive(false);
+        logoutPanel.SetActive(false);
     }
 
-	public void GameOver()
+    public void Rewards()
     {
         menuPanel.SetActive(false);
-        shopPanel.SetActive(false);
-        rewardsPanel.SetActive(false);
+        accountPanel.SetActive(false);
+        configPanel.SetActive(false);
         newsPanel.SetActive(false);
-        profilePanel.SetActive(false);
-        optionsPanel.SetActive(false);
-        lobbyPanel.SetActive(false);
+        rewardsPanel.SetActive(true);
+        charactersPanel.SetActive(false);
+        shopPanel.SetActive(false);
+        gameoverPanel.SetActive(false);
+        logoutPanel.SetActive(false);
+    }
+
+    public void CharacterSelection()
+    {
+        menuPanel.SetActive(false);
+        accountPanel.SetActive(false);
+        configPanel.SetActive(false);
+        newsPanel.SetActive(false);
+        rewardsPanel.SetActive(false);
+        charactersPanel.SetActive(true);
+        shopPanel.SetActive(false);
+        gameoverPanel.SetActive(false);
+        logoutPanel.SetActive(false);
+    }
+
+    public void Shop()
+    {
+        menuPanel.SetActive(false);
+        accountPanel.SetActive(false);
+        configPanel.SetActive(false);
+        newsPanel.SetActive(false);
+        rewardsPanel.SetActive(false);
+        charactersPanel.SetActive(false);
+        shopPanel.SetActive(true);
+        gameoverPanel.SetActive(false);
+        logoutPanel.SetActive(false);
+    }
+
+    public void GameOver()
+    {
+        menuPanel.SetActive(false);
+        accountPanel.SetActive(false);
+        configPanel.SetActive(false);
+        newsPanel.SetActive(false);
+        rewardsPanel.SetActive(false);
+        charactersPanel.SetActive(false);
+        shopPanel.SetActive(false);
         gameoverPanel.SetActive(true);
+        logoutPanel.SetActive(false);
     }
 
-    public void ClosePanel()
+    public void LogOut()
+    {
+        menuPanel.SetActive(false);
+        accountPanel.SetActive(false);
+        configPanel.SetActive(false);
+        newsPanel.SetActive(false);
+        rewardsPanel.SetActive(false);
+        charactersPanel.SetActive(false);
+        shopPanel.SetActive(false);
+        gameoverPanel.SetActive(false);
+        logoutPanel.SetActive(true);
+    }
+
+    public void Close()
     {
         menuPanel.SetActive(true);
-        shopPanel.SetActive(false);
-        rewardsPanel.SetActive(false);
+        accountPanel.SetActive(false);
+        configPanel.SetActive(false);
         newsPanel.SetActive(false);
-        profilePanel.SetActive(false);
-        optionsPanel.SetActive(false);
-        lobbyPanel.SetActive(false);
+        rewardsPanel.SetActive(false);
+        charactersPanel.SetActive(false);
+        shopPanel.SetActive(false);
         gameoverPanel.SetActive(false);
+        logoutPanel.SetActive(false);
     }
 }

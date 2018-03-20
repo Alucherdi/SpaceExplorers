@@ -41,7 +41,6 @@ public class GameState : MonoBehaviour
         {
             Destroy(gameObject);
         }
-       
     }
 
     void Start ()
