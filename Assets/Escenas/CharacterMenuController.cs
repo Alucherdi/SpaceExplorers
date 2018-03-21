@@ -43,6 +43,7 @@ public class CharacterMenuController : MonoBehaviour {
     {
         characterImage.sprite = champsImages[3];
         champText.text = "Matsumoto";
+        CharacterSelection.instance.confirmButton.interactable = false;
         //ToCharacterSelection(champText.text, true);
     }
 
@@ -50,6 +51,7 @@ public class CharacterMenuController : MonoBehaviour {
     {
         characterImage.sprite = champsImages[4];
         champText.text = "No Character";
+        CharacterSelection.instance.confirmButton.interactable = false;
         //ToCharacterSelection(champText.text, true);
     }
 

@@ -126,17 +126,23 @@ public class GameState : MonoBehaviour
 
     public void BackMenu()
     {
-
+        Time.timeScale = 1;
+        //SceneManager.LoadScene(); //Escena donde esta el Menu
+        MenuController.instance.Home();
     }
 
     public void Victory()
     {
-
+        Time.timeScale = 1;
+        //SceneManager.LoadScene();
+        MenuController.instance.GameOver(); //Mas letrero de victoria
     }
 
     public void GameOver()
     {
-
+        Time.timeScale = 1;
+        //SceneManager.LoadScene();//escena donde esta el GameOver
+        MenuController.instance.GameOver();
     }
 
     public void Logout()

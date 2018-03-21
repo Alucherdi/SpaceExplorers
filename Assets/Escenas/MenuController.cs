@@ -9,6 +9,8 @@ public class MenuController : MonoBehaviour {
 
     public GameObject menuPanel;
 
+    public GameObject homePanel;
+
     public GameObject accountPanel;
 
     public GameObject configPanel;
@@ -28,7 +30,13 @@ public class MenuController : MonoBehaviour {
 	void Start () {
         instance = this;
 
+        Home();
+	}
+
+    public void Home()
+    {
         menuPanel.SetActive(true);
+        homePanel.SetActive(true);
         accountPanel.SetActive(false);
         configPanel.SetActive(false);
         newsPanel.SetActive(false);
@@ -37,11 +45,12 @@ public class MenuController : MonoBehaviour {
         shopPanel.SetActive(false);
         gameoverPanel.SetActive(false);
         logoutPanel.SetActive(false);
-	}
+    }
 
     public void MyAccount()
     {
-        menuPanel.SetActive(false);
+        menuPanel.SetActive(true);
+        homePanel.SetActive(false);
         accountPanel.SetActive(true);
         configPanel.SetActive(false);
         newsPanel.SetActive(false);
@@ -54,7 +63,8 @@ public class MenuController : MonoBehaviour {
 
     public void Options()
     {
-        menuPanel.SetActive(false);
+        menuPanel.SetActive(true);
+        homePanel.SetActive(false);
         accountPanel.SetActive(false);
         configPanel.SetActive(true);
         newsPanel.SetActive(false);
@@ -67,7 +77,8 @@ public class MenuController : MonoBehaviour {
 
     public void News()
     {
-        menuPanel.SetActive(false);
+        menuPanel.SetActive(true);
+        homePanel.SetActive(false);
         accountPanel.SetActive(false);
         configPanel.SetActive(false);
         newsPanel.SetActive(true);
@@ -80,7 +91,8 @@ public class MenuController : MonoBehaviour {
 
     public void Rewards()
     {
-        menuPanel.SetActive(false);
+        menuPanel.SetActive(true);
+        homePanel.SetActive(false);
         accountPanel.SetActive(false);
         configPanel.SetActive(false);
         newsPanel.SetActive(false);
@@ -94,6 +106,7 @@ public class MenuController : MonoBehaviour {
     public void CharacterSelection()
     {
         menuPanel.SetActive(false);
+        homePanel.SetActive(false);
         accountPanel.SetActive(false);
         configPanel.SetActive(false);
         newsPanel.SetActive(false);
@@ -106,7 +119,8 @@ public class MenuController : MonoBehaviour {
 
     public void Shop()
     {
-        menuPanel.SetActive(false);
+        menuPanel.SetActive(true);
+        homePanel.SetActive(false);
         accountPanel.SetActive(false);
         configPanel.SetActive(false);
         newsPanel.SetActive(false);
@@ -120,6 +134,7 @@ public class MenuController : MonoBehaviour {
     public void GameOver()
     {
         menuPanel.SetActive(false);
+        homePanel.SetActive(false);
         accountPanel.SetActive(false);
         configPanel.SetActive(false);
         newsPanel.SetActive(false);
@@ -132,27 +147,6 @@ public class MenuController : MonoBehaviour {
 
     public void LogOut()
     {
-        menuPanel.SetActive(false);
-        accountPanel.SetActive(false);
-        configPanel.SetActive(false);
-        newsPanel.SetActive(false);
-        rewardsPanel.SetActive(false);
-        charactersPanel.SetActive(false);
-        shopPanel.SetActive(false);
-        gameoverPanel.SetActive(false);
         logoutPanel.SetActive(true);
-    }
-
-    public void Close()
-    {
-        menuPanel.SetActive(true);
-        accountPanel.SetActive(false);
-        configPanel.SetActive(false);
-        newsPanel.SetActive(false);
-        rewardsPanel.SetActive(false);
-        charactersPanel.SetActive(false);
-        shopPanel.SetActive(false);
-        gameoverPanel.SetActive(false);
-        logoutPanel.SetActive(false);
     }
 }
