@@ -103,8 +103,11 @@ public class MenuController : MonoBehaviour {
         logoutPanel.SetActive(false);
     }
 
-    public void CharacterSelection()
+    public void CharSelection()
     {
+        CharacterSelection.instance.confirmButton.interactable = false;
+        CharacterMenuController.instance.NoPlayerSelection();
+
         menuPanel.SetActive(false);
         homePanel.SetActive(false);
         accountPanel.SetActive(false);
