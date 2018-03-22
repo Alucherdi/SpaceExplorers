@@ -6746,6 +6746,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 494fe770a4ac8424a9b13fb8f28b1aa0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cooldown: {fileID: 0}
   character: {fileID: 11400000, guid: c5ead796d3eaa974baeec126f72757ad, type: 2}
 --- !u!114 &591611549
 MonoBehaviour:
@@ -10502,6 +10503,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 494fe770a4ac8424a9b13fb8f28b1aa0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cooldown: {fileID: 0}
   character: {fileID: 11400000, guid: d6b3c9bb5cbf334439f14395f1e56b1f, type: 2}
 --- !u!114 &928188595
 MonoBehaviour:
@@ -11179,6 +11181,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 494fe770a4ac8424a9b13fb8f28b1aa0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cooldown: {fileID: 0}
   character: {fileID: 11400000, guid: 45e84e4765cbe8c418ebc891b2900f52, type: 2}
 --- !u!1 &941081342
 GameObject:
@@ -13675,6 +13678,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 494fe770a4ac8424a9b13fb8f28b1aa0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cooldown: {fileID: 0}
   character: {fileID: 11400000, guid: d6b3c9bb5cbf334439f14395f1e56b1f, type: 2}
 --- !u!114 &1133787041
 MonoBehaviour:
@@ -19903,12 +19907,13 @@ GameObject:
   - component: {fileID: 1605938173}
   - component: {fileID: 1605938172}
   - component: {fileID: 1605938171}
-  - component: {fileID: 1605938170}
+  - component: {fileID: 1605938180}
   - component: {fileID: 1605938169}
   - component: {fileID: 1605938168}
   - component: {fileID: 1605938167}
   - component: {fileID: 1605938166}
   - component: {fileID: 1605938165}
+  - component: {fileID: 1605938170}
   m_Layer: 0
   m_Name: Matsumoto
   m_TagString: Untagged
@@ -20019,14 +20024,26 @@ MonoBehaviour:
   m_GameObject: {fileID: 1605938164}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 75f01002ae8b56144a0d3ad1b826a865, type: 3}
+  m_Script: {fileID: 11500000, guid: 3634006b2d6ba9e40aca3794341930a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  swordHitbox: {fileID: 868327938}
-  spawnSword: {fileID: 0}
+  abb_q: {fileID: 0}
+  abb_w: {fileID: 0}
+  abb_e: {fileID: 0}
+  abb_r: {fileID: 0}
   cooldownQ: 0
-  cooldownQlimit: 0
-  active: 0
+  cooldownQlimit: 5
+  cooldownW: 0
+  cooldownWlimit: 5
+  cooldownE: 0
+  cooldownElimit: 5
+  cooldownR: 0
+  cooldownRlimit: 5
+  Yq: 0
+  Yw: 0
+  Ye: 0
+  Yr: 0
+  Yd: 0
 --- !u!114 &1605938171
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20038,6 +20055,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 494fe770a4ac8424a9b13fb8f28b1aa0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cooldown: {fileID: 1605938170}
   character: {fileID: 11400000, guid: d6b3c9bb5cbf334439f14395f1e56b1f, type: 2}
 --- !u!114 &1605938172
 MonoBehaviour:
@@ -20206,6 +20224,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1605938180
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1605938164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75f01002ae8b56144a0d3ad1b826a865, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  swordHitbox: {fileID: 868327938}
+  spawnSword: {fileID: 0}
+  active: 0
+  cooldown: {fileID: 1605938170}
 --- !u!1 &1607402971
 GameObject:
   m_ObjectHideFlags: 0

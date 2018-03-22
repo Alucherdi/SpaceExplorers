@@ -6,6 +6,7 @@ public class Wrapper : MonoBehaviour {
 
 	private Ability_abstract[] abilities;
 	private Hashtable abilitiesh;
+	public CooldownWrapper cooldown;
 
 	void Start()
 	{
@@ -24,26 +25,35 @@ public class Wrapper : MonoBehaviour {
 	public Character character;
 
 	public void launchQ()
-	{
-		abilities[0].launch();
+	{  if(cooldown.Yq){
+			abilities[0].launch();
+		}
 	}
 
 	public void launchW()
 	{
-		abilities[1].launch();
+		if (cooldown.Yw) {
+			abilities [1].launch ();
+		}
 	}
 
 	public void launchE()
 	{
-		abilities[2].launch();
+		if(cooldown.Ye){
+			abilities[2].launch();
+		}
 	}
 
 	public void launchR()
 	{
-		abilities[3].launch();
+		if(cooldown.Yr){
+			abilities[3].launch();
+		}
 	}
 
 	public void launchDash(){
-		abilities[4].launch();
+		if(cooldown.Yd){
+			abilities[4].launch();
+		}
 	}
 }

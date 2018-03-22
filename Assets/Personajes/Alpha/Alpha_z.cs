@@ -1,25 +1,21 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 
-public class Alpha_q : Ability_abstract {
+public class Alpha_z : Ability_abstract {
 
 	// Use this for initialization
 	public GameObject swordHitbox;
 	Camera mainCamera;
 	PlayerController pjController;
 	public GameObject spawnSword;
-	public bool active;
+
 	// Cooldown de abilidad
 	float costAbility = 25;
 	// CooldownWrapper.
 	public CooldownWrapper cooldown;
 
 	void Start () {
-		active = false;
 		swordHitbox.GetComponent<MeshRenderer> ().enabled = false;
 		mainCamera = FindObjectOfType<Camera> ();
 		pjController = GetComponent<PlayerController> ();
@@ -30,7 +26,7 @@ public class Alpha_q : Ability_abstract {
 	void Update () {
 		//cooldownQlimit = PlayerController.instance.stats.stats.launchQcd - (PlayerController.instance.stats.stats.launchQcd * (PlayerController.instance.stats.stats.cooldownReduction/100));
 		//if (cooldownQ == 0)
-		if(active)
+		if(cooldown.Yq)
 		{
 			if (Input.GetMouseButtonUp(0) && Cursor_q.instance.activeCursor == true)
 			{
@@ -44,8 +40,7 @@ public class Alpha_q : Ability_abstract {
 					PlayerController.instance.barraStamina.fillAmount -= costAbility / PlayerController.instance.stats.stats.stamina;
 					PlayerController.instance.AbilityOff();
 					// Inboke cancel
-					cooldown.Yq = false;
-					active = false;
+					cooldown.Yq =false;
 
 				}
 				else
@@ -67,6 +62,6 @@ public class Alpha_q : Ability_abstract {
 		Debug.Log ("Alpha q");
 		//cooldownQ=0;
 		Cursor_q.instance.Active(true);
-		active = true;
 	}
 }
+
