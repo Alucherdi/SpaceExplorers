@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement; //elimnar despues
 
 public class CharacterList : MonoBehaviour {
 
@@ -26,5 +27,14 @@ public class CharacterList : MonoBehaviour {
             characterList[1].SetActive(true);
         else if (CharacterSelection.instance.champname == "Kaleb_Dune")
             characterList[2].SetActive(true);
+    }
+
+    //Eliminar para despues
+    public void Back()
+    {
+        Time.timeScale = 1;
+        Loader.instance.LoadScene(1);
+        SceneManager.LoadScene(1);
+        MenuController.instance.Home();
     }
 }

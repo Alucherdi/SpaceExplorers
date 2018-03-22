@@ -27,7 +27,8 @@ public class MenuController : MonoBehaviour {
 
     public GameObject logoutPanel;
 
-	void Start () {
+
+    void Start () {
         instance = this;
 
         Home();
@@ -151,5 +152,10 @@ public class MenuController : MonoBehaviour {
     public void LogOut()
     {
         logoutPanel.SetActive(true);
+    }
+
+    public void CloseLogOut()
+    {
+        logoutPanel.SetActive(false);
     }
 }

@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class Loader : MonoBehaviour {
 
     public static Loader instance;
+
     public Image loaderImage;
     public Text loaderText;
     public GameObject loaderPanel;
@@ -17,9 +18,10 @@ public class Loader : MonoBehaviour {
     {
         instance = this;
 
-        DontDestroyOnLoad(this.gameObject);
+        DontDestroyOnLoad(gameObject);
         loading = false;
         loaderPanel.SetActive(false);
+
     }
 
     void Start()
@@ -36,6 +38,7 @@ public class Loader : MonoBehaviour {
             if (loaderScene.isDone)
                 loaderPanel.SetActive(false);
         }
+
     }
 
     public void LoadScene(int numscene)
