@@ -10,9 +10,9 @@ public class Kaleb_R : Ability_abstract
     public float cooldownRlimit;
 
     public GameObject bulletPanel;
-    public Image firstshootImage;
-    public Image secondshootImage;
     public Image thirdshootImage;
+    public Image secondshootImage;
+    public Image firstshootImage;
 
     public int bullets = 3;
     public float wait = 0;
@@ -67,6 +67,7 @@ public class Kaleb_R : Ability_abstract
             secondshootImage.enabled = false;
         else if (bullets == 0)
             thirdshootImage.enabled = false;
+
 
         if (cooldownR >= cooldownRlimit)
         {
