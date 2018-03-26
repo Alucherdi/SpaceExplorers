@@ -5,16 +5,29 @@ using UnityEngine;
 public class Alpha_e : Ability_abstract {
 
 	float costAbility = 25;
-	public float cooldownE=25;
-	public float cooldownElimit;
-	public bool active = false;
+	//public float cooldownE=25;
+	//public float cooldownElimit;
+	//public bool active = false;
+
+	// Cooldown wrapper 
+	public CooldownWrapper cooldown;
+	public bool active;
+
+	void Start () {
+		active = false;
+		cooldown = GetComponent<CooldownWrapper> ();
+		//swordHitbox.GetComponent<MeshRenderer> ().enabled = false;
+		//mainCamera = FindObjectOfType<Camera> ();
+		//pjController = GetComponent<PlayerController> ();
+
+	}
 
 
 	void Update()
 	{
-		cooldownElimit = PlayerController.instance.stats.stats.launchEcd - (PlayerController.instance.stats.stats.launchEcd * (PlayerController.instance.stats.stats.cooldownReduction/100));
+		//cooldownElimit = PlayerController.instance.stats.stats.launchEcd - (PlayerController.instance.stats.stats.launchEcd * (PlayerController.instance.stats.stats.cooldownReduction/100));
 
-		if (cooldownE == 0)
+		if (active)
 		{
 			if (Input.GetMouseButtonUp(0) && Cursor_e.instance.activeCursor == true)
 			{
@@ -26,6 +39,7 @@ public class Alpha_e : Ability_abstract {
 					//PlayerController.instance.LookDestination(SkillShotCursor.instance.newPosition);
 					PlayerController.instance.barraStamina.fillAmount -= costAbility / PlayerController.instance.stats.stats.stamina;
 					PlayerController.instance.AbilityOff();
+					cooldown.Ye= false;
 					active = false;
 				}
 				else
@@ -44,12 +58,13 @@ public class Alpha_e : Ability_abstract {
 			active = false;
 			Debug.Log ("Desaparece porque aun no llega el cd e");
 		}
-
+		/*
 		if (cooldownE >= cooldownElimit)
 		{
 			CancelInvoke("CoolDown");
 			cooldownE = 0;
 		} 
+		*/
 	}
 
 	public void PoisonedKnifes()
@@ -57,19 +72,13 @@ public class Alpha_e : Ability_abstract {
 		Debug.Log("Utilizaste los cuchillos envenedados >:v");
 		//PlayerController.instance.anim.SetTrigger("SpellQ");
 		BulletShooter.instance.BulletShot();
-		InvokeRepeating("CoolDown", 0.1f, 1.0f);
-	}
-
-	void CoolDown()
-	{
-		cooldownE++;
 	}
 
 
 	public override void launch()
 	{
 		active = true;
-		cooldownE=0;
+		//cooldownE=0;
 		Debug.Log ("Se esta presionando e");
 		Cursor_e.instance.Active(true);
 	}

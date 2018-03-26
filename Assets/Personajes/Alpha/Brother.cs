@@ -21,19 +21,8 @@ public class Brother : MonoBehaviour {
 	public bool started;
 
 	void Start () {
-		/*
-		for(int i=0; i < enemies.Count; i ++){
-			enemiesCheck [i] = false;
-		}
-		current = Time.time + interval;
-		cach = false;
-		follow = false;
-		search = true;
-		move = CheckClose ();
-		*/
 		started = false;
 		current = Time.time;
-		//ArtificialStart ();
 	}
 
 	public void ArtificialStart(){

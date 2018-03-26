@@ -20,6 +20,7 @@ public class Alpha_q : Ability_abstract {
 
 	void Start () {
 		active = false;
+		cooldown = GetComponent<CooldownWrapper> ();
 		swordHitbox.GetComponent<MeshRenderer> ().enabled = false;
 		mainCamera = FindObjectOfType<Camera> ();
 		pjController = GetComponent<PlayerController> ();

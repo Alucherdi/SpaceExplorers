@@ -91,7 +91,7 @@ public class CooldownWrapper : MonoBehaviour {
 		{
 			CancelInvoke("CoolDownW");
 			cooldownW = 0;
-			Yq = true;
+			Yw = true;
 		}
 		if (cooldownE >= cooldownElimit)
 		{
