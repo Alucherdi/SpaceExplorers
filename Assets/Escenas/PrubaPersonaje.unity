@@ -14974,7 +14974,7 @@ Prefab:
     - target: {fileID: 224431340675579148, guid: 1e4f3d5c7e6ed4e4fafa2ecd0ec5efca,
         type: 2}
       propertyPath: m_AnchorMin.x
-      value: 0.00000011175871
+      value: 0.000000059604645
       objectReference: {fileID: 0}
     - target: {fileID: 224431340675579148, guid: 1e4f3d5c7e6ed4e4fafa2ecd0ec5efca,
         type: 2}
@@ -19987,6 +19987,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   area: {fileID: 1786944071403894, guid: 9769a9e879a9d9746a68db9f3c0f2f76, type: 2}
+  cooldown: {fileID: 0}
+  active: 0
 --- !u!114 &1605938168
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19998,8 +20000,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 033a7f11a08c92841ab27cb5c676dcd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cooldownE: 0
-  cooldownElimit: 0
+  cooldown: {fileID: 0}
   active: 0
 --- !u!114 &1605938169
 MonoBehaviour:
@@ -20014,8 +20015,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shieldHitbox: {fileID: 985976066}
   spawnSword: {fileID: 1673654015}
-  cooldownW: 0
-  cooldownWlimit: 0
+  cooldown: {fileID: 0}
+  active: 0
 --- !u!114 &1605938170
 MonoBehaviour:
   m_ObjectHideFlags: 0
