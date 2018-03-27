@@ -7,7 +7,7 @@ public class CharacterList : MonoBehaviour {
 
     public GameObject[] characterList;
 
-	void Start () {
+	void Awake () {
         characterList = new GameObject[transform.childCount];
 
         characterList[0] = GameObject.Find("Leo23");

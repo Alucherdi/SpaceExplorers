@@ -22,7 +22,7 @@ public class EENDS_item : Item{
         active = true;
     }
 
-    void Start()
+    void Awake()
     {
         player = GameObject.FindWithTag("Player");
         destination = GameObject.Find("Teleport");
