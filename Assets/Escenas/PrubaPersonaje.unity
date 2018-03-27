@@ -8651,6 +8651,7 @@ GameObject:
   - component: {fileID: 1030678564}
   - component: {fileID: 1030678580}
   - component: {fileID: 1030678579}
+  - component: {fileID: 1030678581}
   m_Layer: 8
   m_Name: Kaleb_Dune
   m_TagString: Player
@@ -8982,6 +8983,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 967c3593b10efc1479f36bcf30cca7cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1030678581
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1030678563}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SceneId:
+    m_Value: 0
+  m_AssetId:
+    i0: 0
+    i1: 0
+    i2: 0
+    i3: 0
+    i4: 0
+    i5: 0
+    i6: 0
+    i7: 0
+    i8: 0
+    i9: 0
+    i10: 0
+    i11: 0
+    i12: 0
+    i13: 0
+    i14: 0
+    i15: 0
+  m_ServerOnly: 0
+  m_LocalPlayerAuthority: 0
 --- !u!1 &1031969217
 GameObject:
   m_ObjectHideFlags: 0
@@ -9710,6 +9743,7 @@ GameObject:
   - component: {fileID: 1133787034}
   - component: {fileID: 1133787049}
   - component: {fileID: 1133787050}
+  - component: {fileID: 1133787051}
   m_Layer: 8
   m_Name: Ek
   m_TagString: Player
@@ -10048,6 +10082,38 @@ MonoBehaviour:
     wood: 0
   max: 6
   backpack: []
+--- !u!114 &1133787051
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1133787033}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SceneId:
+    m_Value: 0
+  m_AssetId:
+    i0: 0
+    i1: 0
+    i2: 0
+    i3: 0
+    i4: 0
+    i5: 0
+    i6: 0
+    i7: 0
+    i8: 0
+    i9: 0
+    i10: 0
+    i11: 0
+    i12: 0
+    i13: 0
+    i14: 0
+    i15: 0
+  m_ServerOnly: 0
+  m_LocalPlayerAuthority: 0
 --- !u!1001 &1184544100
 Prefab:
   m_ObjectHideFlags: 0
@@ -17356,6 +17422,7 @@ GameObject:
   - component: {fileID: 1728201749}
   - component: {fileID: 1728201748}
   - component: {fileID: 1728201747}
+  - component: {fileID: 1728201764}
   m_Layer: 8
   m_Name: Leo23
   m_TagString: Player
@@ -17679,6 +17746,38 @@ Transform:
   m_Father: {fileID: 733214572}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1728201764
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1728201746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SceneId:
+    m_Value: 0
+  m_AssetId:
+    i0: 0
+    i1: 0
+    i2: 0
+    i3: 0
+    i4: 0
+    i5: 0
+    i6: 0
+    i7: 0
+    i8: 0
+    i9: 0
+    i10: 0
+    i11: 0
+    i12: 0
+    i13: 0
+    i14: 0
+    i15: 0
+  m_ServerOnly: 0
+  m_LocalPlayerAuthority: 0
 --- !u!1 &1731542944
 GameObject:
   m_ObjectHideFlags: 0
