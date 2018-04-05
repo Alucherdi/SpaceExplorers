@@ -37,7 +37,7 @@ public class PlayerController : NetworkBehaviour
     public Image barraStamina;
 
     public SpriteRenderer spritePlayer;//Cambiar
-    public Camera maincamera;
+    public GameObject maincamera;
 
     public int waitTime;
 
@@ -66,6 +66,8 @@ public class PlayerController : NetworkBehaviour
 
     void Update()
     {
+        maincamera = GameObject.Find("Main Camera");
+
         currentState = anim.GetCurrentAnimatorStateInfo(0);
 
         if (Input.GetMouseButtonDown(1) || Input.GetMouseButton(1))
