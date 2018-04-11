@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.57481706, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -1912,6 +1912,10 @@ Prefab:
       propertyPath: maincamera
       value: 
       objectReference: {fileID: 1825290478}
+    - target: {fileID: 1323493036895850, guid: 1f322e0f30b4b2547824528a0f6fde48, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1f322e0f30b4b2547824528a0f6fde48, type: 2}
   m_IsPrefabParent: 0
@@ -5315,7 +5319,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &733214572
 Transform:
   m_ObjectHideFlags: 0
@@ -7996,7 +8000,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1052042265
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13498,7 +13502,7 @@ GameObject:
   - component: {fileID: 1634857101}
   - component: {fileID: 1634857100}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: EENDB
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15211,6 +15215,10 @@ Prefab:
         type: 2}
       propertyPath: m_AssetId.i15
       value: 199
+      objectReference: {fileID: 0}
+    - target: {fileID: 1613608278457362, guid: 860fca77ae3014347a7fe7c694f1ecc7, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 860fca77ae3014347a7fe7c694f1ecc7, type: 2}
