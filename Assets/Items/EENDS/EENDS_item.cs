@@ -22,11 +22,14 @@ public class EENDS_item : Item{
         active = true;
     }
 
-    void Update()
+    void Awake()
     {
         player = GameObject.FindWithTag("Player");
         destination = GameObject.Find("Teleport");
+    }
 
+    void Update()
+    {
         teleportPosition = destination.transform.position;
 
         if (cooldown == 0 && active == true)
