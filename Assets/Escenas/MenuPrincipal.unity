@@ -1194,8 +1194,8 @@ MonoBehaviour:
   networkManager: {fileID: 0}
   characterList:
   - {fileID: 1688912391183572, guid: 33deece69293c9e4f84cf5e46348911f, type: 2}
-  - {fileID: 1323493036895850, guid: 1f322e0f30b4b2547824528a0f6fde48, type: 2}
-  - {fileID: 1613608278457362, guid: 860fca77ae3014347a7fe7c694f1ecc7, type: 2}
+  - {fileID: 1536946327454832, guid: 9b3f5170426242846a8281e6b959386f, type: 2}
+  - {fileID: 1474679734591538, guid: e312a386ed2d9fb4a8bb49571a9d1033, type: 2}
 --- !u!1 &258195815
 GameObject:
   m_ObjectHideFlags: 0
@@ -5761,9 +5761,9 @@ MonoBehaviour:
   champText: {fileID: 550679603}
   champsImages:
   - {fileID: 21300000, guid: 0cce3db30858d0b48acfac646957d4ed, type: 3}
-  - {fileID: 21300050, guid: 3ff94384c9197b14790401b476f85571, type: 3}
+  - {fileID: 21300000, guid: 0cd02ef1ce646a242b75a1f90617efe8, type: 3}
   - {fileID: 21300278, guid: ffb0a75cc0f08e740b0e3083024cc53f, type: 3}
-  - {fileID: 21300422, guid: ffb0a75cc0f08e740b0e3083024cc53f, type: 3}
+  - {fileID: 21300000, guid: 3bf7685ea07577548b9b30a91a83b5b0, type: 3}
   - {fileID: 21300000, guid: 15bb57175a52df847af2a80bc39d2aa2, type: 3}
 --- !u!114 &1260578059
 MonoBehaviour:
