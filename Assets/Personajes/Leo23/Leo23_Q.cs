@@ -30,7 +30,7 @@ public class Leo23_Q : Ability_abstract
                 if (PlayerController.instance.barraStamina.fillAmount >= costAbility / PlayerController.instance.stats.stats.stamina)
                 {
                     SkillShotCursor.instance.activeCursor = false;
-                    ThrowObject.instance.ObjectThrow();
+                    ThrowObject.instance.CmdObjectThrow();
                     InvokeRepeating("CoolDown", 0.1f, 1.0f);
                     PlayerController.instance.barraStamina.fillAmount -= costAbility / PlayerController.instance.stats.stats.stamina;
                     PlayerController.instance.AbilityOff();
