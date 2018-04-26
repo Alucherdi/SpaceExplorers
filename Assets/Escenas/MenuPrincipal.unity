@@ -1090,7 +1090,7 @@ MonoBehaviour:
   m_ScriptCRCCheck: 1
   m_MaxDelay: 0.01
   m_LogLevel: 2
-  m_PlayerPrefab: {fileID: 1688912391183572, guid: 33deece69293c9e4f84cf5e46348911f,
+  m_PlayerPrefab: {fileID: 1010011852535188, guid: 01bb92497ba6de64e9486bc703d641bf,
     type: 2}
   m_AutoCreatePlayer: 1
   m_PlayerSpawnMethod: 0
@@ -1196,6 +1196,7 @@ MonoBehaviour:
   - {fileID: 1688912391183572, guid: 33deece69293c9e4f84cf5e46348911f, type: 2}
   - {fileID: 1536946327454832, guid: 9b3f5170426242846a8281e6b959386f, type: 2}
   - {fileID: 1474679734591538, guid: e312a386ed2d9fb4a8bb49571a9d1033, type: 2}
+  spawnPoint: {fileID: 0}
 --- !u!1 &258195815
 GameObject:
   m_ObjectHideFlags: 0
