@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
                     
-public enum States {START,LOG_IN,LOBBY,SEARCH_MATCH,IN_GAME,BACK_MENU,VICTORY,GAME_OVER,EXIT,LOG_OUT}
+public enum States {START,LOBBY,SEARCH_MATCH,IN_GAME,BACK_MENU,GAME_OVER,EXIT,LOG_OUT}
+
+//public enum States { START, LOG_IN, LOBBY, SEARCH_MATCH, IN_GAME, BACK_MENU, VICTORY, GAME_OVER, EXIT, LOG_OUT }
 
 public class GameState : MonoBehaviour
 {
@@ -11,8 +13,6 @@ public class GameState : MonoBehaviour
 
     public States currentState;
 
-    public delegate void LoginEvent();
-    public LoginEvent login;
     public delegate void LobbyEvent();
     public LobbyEvent lobby;
     public delegate void SearchMatchEvent();
@@ -21,8 +21,6 @@ public class GameState : MonoBehaviour
     public InGameEvent ingame;
     public delegate void BackMenuEvent();
     public BackMenuEvent backmenu;
-    public delegate void VictoryEvent();
-    public VictoryEvent victory;
     public delegate void GameOverEvent();
     public GameOverEvent gameover;
     public delegate void ExitEvent();
@@ -47,12 +45,10 @@ public class GameState : MonoBehaviour
     {
         currentState = States.START;
 
-        login += Login;
         lobby += Lobby;
         searchmatch += SearchMatch;
         ingame += InGame;
         backmenu += BackMenu;
-        victory += Victory;
         gameover += GameOver;
         exit += ExitGame;
         logout += Logout;
@@ -64,10 +60,6 @@ public class GameState : MonoBehaviour
 
         switch(currentState)
         {
-            case States.LOG_IN:
-                login();
-                break;
-
             case States.LOBBY:
                 lobby();
                 break;
@@ -84,10 +76,6 @@ public class GameState : MonoBehaviour
                 backmenu();
                 break;
 
-            case States.VICTORY:
-                victory();
-                break;
-
             case States.GAME_OVER:
                 gameover();
                 break;
@@ -102,19 +90,15 @@ public class GameState : MonoBehaviour
         }
     }
 
-    public void Login()
-    {
-
-    }
-
     public void Lobby()
     {
-
+        Time.timeScale = 1;
+        //MenuController.instance.Lobby();
     }
 
     public void SearchMatch()
     {
-
+        //Matchmaking
     }
 
     public void InGame()
@@ -131,13 +115,6 @@ public class GameState : MonoBehaviour
         MenuController.instance.Home();
     }
 
-    public void Victory()
-    {
-        Time.timeScale = 1;
-        //SceneManager.LoadScene();
-        MenuController.instance.GameOver(); //Mas letrero de victoria
-    }
-
     public void GameOver()
     {
         Time.timeScale = 1;
@@ -147,7 +124,7 @@ public class GameState : MonoBehaviour
 
     public void Logout()
     {
-
+        //
     }
 
     public void ExitGame()

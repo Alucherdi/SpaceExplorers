@@ -5295,7 +5295,6 @@ MonoBehaviour:
   - {fileID: 1728201746}
   - {fileID: 1133787033}
   - {fileID: 1030678563}
-  spawnPoint: {fileID: 0}
 --- !u!1 &733297126
 GameObject:
   m_ObjectHideFlags: 0
@@ -9928,7 +9927,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1812849203655254, guid: 1e4f3d5c7e6ed4e4fafa2ecd0ec5efca, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1256097374370722, guid: 1e4f3d5c7e6ed4e4fafa2ecd0ec5efca, type: 2}
       propertyPath: m_IsActive
@@ -9941,6 +9940,36 @@ Prefab:
     - target: {fileID: 1743663868759890, guid: 1e4f3d5c7e6ed4e4fafa2ecd0ec5efca, type: 2}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224663572350344132, guid: 1e4f3d5c7e6ed4e4fafa2ecd0ec5efca,
+        type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224137247237823424, guid: 1e4f3d5c7e6ed4e4fafa2ecd0ec5efca,
+        type: 2}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 224546809319359314, guid: 1e4f3d5c7e6ed4e4fafa2ecd0ec5efca,
+        type: 2}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 224011996745592834, guid: 1e4f3d5c7e6ed4e4fafa2ecd0ec5efca,
+        type: 2}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 224546209629189120, guid: 1e4f3d5c7e6ed4e4fafa2ecd0ec5efca,
+        type: 2}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224381001884526938, guid: 1e4f3d5c7e6ed4e4fafa2ecd0ec5efca,
+        type: 2}
+      propertyPath: m_RootOrder
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1e4f3d5c7e6ed4e4fafa2ecd0ec5efca, type: 2}
