@@ -4,4 +4,13 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Escenas/Loader.unity
+    guid: f5189f894dcf1534e90e53d22d0ff8a0
+  - enabled: 1
+    path: Assets/Escenas/MenuPrincipal.unity
+    guid: 0185af26d6c1d16488c7108baa2e1380
+  - enabled: 1
+    path: Assets/Escenas/PrubaPersonaje.unity
+    guid: 06fc922b8ceb56c4183c717924566734

@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb97cbf6083783f44bad99c04bf02097, type: 3}
+  m_Name: Assassin
+  m_EditorClassIdentifier: 
+  characterName: Assassin_Proto
+  stats:
+    health: 400
+    stamina: 200
+    healthRegen: 10
+    staminaRegen: 10
+    physicalDamage: 80
+    energyDamage: 10
+    physicalResist: 80
+    energyResist: 50
+    movementSpeed: 75
+    attackSpeed: 75
+    cooldownReduction: 20
+    launchQcd: 5
+    launchWcd: 5
+    launchEcd: 10
+    launchRcd: 25
+    launchDcd: 10
+  modifiers:
+    health: 0.5
+    stamina: 0.5
+    healthRegen: 0.5
+    staminaRegen: 0.5
+    physicalDamage: 0.5
+    energyDamage: 0.5
+    physicalResist: 0.5
+    energyResist: 0.5
+    movementSpeed: 0.5
+    attackSpeed: 0.5
+    cooldownReduction: 0.5

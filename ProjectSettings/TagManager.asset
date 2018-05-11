@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Enemy
   - Floor
+  - Knife
+  - Lightsaber
+  - Item
   layers:
   - Default
   - TransparentFX
@@ -15,10 +18,10 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
-  - 
+  - Players
+  - Environment
+  - Ground
+  - Minimap
   - 
   - 
   - 
