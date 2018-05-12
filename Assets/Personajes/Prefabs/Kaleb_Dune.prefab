@@ -28,8 +28,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
-<<<<<<< HEAD
-=======
 --- !u!1 &1069332571541192
 GameObject:
   m_ObjectHideFlags: 0
@@ -46,7 +44,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
->>>>>>> Armando
 --- !u!1 &1074977059743002
 GameObject:
   m_ObjectHideFlags: 1
@@ -233,11 +230,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-<<<<<<< HEAD
-  m_IsActive: 1
-=======
   m_IsActive: 0
->>>>>>> Armando
 --- !u!1 &1572030822351558
 GameObject:
   m_ObjectHideFlags: 1
@@ -361,8 +354,6 @@ Transform:
   m_Father: {fileID: 4915122863503830}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< HEAD
-=======
 --- !u!4 &4526687326834296
 Transform:
   m_ObjectHideFlags: 1
@@ -376,7 +367,6 @@ Transform:
   m_Father: {fileID: 4915122863503830}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 90, y: -90, z: 0}
->>>>>>> Armando
 --- !u!4 &4618555901832930
 Transform:
   m_ObjectHideFlags: 1
@@ -415,10 +405,7 @@ Transform:
   m_Children:
   - {fileID: 224739740658834460}
   - {fileID: 4009703402736388}
-<<<<<<< HEAD
-=======
   - {fileID: 4526687326834296}
->>>>>>> Armando
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1150,11 +1137,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1474679734591538}
-<<<<<<< HEAD
-  m_Enabled: 1
-=======
   m_Enabled: 0
->>>>>>> Armando
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ffb4a5b661f57cb4891f99a35d3b105a, type: 3}
   m_Name: 
@@ -1320,13 +1303,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-<<<<<<< HEAD
-  m_Sprite: {fileID: 21300000, guid: 0cce3db30858d0b48acfac646957d4ed, type: 3}
-  m_Color: {r: 0.051876336, g: 0.6838235, b: 0, a: 1}
-=======
   m_Sprite: {fileID: 21300000, guid: 3bf7685ea07577548b9b30a91a83b5b0, type: 3}
   m_Color: {r: 1, g: 0.4980392, b: 0.4980392, a: 1}
->>>>>>> Armando
   m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
@@ -1335,8 +1313,6 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-<<<<<<< HEAD
-=======
 --- !u!212 &212513097557879216
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -1381,7 +1357,6 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
->>>>>>> Armando
 --- !u!222 &222142038000919404
 CanvasRenderer:
   m_ObjectHideFlags: 1
