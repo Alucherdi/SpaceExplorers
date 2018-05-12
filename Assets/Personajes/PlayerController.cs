@@ -37,10 +37,7 @@ public class PlayerController : NetworkBehaviour
     public Image barraStamina;
 
     public SpriteRenderer spritePlayer;//Cambiar
-<<<<<<< HEAD
-=======
 
->>>>>>> Armando
     public GameObject maincamera;
 
     public int waitTime;

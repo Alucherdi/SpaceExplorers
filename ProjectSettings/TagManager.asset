@@ -3,12 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - Enemy
-  - Floor
-  - Knife
-  - Lightsaber
-  - Item
+  tags: []
   layers:
   - Default
   - TransparentFX
@@ -18,14 +13,10 @@ TagManager:
   - UI
   - 
   - 
-  - Players
-  - Environment
-  - Ground
-<<<<<<< HEAD
   - 
-=======
-  - Minimap
->>>>>>> Armando
+  - 
+  - 
+  - 
   - 
   - 
   - 
