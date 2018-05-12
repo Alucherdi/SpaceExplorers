@@ -9,119 +9,208 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
+<<<<<<< HEAD
   m_RootGameObject: {fileID: 1688912391183572}
   m_IsPrefabParent: 1
 --- !u!1 &1027633752239056
+=======
+  m_RootGameObject: {fileID: 1938568056259122}
+  m_IsPrefabParent: 1
+--- !u!1 &1056981464950286
+>>>>>>> Armando
 GameObject:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 224834004233523600}
   - component: {fileID: 222700353914697168}
   - component: {fileID: 114598906967291612}
   m_Layer: 8
   m_Name: AreaSkillImage
+=======
+  - component: {fileID: 224559919187751964}
+  - component: {fileID: 222095749834359794}
+  - component: {fileID: 114116798997274662}
+  m_Layer: 8
+  m_Name: InfoPlayerPanel
+>>>>>>> Armando
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD
 --- !u!1 &1036340792899680
 GameObject:
   m_ObjectHideFlags: 1
+=======
+--- !u!1 &1168052431495460
+GameObject:
+  m_ObjectHideFlags: 0
+>>>>>>> Armando
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 224317317057404806}
   - component: {fileID: 222993820563267338}
   - component: {fileID: 114175242196575318}
   m_Layer: 8
   m_Name: StaminaImage
+=======
+  - component: {fileID: 4389467853029408}
+  - component: {fileID: 212733770214882380}
+  m_Layer: 11
+  m_Name: MinimapCursor
+>>>>>>> Armando
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD
 --- !u!1 &1069527316913612
 GameObject:
   m_ObjectHideFlags: 0
+=======
+--- !u!1 &1267045515408688
+GameObject:
+  m_ObjectHideFlags: 1
+>>>>>>> Armando
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 224930537546765212}
   - component: {fileID: 223490857053350622}
   - component: {fileID: 114035419447762412}
   - component: {fileID: 114042400613470328}
   m_Layer: 8
   m_Name: InfoPlayerCanvas
+=======
+  - component: {fileID: 4034209306459074}
+  - component: {fileID: 33057084229642040}
+  - component: {fileID: 65615819425795660}
+  - component: {fileID: 23499663383337328}
+  - component: {fileID: 114931588995471318}
+  m_Layer: 8
+  m_Name: CubeSword
+>>>>>>> Armando
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD
 --- !u!1 &1087522966074406
 GameObject:
   m_ObjectHideFlags: 0
+=======
+--- !u!1 &1308302695322964
+GameObject:
+  m_ObjectHideFlags: 1
+>>>>>>> Armando
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 4509683809113544}
   - component: {fileID: 212831556882518092}
   - component: {fileID: 60085249690202220}
   m_Layer: 8
   m_Name: Lightsaber
+=======
+  - component: {fileID: 4826907465639332}
+  m_Layer: 8
+  m_Name: Teleport
+>>>>>>> Armando
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD
 --- !u!1 &1153580741884036
+=======
+--- !u!1 &1355596947347332
+>>>>>>> Armando
 GameObject:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 4979265343200636}
   m_Layer: 8
   m_Name: Teleport
+=======
+  - component: {fileID: 224332006622906392}
+  - component: {fileID: 222803177377526448}
+  - component: {fileID: 114100522256748542}
+  m_Layer: 8
+  m_Name: StaminaImage
+>>>>>>> Armando
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD
 --- !u!1 &1173433513118068
+=======
+--- !u!1 &1452475987723850
+>>>>>>> Armando
 GameObject:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 224534999517686164}
   - component: {fileID: 222038992764730264}
   - component: {fileID: 114468816069308690}
   m_Layer: 8
   m_Name: LifeImage
+=======
+  - component: {fileID: 224758766371423958}
+  - component: {fileID: 222012693069873738}
+  - component: {fileID: 114747367613171756}
+  m_Layer: 8
+  m_Name: AreaSkillImage
+>>>>>>> Armando
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD
 --- !u!1 &1276071656375952
+=======
+--- !u!1 &1698673698457340
+>>>>>>> Armando
 GameObject:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 224746086084747530}
   - component: {fileID: 222348185212174184}
   - component: {fileID: 114123328407507392}
+=======
+  - component: {fileID: 224486709574720372}
+  - component: {fileID: 222092012411879890}
+  - component: {fileID: 114824458494603374}
+>>>>>>> Armando
   m_Layer: 8
   m_Name: SkillShotCursorImage
   m_TagString: Untagged
@@ -129,13 +218,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD
 --- !u!1 &1338932640735818
+=======
+--- !u!1 &1718324928913188
+>>>>>>> Armando
 GameObject:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 4582781151523306}
   - component: {fileID: 33038608224371316}
   - component: {fileID: 65045886827818216}
@@ -143,36 +237,62 @@ GameObject:
   - component: {fileID: 114860025208445476}
   m_Layer: 8
   m_Name: CubeSword
+=======
+  - component: {fileID: 224023653996619024}
+  - component: {fileID: 222515947655952100}
+  - component: {fileID: 114075430591804850}
+  m_Layer: 8
+  m_Name: SkillCursorImage
+>>>>>>> Armando
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD
 --- !u!1 &1570889959390550
 GameObject:
   m_ObjectHideFlags: 1
+=======
+--- !u!1 &1781875591597454
+GameObject:
+  m_ObjectHideFlags: 0
+>>>>>>> Armando
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 224335125881247878}
   - component: {fileID: 223267404278115734}
   - component: {fileID: 114825474731869974}
   - component: {fileID: 114998414993384274}
   m_Layer: 8
   m_Name: AbilitiesCanvas
+=======
+  - component: {fileID: 4185117548252556}
+  - component: {fileID: 114851000382371902}
+  - component: {fileID: 114737620874658144}
+  m_Layer: 8
+  m_Name: Abilities
+>>>>>>> Armando
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD
 --- !u!1 &1688912391183572
+=======
+--- !u!1 &1834586794639352
+>>>>>>> Armando
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 4913611890843278}
   - component: {fileID: 212883158387688712}
   - component: {fileID: 136766222338555214}
@@ -196,61 +316,127 @@ GameObject:
   m_Layer: 8
   m_Name: Leo23
   m_TagString: Player
+=======
+  - component: {fileID: 4466254101868424}
+  - component: {fileID: 212375990790459586}
+  - component: {fileID: 60085791863311840}
+  m_Layer: 8
+  m_Name: Lightsaber
+  m_TagString: Untagged
+>>>>>>> Armando
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD
 --- !u!1 &1739929431026068
+=======
+--- !u!1 &1912757127859750
+>>>>>>> Armando
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 4649593926702182}
   - component: {fileID: 114955622574909780}
   - component: {fileID: 114510260368186972}
   m_Layer: 8
   m_Name: Abilities
+=======
+  - component: {fileID: 224761164090569748}
+  - component: {fileID: 223049244656009438}
+  - component: {fileID: 114850178731897824}
+  - component: {fileID: 114070277747952902}
+  m_Layer: 8
+  m_Name: InfoPlayerCanvas
+>>>>>>> Armando
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD
 --- !u!1 &1834982628197290
+=======
+--- !u!1 &1929185853998170
+>>>>>>> Armando
 GameObject:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 224789024755914266}
   - component: {fileID: 222122126918280138}
   - component: {fileID: 114696769657410530}
   m_Layer: 8
   m_Name: SkillCursorImage
+=======
+  - component: {fileID: 224838027481897084}
+  - component: {fileID: 222384629802318570}
+  - component: {fileID: 114593419427784594}
+  m_Layer: 8
+  m_Name: LifeImage
+>>>>>>> Armando
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD
 --- !u!1 &1997988089177412
 GameObject:
   m_ObjectHideFlags: 1
+=======
+--- !u!1 &1938568056259122
+GameObject:
+  m_ObjectHideFlags: 0
+>>>>>>> Armando
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 224355252486225780}
   - component: {fileID: 222373551497745260}
   - component: {fileID: 114479552464339894}
   m_Layer: 8
   m_Name: InfoPlayerPanel
   m_TagString: Untagged
+=======
+  - component: {fileID: 4915208725662354}
+  - component: {fileID: 212167037043439480}
+  - component: {fileID: 136327911004051416}
+  - component: {fileID: 54528614802014530}
+  - component: {fileID: 95862328301617992}
+  - component: {fileID: 195085350448138680}
+  - component: {fileID: 114965773969947910}
+  - component: {fileID: 114703678006756626}
+  - component: {fileID: 114261808292383518}
+  - component: {fileID: 114043284620256014}
+  - component: {fileID: 114338579429021974}
+  - component: {fileID: 114893263722764184}
+  - component: {fileID: 114506589501418368}
+  - component: {fileID: 114882292367300332}
+  - component: {fileID: 114462294793361038}
+  - component: {fileID: 114217400216863944}
+  - component: {fileID: 114532824039205388}
+  - component: {fileID: 114307049636491204}
+  - component: {fileID: 114541790419425816}
+  - component: {fileID: 114997841991003924}
+  m_Layer: 8
+  m_Name: Leo23
+  m_TagString: Player
+>>>>>>> Armando
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD
 --- !u!4 &4509683809113544
 Transform:
   m_ObjectHideFlags: 1
@@ -265,28 +451,65 @@ Transform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!4 &4582781151523306
+=======
+--- !u!1 &1959839020912490
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 224613172224984754}
+  - component: {fileID: 223831463086026408}
+  - component: {fileID: 114924888842721536}
+  - component: {fileID: 114749377671438074}
+  m_Layer: 8
+  m_Name: AbilitiesCanvas
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4034209306459074
+>>>>>>> Armando
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
+<<<<<<< HEAD
   m_GameObject: {fileID: 1338932640735818}
+=======
+  m_GameObject: {fileID: 1267045515408688}
+>>>>>>> Armando
   m_LocalRotation: {x: -0.00000008940697, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.02, y: 1.129, z: 0.195}
   m_LocalScale: {x: 0.04, y: 0.04, z: 0.04}
   m_Children: []
+<<<<<<< HEAD
   m_Father: {fileID: 4649593926702182}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4649593926702182
+=======
+  m_Father: {fileID: 4185117548252556}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4185117548252556
+>>>>>>> Armando
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
+<<<<<<< HEAD
   m_GameObject: {fileID: 1739929431026068}
+=======
+  m_GameObject: {fileID: 1781875591597454}
+>>>>>>> Armando
   m_LocalRotation: {x: 0.00000008940697, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: -0.55, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children:
+<<<<<<< HEAD
   - {fileID: 224335125881247878}
   - {fileID: 4582781151523306}
   - {fileID: 4979265343200636}
@@ -294,10 +517,20 @@ Transform:
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4913611890843278
+=======
+  - {fileID: 224613172224984754}
+  - {fileID: 4034209306459074}
+  - {fileID: 4826907465639332}
+  m_Father: {fileID: 4915208725662354}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4389467853029408
+>>>>>>> Armando
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
+<<<<<<< HEAD
   m_GameObject: {fileID: 1688912391183572}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -1370.6001, y: -726.3, z: 125}
@@ -310,24 +543,80 @@ Transform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4979265343200636
+=======
+  m_GameObject: {fileID: 1168052431495460}
+  m_LocalRotation: {x: 0.5, y: -0.5, z: 0.5, w: 0.5}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4915208725662354}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 90, y: -90, z: 0}
+--- !u!4 &4466254101868424
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1834586794639352}
+  m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: -0.33380127, y: 0.088000014, z: -0.0009994507}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4915208725662354}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+--- !u!4 &4826907465639332
+>>>>>>> Armando
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+<<<<<<< HEAD
   m_GameObject: {fileID: 1153580741884036}
+=======
+  m_GameObject: {fileID: 1308302695322964}
+>>>>>>> Armando
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
+<<<<<<< HEAD
   m_Father: {fileID: 4649593926702182}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &23920511482667030
+=======
+  m_Father: {fileID: 4185117548252556}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4915208725662354
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1938568056259122}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1370.6001, y: -726.3, z: 125}
+  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_Children:
+  - {fileID: 4466254101868424}
+  - {fileID: 224761164090569748}
+  - {fileID: 4185117548252556}
+  - {fileID: 4389467853029408}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &23499663383337328
+>>>>>>> Armando
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
+<<<<<<< HEAD
   m_GameObject: {fileID: 1338932640735818}
+=======
+  m_GameObject: {fileID: 1267045515408688}
+>>>>>>> Armando
   m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -356,19 +645,33 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+<<<<<<< HEAD
 --- !u!33 &33038608224371316
+=======
+--- !u!33 &33057084229642040
+>>>>>>> Armando
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
+<<<<<<< HEAD
   m_GameObject: {fileID: 1338932640735818}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!54 &54262220446717562
+=======
+  m_GameObject: {fileID: 1267045515408688}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &54528614802014530
+>>>>>>> Armando
 Rigidbody:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
+<<<<<<< HEAD
   m_GameObject: {fileID: 1688912391183572}
+=======
+  m_GameObject: {fileID: 1938568056259122}
+>>>>>>> Armando
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
@@ -378,12 +681,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+<<<<<<< HEAD
 --- !u!60 &60085249690202220
+=======
+--- !u!60 &60085791863311840
+>>>>>>> Armando
 PolygonCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
+<<<<<<< HEAD
   m_GameObject: {fileID: 1087522966074406}
+=======
+  m_GameObject: {fileID: 1834586794639352}
+>>>>>>> Armando
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -409,25 +720,41 @@ PolygonCollider2D:
       - {x: 0.16, y: 0.16}
       - {x: 0.08, y: 0.16}
       - {x: -0.16, y: 0.049999997}
+<<<<<<< HEAD
 --- !u!65 &65045886827818216
+=======
+--- !u!65 &65615819425795660
+>>>>>>> Armando
 BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
+<<<<<<< HEAD
   m_GameObject: {fileID: 1338932640735818}
+=======
+  m_GameObject: {fileID: 1267045515408688}
+>>>>>>> Armando
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
 --- !u!95 &95746650088522518
+=======
+--- !u!95 &95862328301617992
+>>>>>>> Armando
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
+<<<<<<< HEAD
   m_GameObject: {fileID: 1688912391183572}
+=======
+  m_GameObject: {fileID: 1938568056259122}
+>>>>>>> Armando
   m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: f1c6f5204e3cd9349a39b3f56630c446, type: 2}
@@ -438,6 +765,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+<<<<<<< HEAD
 --- !u!114 &114035419447762412
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -460,10 +788,14 @@ MonoBehaviour:
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
 --- !u!114 &114036981889496732
+=======
+--- !u!114 &114043284620256014
+>>>>>>> Armando
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
+<<<<<<< HEAD
   m_GameObject: {fileID: 1688912391183572}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -473,11 +805,27 @@ MonoBehaviour:
   cooldownW: 0
   cooldownWLimit: 0
 --- !u!114 &114042400613470328
+=======
+  m_GameObject: {fileID: 1938568056259122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3aeef331bb52cf142b5fc4e27c5e40a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cooldownQ: 0
+  cooldownQlimit: 0
+  throwObject: {fileID: 1834586794639352}
+--- !u!114 &114070277747952902
+>>>>>>> Armando
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
+<<<<<<< HEAD
   m_GameObject: {fileID: 1069527316913612}
+=======
+  m_GameObject: {fileID: 1912757127859750}
+>>>>>>> Armando
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 1301386320, guid: f70555f144d8491a825f0804e09c671c, type: 3}
@@ -488,6 +836,7 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+<<<<<<< HEAD
 --- !u!114 &114046793902257718
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -514,11 +863,18 @@ MonoBehaviour:
   cooldownQlimit: 0
   throwObject: {fileID: 1087522966074406}
 --- !u!114 &114123328407507392
+=======
+--- !u!114 &114075430591804850
+>>>>>>> Armando
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
+<<<<<<< HEAD
   m_GameObject: {fileID: 1276071656375952}
+=======
+  m_GameObject: {fileID: 1718324928913188}
+>>>>>>> Armando
   m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
@@ -532,7 +888,11 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+<<<<<<< HEAD
   m_Sprite: {fileID: 21300000, guid: e3de2d859a9c16640a79d371aa567e15, type: 3}
+=======
+  m_Sprite: {fileID: 21300000, guid: b556e31f06c1f224bb389459e7219b43, type: 3}
+>>>>>>> Armando
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -540,12 +900,20 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+<<<<<<< HEAD
 --- !u!114 &114175242196575318
+=======
+--- !u!114 &114100522256748542
+>>>>>>> Armando
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
+<<<<<<< HEAD
   m_GameObject: {fileID: 1036340792899680}
+=======
+  m_GameObject: {fileID: 1355596947347332}
+>>>>>>> Armando
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
@@ -567,11 +935,16 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 1
+<<<<<<< HEAD
 --- !u!114 &114191078675456454
+=======
+--- !u!114 &114116798997274662
+>>>>>>> Armando
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
+<<<<<<< HEAD
   m_GameObject: {fileID: 1688912391183572}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -582,10 +955,36 @@ MonoBehaviour:
   cooldownDashLimit: 0
   dash: 0
 --- !u!114 &114271345343122540
+=======
+  m_GameObject: {fileID: 1056981464950286}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!114 &114217400216863944
+>>>>>>> Armando
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
+<<<<<<< HEAD
   m_GameObject: {fileID: 1688912391183572}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -601,10 +1000,20 @@ MonoBehaviour:
   max: 6
   backpack: []
 --- !u!114 &114292435043697800
+=======
+  m_GameObject: {fileID: 1938568056259122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 967c3593b10efc1479f36bcf30cca7cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114261808292383518
+>>>>>>> Armando
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
+<<<<<<< HEAD
   m_GameObject: {fileID: 1688912391183572}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -622,10 +1031,21 @@ MonoBehaviour:
   m_InterpolateRotation: 1
   m_InterpolateMovement: 1
 --- !u!114 &114379646040633876
+=======
+  m_GameObject: {fileID: 1938568056259122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 494fe770a4ac8424a9b13fb8f28b1aa0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  character: {fileID: 11400000, guid: 45e84e4765cbe8c418ebc891b2900f52, type: 2}
+--- !u!114 &114307049636491204
+>>>>>>> Armando
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
+<<<<<<< HEAD
   m_GameObject: {fileID: 1688912391183572}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -635,10 +1055,41 @@ MonoBehaviour:
   cooldownR: 0
   cooldownRLimit: 0
 --- !u!114 &114390298252422936
+=======
+  m_GameObject: {fileID: 1938568056259122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SceneId:
+    m_Value: 0
+  m_AssetId:
+    i0: 51
+    i1: 222
+    i2: 236
+    i3: 230
+    i4: 146
+    i5: 147
+    i6: 201
+    i7: 228
+    i8: 248
+    i9: 76
+    i10: 245
+    i11: 228
+    i12: 99
+    i13: 72
+    i14: 145
+    i15: 31
+  m_ServerOnly: 0
+  m_LocalPlayerAuthority: 1
+--- !u!114 &114338579429021974
+>>>>>>> Armando
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
+<<<<<<< HEAD
   m_GameObject: {fileID: 1688912391183572}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -647,10 +1098,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   character: {fileID: 11400000, guid: 45e84e4765cbe8c418ebc891b2900f52, type: 2}
 --- !u!114 &114401334293928958
+=======
+  m_GameObject: {fileID: 1938568056259122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 972f4176f221b4e4bbe9b19447f4b873, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cooldownW: 0
+  cooldownWLimit: 0
+--- !u!114 &114462294793361038
+>>>>>>> Armando
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
+<<<<<<< HEAD
   m_GameObject: {fileID: 1688912391183572}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -676,10 +1139,49 @@ MonoBehaviour:
   maincamera: {fileID: 0}
   waitTime: 0
 --- !u!114 &114468816069308690
+=======
+  m_GameObject: {fileID: 1938568056259122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 634244d49852c4149a34eeefe4806bbf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stats:
+    health: 0
+    stamina: 0
+    healthRegen: 0
+    staminaRegen: 0
+    physicalDamage: 0
+    energyDamage: 0
+    physicalResist: 0
+    energyResist: 0
+    movementSpeed: 0
+    attackSpeed: 0
+    cooldownReduction: 0
+    launchQcd: 0
+    launchWcd: 0
+    launchEcd: 0
+    launchRcd: 0
+    launchDcd: 0
+  modifiers:
+    health: 0
+    stamina: 0
+    healthRegen: 0
+    staminaRegen: 0
+    physicalDamage: 0
+    energyDamage: 0
+    physicalResist: 0
+    energyResist: 0
+    movementSpeed: 0
+    attackSpeed: 0
+    cooldownReduction: 0
+--- !u!114 &114506589501418368
+>>>>>>> Armando
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
+<<<<<<< HEAD
   m_GameObject: {fileID: 1173433513118068}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -703,10 +1205,22 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 1
 --- !u!114 &114475236433320576
+=======
+  m_GameObject: {fileID: 1938568056259122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3bfcb4c9a5bd9c45914617c0c890367, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cooldownR: 0
+  cooldownRLimit: 0
+--- !u!114 &114532824039205388
+>>>>>>> Armando
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
+<<<<<<< HEAD
   m_GameObject: {fileID: 1688912391183572}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -715,24 +1229,71 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
 --- !u!114 &114479552464339894
+=======
+  m_GameObject: {fileID: 1938568056259122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04cd31c6beabab14f97e3c62ca7ed461, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  materials:
+    water: 0
+    metal: 0
+    leaves: 0
+    organic: 0
+    wood: 0
+  max: 6
+  backpack: []
+--- !u!114 &114541790419425816
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1938568056259122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1768714887, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_TransformSyncMode: 1
+  m_SendInterval: 0.05882353
+  m_SyncRotationAxis: 7
+  m_RotationSyncCompression: 0
+  m_SyncSpin: 0
+  m_MovementTheshold: 0.001
+  m_VelocityThreshold: 0.0001
+  m_SnapThreshold: 5
+  m_InterpolateRotation: 1
+  m_InterpolateMovement: 1
+--- !u!114 &114593419427784594
+>>>>>>> Armando
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+<<<<<<< HEAD
   m_GameObject: {fileID: 1997988089177412}
+=======
+  m_GameObject: {fileID: 1929185853998170}
+>>>>>>> Armando
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
+<<<<<<< HEAD
   m_Color: {r: 1, g: 1, b: 1, a: 0}
+=======
+  m_Color: {r: 0.35119238, g: 0.71323526, b: 0.23599698, a: 1}
+>>>>>>> Armando
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+<<<<<<< HEAD
   m_Sprite: {fileID: 0}
   m_Type: 1
   m_PreserveAspect: 0
@@ -742,10 +1303,22 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
 --- !u!114 &114505601297133368
+=======
+  m_Sprite: {fileID: 21300000, guid: 0626b924325d1c34cafa6b22297f4e4f, type: 3}
+  m_Type: 3
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 0
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 1
+--- !u!114 &114703678006756626
+>>>>>>> Armando
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
+<<<<<<< HEAD
   m_GameObject: {fileID: 1688912391183572}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -764,11 +1337,42 @@ MonoBehaviour:
   - {fileID: 114046793902257718}
   - {fileID: 114271345343122540}
 --- !u!114 &114510260368186972
+=======
+  m_GameObject: {fileID: 1938568056259122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b818ab9082472d4c9bcf34851e5af37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  navMeshAgent: {fileID: 0}
+  movementMask:
+    serializedVersion: 2
+    m_Bits: 1024
+  stats: {fileID: 0}
+  anim: {fileID: 0}
+  newPosition: {x: 0, y: 0, z: 0}
+  moving: 0
+  abilityQ: 0
+  abilityW: 0
+  abilityE: 0
+  abilityR: 0
+  dash: 0
+  barraVida: {fileID: 114593419427784594}
+  barraStamina: {fileID: 114100522256748542}
+  spritePlayer: {fileID: 0}
+  maincamera: {fileID: 0}
+  waitTime: 0
+--- !u!114 &114737620874658144
+>>>>>>> Armando
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
+<<<<<<< HEAD
   m_GameObject: {fileID: 1739929431026068}
+=======
+  m_GameObject: {fileID: 1781875591597454}
+>>>>>>> Armando
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0b091302ad24837458474ee1ef240dd2, type: 3}
@@ -776,14 +1380,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   activeCursor: 0
   newPosition: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
   areaSkillImage: {fileID: 114598906967291612}
   cursorSkillIamge: {fileID: 114696769657410530}
 --- !u!114 &114598906967291612
+=======
+  areaSkillImage: {fileID: 114747367613171756}
+  cursorSkillIamge: {fileID: 114075430591804850}
+--- !u!114 &114747367613171756
+>>>>>>> Armando
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
+<<<<<<< HEAD
   m_GameObject: {fileID: 1027633752239056}
+=======
+  m_GameObject: {fileID: 1452475987723850}
+>>>>>>> Armando
   m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
@@ -805,11 +1419,16 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+<<<<<<< HEAD
 --- !u!114 &114616029396724262
+=======
+--- !u!114 &114749377671438074
+>>>>>>> Armando
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
+<<<<<<< HEAD
   m_GameObject: {fileID: 1688912391183572}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -859,11 +1478,29 @@ MonoBehaviour:
   cooldownE: 0
   cooldownELimit: 0
 --- !u!114 &114696769657410530
+=======
+  m_GameObject: {fileID: 1959839020912490}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1301386320, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &114824458494603374
+>>>>>>> Armando
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
+<<<<<<< HEAD
   m_GameObject: {fileID: 1834982628197290}
+=======
+  m_GameObject: {fileID: 1698673698457340}
+>>>>>>> Armando
   m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
@@ -877,7 +1514,11 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+<<<<<<< HEAD
   m_Sprite: {fileID: 21300000, guid: b556e31f06c1f224bb389459e7219b43, type: 3}
+=======
+  m_Sprite: {fileID: 21300000, guid: e3de2d859a9c16640a79d371aa567e15, type: 3}
+>>>>>>> Armando
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -885,12 +1526,20 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+<<<<<<< HEAD
 --- !u!114 &114825474731869974
+=======
+--- !u!114 &114850178731897824
+>>>>>>> Armando
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
+<<<<<<< HEAD
   m_GameObject: {fileID: 1570889959390550}
+=======
+  m_GameObject: {fileID: 1912757127859750}
+>>>>>>> Armando
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
@@ -906,11 +1555,16 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
+<<<<<<< HEAD
 --- !u!114 &114851060162455042
+=======
+--- !u!114 &114851000382371902
+>>>>>>> Armando
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
+<<<<<<< HEAD
   m_GameObject: {fileID: 1688912391183572}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -939,22 +1593,91 @@ MonoBehaviour:
   m_ServerOnly: 0
   m_LocalPlayerAuthority: 1
 --- !u!114 &114860025208445476
+=======
+  m_GameObject: {fileID: 1781875591597454}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf7c1e8001c302048b393c95a9128b5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  newPosition: {x: 0, y: 0, z: 0}
+  activeCursor: 0
+  skillShotCursorImage: {fileID: 114824458494603374}
+--- !u!114 &114882292367300332
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1938568056259122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb86ce2cfecdcbb4181fdb8714fa1313, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cooldownDash: 0
+  cooldownDashLimit: 0
+  dash: 0
+--- !u!114 &114893263722764184
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1938568056259122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 891baafdac8db674188201f9c525019e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cooldownE: 0
+  cooldownELimit: 0
+--- !u!114 &114924888842721536
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1959839020912490}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 0
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 800, y: 600}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+--- !u!114 &114931588995471318
+>>>>>>> Armando
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+<<<<<<< HEAD
   m_GameObject: {fileID: 1338932640735818}
+=======
+  m_GameObject: {fileID: 1267045515408688}
+>>>>>>> Armando
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c111377ed6842734390e93f26b7509a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   boomer: {fileID: 1495745850131530, guid: 35177c0fccd8c014881edcdce57b41f1, type: 2}
+<<<<<<< HEAD
 --- !u!114 &114955622574909780
+=======
+--- !u!114 &114965773969947910
+>>>>>>> Armando
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
+<<<<<<< HEAD
   m_GameObject: {fileID: 1739929431026068}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -965,10 +1688,21 @@ MonoBehaviour:
   activeCursor: 0
   skillShotCursorImage: {fileID: 114123328407507392}
 --- !u!114 &114998414993384274
+=======
+  m_GameObject: {fileID: 1938568056259122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a49296cd41dee44ab22afc7b3d8e55b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+--- !u!114 &114997841991003924
+>>>>>>> Armando
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
+<<<<<<< HEAD
   m_GameObject: {fileID: 1570889959390550}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -981,11 +1715,35 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
 --- !u!136 &136766222338555214
+=======
+  m_GameObject: {fileID: 1938568056259122}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffb4a5b661f57cb4891f99a35d3b105a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  componentsToDisable:
+  - {fileID: 114703678006756626}
+  - {fileID: 114261808292383518}
+  - {fileID: 114043284620256014}
+  - {fileID: 114338579429021974}
+  - {fileID: 114893263722764184}
+  - {fileID: 114506589501418368}
+  - {fileID: 114882292367300332}
+  - {fileID: 114462294793361038}
+  - {fileID: 114217400216863944}
+  - {fileID: 114532824039205388}
+--- !u!136 &136327911004051416
+>>>>>>> Armando
 CapsuleCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
+<<<<<<< HEAD
   m_GameObject: {fileID: 1688912391183572}
+=======
+  m_GameObject: {fileID: 1938568056259122}
+>>>>>>> Armando
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
@@ -993,12 +1751,20 @@ CapsuleCollider:
   m_Height: 1.08
   m_Direction: 1
   m_Center: {x: 0.016278459, y: 0, z: 0.000083160405}
+<<<<<<< HEAD
 --- !u!195 &195091871188088392
+=======
+--- !u!195 &195085350448138680
+>>>>>>> Armando
 NavMeshAgent:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
+<<<<<<< HEAD
   m_GameObject: {fileID: 1688912391183572}
+=======
+  m_GameObject: {fileID: 1938568056259122}
+>>>>>>> Armando
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.25
@@ -1014,56 +1780,19 @@ NavMeshAgent:
   m_BaseOffset: 0.54
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+<<<<<<< HEAD
 --- !u!212 &212831556882518092
+=======
+--- !u!212 &212167037043439480
+>>>>>>> Armando
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
+<<<<<<< HEAD
   m_GameObject: {fileID: 1087522966074406}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300096, guid: ffb0a75cc0f08e740b0e3083024cc53f, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 0.48, y: 0.48}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
---- !u!212 &212883158387688712
-SpriteRenderer:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1688912391183572}
+=======
+  m_GameObject: {fileID: 1938568056259122}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -1102,48 +1831,192 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!212 &212375990790459586
+SpriteRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1834586794639352}
+>>>>>>> Armando
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300096, guid: ffb0a75cc0f08e740b0e3083024cc53f, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 0.48, y: 0.48}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+<<<<<<< HEAD
+--- !u!212 &212883158387688712
+=======
+--- !u!212 &212733770214882380
+>>>>>>> Armando
+SpriteRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+<<<<<<< HEAD
+  m_GameObject: {fileID: 1688912391183572}
+=======
+  m_GameObject: {fileID: 1168052431495460}
+>>>>>>> Armando
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+<<<<<<< HEAD
+  m_Sprite: {fileID: 21300000, guid: 0cce3db30858d0b48acfac646957d4ed, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 1
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1.28, y: 1.28}
+=======
+  m_Sprite: {fileID: 21300000, guid: 5a10b8eb8ceb2d2428e44fcf9f58ec94, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+>>>>>>> Armando
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+<<<<<<< HEAD
 --- !u!222 &222038992764730264
+=======
+--- !u!222 &222012693069873738
+>>>>>>> Armando
 CanvasRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
+<<<<<<< HEAD
   m_GameObject: {fileID: 1173433513118068}
 --- !u!222 &222122126918280138
+=======
+  m_GameObject: {fileID: 1452475987723850}
+--- !u!222 &222092012411879890
+>>>>>>> Armando
 CanvasRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
+<<<<<<< HEAD
   m_GameObject: {fileID: 1834982628197290}
 --- !u!222 &222348185212174184
+=======
+  m_GameObject: {fileID: 1698673698457340}
+--- !u!222 &222095749834359794
+>>>>>>> Armando
 CanvasRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
+<<<<<<< HEAD
   m_GameObject: {fileID: 1276071656375952}
 --- !u!222 &222373551497745260
+=======
+  m_GameObject: {fileID: 1056981464950286}
+--- !u!222 &222384629802318570
+>>>>>>> Armando
 CanvasRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
+<<<<<<< HEAD
   m_GameObject: {fileID: 1997988089177412}
 --- !u!222 &222700353914697168
+=======
+  m_GameObject: {fileID: 1929185853998170}
+--- !u!222 &222515947655952100
+>>>>>>> Armando
 CanvasRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
+<<<<<<< HEAD
   m_GameObject: {fileID: 1027633752239056}
 --- !u!222 &222993820563267338
+=======
+  m_GameObject: {fileID: 1718324928913188}
+--- !u!222 &222803177377526448
+>>>>>>> Armando
 CanvasRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
+<<<<<<< HEAD
   m_GameObject: {fileID: 1036340792899680}
 --- !u!223 &223267404278115734
+=======
+  m_GameObject: {fileID: 1355596947347332}
+--- !u!223 &223049244656009438
+>>>>>>> Armando
 Canvas:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
+<<<<<<< HEAD
   m_GameObject: {fileID: 1570889959390550}
+=======
+  m_GameObject: {fileID: 1912757127859750}
+>>>>>>> Armando
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 2
@@ -1158,12 +2031,20 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+<<<<<<< HEAD
 --- !u!223 &223490857053350622
+=======
+--- !u!223 &223831463086026408
+>>>>>>> Armando
 Canvas:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
+<<<<<<< HEAD
   m_GameObject: {fileID: 1069527316913612}
+=======
+  m_GameObject: {fileID: 1959839020912490}
+>>>>>>> Armando
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 2
@@ -1178,16 +2059,25 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+<<<<<<< HEAD
 --- !u!224 &224317317057404806
+=======
+--- !u!224 &224023653996619024
+>>>>>>> Armando
 RectTransform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
+<<<<<<< HEAD
   m_GameObject: {fileID: 1036340792899680}
+=======
+  m_GameObject: {fileID: 1718324928913188}
+>>>>>>> Armando
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
+<<<<<<< HEAD
   m_Father: {fileID: 224355252486225780}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1217,10 +2107,22 @@ RectTransform:
   m_SizeDelta: {x: 25, y: 25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224355252486225780
+=======
+  m_Father: {fileID: 224758766371423958}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.4, y: 0.4}
+  m_AnchorMax: {x: 0.6, y: 0.6}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!224 &224332006622906392
+>>>>>>> Armando
 RectTransform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
+<<<<<<< HEAD
   m_GameObject: {fileID: 1997988089177412}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -1237,10 +2139,27 @@ RectTransform:
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224534999517686164
+=======
+  m_GameObject: {fileID: 1355596947347332}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 224559919187751964}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!224 &224486709574720372
+>>>>>>> Armando
 RectTransform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
+<<<<<<< HEAD
   m_GameObject: {fileID: 1173433513118068}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -1250,21 +2169,47 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
+=======
+  m_GameObject: {fileID: 1698673698457340}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 224613172224984754}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+>>>>>>> Armando
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+<<<<<<< HEAD
 --- !u!224 &224746086084747530
+=======
+--- !u!224 &224559919187751964
+>>>>>>> Armando
 RectTransform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
+<<<<<<< HEAD
   m_GameObject: {fileID: 1276071656375952}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 224335125881247878}
+=======
+  m_GameObject: {fileID: 1056981464950286}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 224838027481897084}
+  - {fileID: 224332006622906392}
+  m_Father: {fileID: 224761164090569748}
+>>>>>>> Armando
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1272,11 +2217,16 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+<<<<<<< HEAD
 --- !u!224 &224789024755914266
+=======
+--- !u!224 &224613172224984754
+>>>>>>> Armando
 RectTransform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
+<<<<<<< HEAD
   m_GameObject: {fileID: 1834982628197290}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -1291,17 +2241,44 @@ RectTransform:
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224834004233523600
+=======
+  m_GameObject: {fileID: 1959839020912490}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
+  m_Children:
+  - {fileID: 224486709574720372}
+  - {fileID: 224758766371423958}
+  m_Father: {fileID: 4185117548252556}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0.1}
+  m_SizeDelta: {x: 25, y: 25}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!224 &224758766371423958
+>>>>>>> Armando
 RectTransform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
+<<<<<<< HEAD
   m_GameObject: {fileID: 1027633752239056}
+=======
+  m_GameObject: {fileID: 1452475987723850}
+>>>>>>> Armando
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1.0000005, z: 1.0000005}
   m_Children:
+<<<<<<< HEAD
   - {fileID: 224789024755914266}
   m_Father: {fileID: 224335125881247878}
+=======
+  - {fileID: 224023653996619024}
+  m_Father: {fileID: 224613172224984754}
+>>>>>>> Armando
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1309,18 +2286,31 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+<<<<<<< HEAD
 --- !u!224 &224930537546765212
+=======
+--- !u!224 &224761164090569748
+>>>>>>> Armando
 RectTransform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
+<<<<<<< HEAD
   m_GameObject: {fileID: 1069527316913612}
+=======
+  m_GameObject: {fileID: 1912757127859750}
+>>>>>>> Armando
   m_LocalRotation: {x: 0.00000008940697, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_Children:
+<<<<<<< HEAD
   - {fileID: 224355252486225780}
   m_Father: {fileID: 4913611890843278}
+=======
+  - {fileID: 224559919187751964}
+  m_Father: {fileID: 4915208725662354}
+>>>>>>> Armando
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1328,3 +2318,24 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0.55}
   m_SizeDelta: {x: 7.5, y: 1.5}
   m_Pivot: {x: 0.5, y: 0}
+<<<<<<< HEAD
+=======
+--- !u!224 &224838027481897084
+RectTransform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1929185853998170}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 224559919187751964}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+>>>>>>> Armando
