@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.57481706, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -2675,7 +2675,7 @@ Prefab:
       objectReference: {fileID: 1825290478}
     - target: {fileID: 1938568056259122, guid: 33deece69293c9e4f84cf5e46348911f, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 33deece69293c9e4f84cf5e46348911f, type: 2}
@@ -16895,6 +16895,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69f8e69852af3c34190933a7ccfdd8f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerTransform: {fileID: 0}
 --- !u!124 &2091367315
 Behaviour:
   m_ObjectHideFlags: 0
@@ -16912,7 +16913,7 @@ Camera:
   m_GameObject: {fileID: 2091367313}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 2
+  m_ClearFlags: 1
   m_BackGroundColor: {r: 0.31600437, g: 0.31249517, b: 0.627451, a: 1}
   m_NormalizedViewPortRect:
     serializedVersion: 2
@@ -16920,15 +16921,15 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
+  near clip plane: -10
   far clip plane: 1000
   field of view: 60
-  orthographic: 0
-  orthographic size: 5
+  orthographic: 1
+  orthographic size: 30
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 2048
+    m_Bits: 4294967295
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 8400000, guid: 97f109aec66498c4e832b69e2226aff3, type: 2}
   m_TargetDisplay: 0
