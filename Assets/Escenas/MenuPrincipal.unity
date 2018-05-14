@@ -9211,6 +9211,7 @@ MonoBehaviour:
   shopPanel: {fileID: 1774514723}
   gameoverPanel: {fileID: 2095189543}
   logoutPanel: {fileID: 1103963719}
+  hudPanel: {fileID: 2080088647}
 --- !u!1 &1262863942
 GameObject:
   m_ObjectHideFlags: 0
@@ -10354,7 +10355,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1556853036
 RectTransform:
   m_ObjectHideFlags: 0
@@ -13313,7 +13314,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1983329698
 RectTransform:
   m_ObjectHideFlags: 0
