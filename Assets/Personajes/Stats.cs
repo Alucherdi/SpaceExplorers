@@ -46,8 +46,15 @@ public class Stats : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-
-	}
+        HudController.instace.health.text = stats.health.ToString();
+        HudController.instace.stamina.text = stats.stamina.ToString();
+        HudController.instace.physicalDamege.text = stats.physicalDamage.ToString();
+        HudController.instace.energyDamage.text = stats.energyDamage.ToString();
+        HudController.instace.physicalResist.text = stats.physicalResist.ToString();
+        HudController.instace.energyResist.text = stats.energyResist.ToString();
+        HudController.instace.moveSpeed.text = stats.movementSpeed.ToString();
+        HudController.instace.attackSpeed.text = stats.attackSpeed.ToString();
+    }
 
 
 

@@ -29,6 +29,7 @@ public class Assassin_Q : Ability_abstract
                     //PlayerController.instance.LookDestination(SkillShotCursor.instance.newPosition);
                     PlayerController.instance.barraStamina.fillAmount -= costAbility / PlayerController.instance.stats.stats.stamina;
                     PlayerController.instance.AbilityOff();
+                    HudController.instace.skillQ.fillAmount = 0;
                 }
                 else
                 {
@@ -47,6 +48,7 @@ public class Assassin_Q : Ability_abstract
         {
             CancelInvoke("CoolDown");
             cooldownQ = 0;
+            HudController.instace.skillQ.fillAmount = 1;
         } 
     }
 
@@ -61,5 +63,6 @@ public class Assassin_Q : Ability_abstract
     void CoolDown()
     {
         cooldownQ++;
+        HudController.instace.skillQ.fillAmount += 1/ cooldownQlimit;
     }
 }

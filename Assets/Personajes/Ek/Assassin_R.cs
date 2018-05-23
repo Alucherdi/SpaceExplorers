@@ -47,6 +47,7 @@ public class Assassin_R : Ability_abstract
                             AreaSkillCursor.instance.activeCursor = false;
                             PlayerController.instance.barraStamina.fillAmount -= costAbility / PlayerController.instance.stats.stats.stamina;
                             PlayerController.instance.AbilityOff();
+                            HudController.instace.skillR.fillAmount = 0;
                         }
                     }
                 }
@@ -66,6 +67,7 @@ public class Assassin_R : Ability_abstract
         {
             CancelInvoke("CoolDown");
             cooldownR = 0;
+            HudController.instace.skillR.fillAmount = 1;
         }
     }
 
@@ -85,5 +87,6 @@ public class Assassin_R : Ability_abstract
     void CoolDown()
     {
         cooldownR++;
+        HudController.instace.skillR.fillAmount += 1 / cooldownRlimit;
     }
 }

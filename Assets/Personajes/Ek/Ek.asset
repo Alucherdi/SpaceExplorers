@@ -9,9 +9,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cb97cbf6083783f44bad99c04bf02097, type: 3}
-  m_Name: Assassin
+  m_Name: Ek
   m_EditorClassIdentifier: 
-  characterName: Assassin_Proto
+  characterName: Ek
   stats:
     health: 400
     stamina: 200

@@ -230,7 +230,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1572030822351558
 GameObject:
   m_ObjectHideFlags: 1
@@ -916,7 +916,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 494fe770a4ac8424a9b13fb8f28b1aa0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  character: {fileID: 11400000, guid: 45e84e4765cbe8c418ebc891b2900f52, type: 2}
+  character: {fileID: 11400000, guid: c5ead796d3eaa974baeec126f72757ad, type: 2}
 --- !u!114 &114667656014691470
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1303,8 +1303,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 3bf7685ea07577548b9b30a91a83b5b0, type: 3}
-  m_Color: {r: 1, g: 0.4980392, b: 0.4980392, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 0cce3db30858d0b48acfac646957d4ed, type: 3}
+  m_Color: {r: 0.19619678, g: 0.53676474, b: 0, a: 1}
   m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
