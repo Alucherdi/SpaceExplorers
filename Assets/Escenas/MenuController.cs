@@ -28,7 +28,19 @@ public class MenuController : MonoBehaviour {
     public GameObject logoutPanel;
 
     public GameObject hudPanel;
+    public Text health;
+    public Text stamina;
+    public Text physicalDamege;
+    public Text energyDamage;
+    public Text physicalResist;
+    public Text energyResist;
+    public Text moveSpeed;
+    public Text attackSpeed;
 
+    public Image skillQ;
+    public Image skillW;
+    public Image skillE;
+    public Image skillR;
 
     void Start () {
         instance = this;

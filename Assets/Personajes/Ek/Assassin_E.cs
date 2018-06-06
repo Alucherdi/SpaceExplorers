@@ -32,13 +32,13 @@ public class Assassin_E : Ability_abstract
         {
             CancelInvoke("CoolDown");
             cooldownE = 0;
-            HudController.instace.skillE.fillAmount = 1;
+            MenuController.instance.skillE.fillAmount = 1;
         }
     }
 
     public void DisableCamouflage()
     {
-        HudController.instace.skillE.fillAmount = 0;
+        MenuController.instance.skillE.fillAmount = 0;
         PlayerController.instance.spritePlayer.enabled = true;
         InvokeRepeating("CoolDown", 0.1f, 1.0f);
     }
@@ -55,6 +55,6 @@ public class Assassin_E : Ability_abstract
     void CoolDown()
     {
         cooldownE++;
-        HudController.instace.skillE.fillAmount += 1 / cooldownElimit;
+        MenuController.instance.skillE.fillAmount += 1 / cooldownElimit;
     }
 }

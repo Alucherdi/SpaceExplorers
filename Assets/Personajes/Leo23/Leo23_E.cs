@@ -30,6 +30,7 @@ public class Leo23_E : Ability_abstract
         {
             CancelInvoke("CoolDown");
             cooldownE = 0;
+            MenuController.instance.skillE.fillAmount = 1;
         }
     }
 
@@ -38,6 +39,7 @@ public class Leo23_E : Ability_abstract
         PlayerController.instance.maincamera.GetComponent<OtherWorldEffect>().enabled = false;
         InvokeRepeating("CoolDown", 0.1f, 1.0f);
         PlayerController.instance.AbilityOff();
+        MenuController.instance.skillE.fillAmount = 0;
     }
 
     public void ActiveOtherWorld()
@@ -51,5 +53,6 @@ public class Leo23_E : Ability_abstract
     void CoolDown()
     {
         cooldownE++;
+        MenuController.instance.skillE.fillAmount += 1 / cooldownELimit;
     }
 }

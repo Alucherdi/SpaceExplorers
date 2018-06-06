@@ -84,6 +84,7 @@ public class Kaleb_E : Ability_abstract
         {
             CancelInvoke("CoolDown");
             cooldownE = 0;
+            MenuController.instance.skillE.fillAmount = 1;
         }
 
     }
@@ -97,6 +98,7 @@ public class Kaleb_E : Ability_abstract
         InvokeRepeating("CoolDown", 0.1f, 1.0f);
         PlayerController.instance.barraStamina.fillAmount -= costAbility / PlayerController.instance.stats.stats.stamina;
         PlayerController.instance.AbilityOff();
+        MenuController.instance.skillE.fillAmount = 0;
     }
 
     public void Jump()
@@ -121,6 +123,7 @@ public class Kaleb_E : Ability_abstract
     void CoolDown()
     {
         cooldownE++;
+        MenuController.instance.skillE.fillAmount += 1 / cooldownElimit;
     }
 
     void JumpingTime()

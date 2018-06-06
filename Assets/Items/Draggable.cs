@@ -7,13 +7,13 @@ using UnityEngine.UI;
 public class Draggable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler {
 
 	Vector3 positionReturn;
-	public Image OriginalIcon; // Itself
+	public Sprite OriginalIcon; // Itself
 	public Sprite sprite;
 	public int slot;
 
 	public void OnBeginDrag(PointerEventData eventData){
 		positionReturn = transform.position;
-		sprite = OriginalIcon.sprite;
+		sprite = OriginalIcon;
 		GetComponent<CanvasGroup> ().blocksRaycasts = false;
 		slot = transform.parent.parent.GetComponent<InventorySlot> ().slotNumber;
 	}

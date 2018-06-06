@@ -11,7 +11,8 @@ public class InventorySlot : MonoBehaviour {
 	public int slotNumber;
 	// Numero en vez de game object
 
-	void Start () {
+	void Update () {
+        player = InventoryUI.instance.player;
 		inventory = player.GetComponent<Inventory> ();
 		//inventory.onItemChangedCallback += UpdateUI;
 	}

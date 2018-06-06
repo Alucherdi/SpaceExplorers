@@ -29,6 +29,7 @@ public class Kaleb_W : Ability_abstract
         {
             CancelInvoke("CoolDown");
             cooldownW = 0;
+            MenuController.instance.skillW.fillAmount = 1;
         }
     }
 
@@ -42,6 +43,7 @@ public class Kaleb_W : Ability_abstract
         PlayerController.instance.maincamera.GetComponent<EnemyDetector>().enabled = false;
         PlayerController.instance.barraStamina.fillAmount -= costAbility / PlayerController.instance.stats.stats.stamina;
         PlayerController.instance.AbilityOff();
+        MenuController.instance.skillW.fillAmount = 0;
     }
 
     public void ActiveVision()
@@ -58,6 +60,7 @@ public class Kaleb_W : Ability_abstract
     void CoolDown()
     {
         cooldownW++;
+        MenuController.instance.skillW.fillAmount += 1 / cooldownWlimit;
     }
 
     void Wait()
