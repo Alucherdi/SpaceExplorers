@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+
 public class DropZone : MonoBehaviour, IDropHandler {
 	//public Image icon;
 	public int slot;
@@ -12,7 +13,9 @@ public class DropZone : MonoBehaviour, IDropHandler {
 	public InventoryUI inventoryUI;
 	public Inventory inventory;
 	Item item;
-	void Start(){
+
+	void Update(){
+        player = InventoryUI.instance.player;
 		inventory = player.GetComponent<Inventory> ();
 		inventoryUI = canvas.GetComponent<InventoryUI> ();
 	}

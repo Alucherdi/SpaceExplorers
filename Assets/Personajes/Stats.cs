@@ -46,8 +46,15 @@ public class Stats : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-
-	}
+        MenuController.instance.health.text = stats.health.ToString();
+        MenuController.instance.stamina.text = stats.stamina.ToString();
+        MenuController.instance.physicalDamege.text = stats.physicalDamage.ToString();
+        MenuController.instance.energyDamage.text = stats.energyDamage.ToString();
+        MenuController.instance.physicalResist.text = stats.physicalResist.ToString();
+        MenuController.instance.energyResist.text = stats.energyResist.ToString();
+        MenuController.instance.moveSpeed.text = stats.movementSpeed.ToString();
+        MenuController.instance.attackSpeed.text = stats.attackSpeed.ToString();
+    }
 
 
 

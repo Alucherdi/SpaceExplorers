@@ -26,6 +26,7 @@ public class Kaleb_Q : Ability_abstract
                     Bullet();
                     PlayerController.instance.barraStamina.fillAmount -= costAbility / PlayerController.instance.stats.stats.stamina;
                     PlayerController.instance.AbilityOff();
+                    MenuController.instance.skillQ.fillAmount = 0;
                 }
                 else
                 {
@@ -44,6 +45,7 @@ public class Kaleb_Q : Ability_abstract
         {
             CancelInvoke("CoolDown");
             cooldownQ = 0;
+            MenuController.instance.skillQ.fillAmount = 1;
         }
     }
 
@@ -58,5 +60,6 @@ public class Kaleb_Q : Ability_abstract
     void CoolDown()
     {
         cooldownQ++;
+        MenuController.instance.skillQ.fillAmount += 1 / cooldownQlimit;
     }
 }

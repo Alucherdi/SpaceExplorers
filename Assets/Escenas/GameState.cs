@@ -106,6 +106,7 @@ public class GameState : MonoBehaviour
         Time.timeScale = 1;
         Loader.instance.LoadScene(2);
         SceneManager.LoadScene(2);
+        MenuController.instance.InGame();
     }
 
     public void BackMenu()

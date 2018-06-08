@@ -27,6 +27,20 @@ public class MenuController : MonoBehaviour {
 
     public GameObject logoutPanel;
 
+    public GameObject hudPanel;
+    public Text health;
+    public Text stamina;
+    public Text physicalDamege;
+    public Text energyDamage;
+    public Text physicalResist;
+    public Text energyResist;
+    public Text moveSpeed;
+    public Text attackSpeed;
+
+    public Image skillQ;
+    public Image skillW;
+    public Image skillE;
+    public Image skillR;
 
     void Start () {
         instance = this;
@@ -46,6 +60,7 @@ public class MenuController : MonoBehaviour {
         shopPanel.SetActive(false);
         gameoverPanel.SetActive(false);
         logoutPanel.SetActive(false);
+        hudPanel.SetActive(false);
     }
 
     public void MyAccount()
@@ -60,6 +75,7 @@ public class MenuController : MonoBehaviour {
         shopPanel.SetActive(false);
         gameoverPanel.SetActive(false);
         logoutPanel.SetActive(false);
+        hudPanel.SetActive(false);
     }
 
     public void Options()
@@ -74,6 +90,7 @@ public class MenuController : MonoBehaviour {
         shopPanel.SetActive(false);
         gameoverPanel.SetActive(false);
         logoutPanel.SetActive(false);
+        hudPanel.SetActive(false);
     }
 
     public void News()
@@ -88,6 +105,7 @@ public class MenuController : MonoBehaviour {
         shopPanel.SetActive(false);
         gameoverPanel.SetActive(false);
         logoutPanel.SetActive(false);
+        hudPanel.SetActive(false);
     }
 
     public void Rewards()
@@ -102,6 +120,7 @@ public class MenuController : MonoBehaviour {
         shopPanel.SetActive(false);
         gameoverPanel.SetActive(false);
         logoutPanel.SetActive(false);
+        hudPanel.SetActive(false);
     }
 
     public void CharSelection()
@@ -119,6 +138,7 @@ public class MenuController : MonoBehaviour {
         shopPanel.SetActive(false);
         gameoverPanel.SetActive(false);
         logoutPanel.SetActive(false);
+        hudPanel.SetActive(false);
     }
 
     public void Shop()
@@ -133,6 +153,22 @@ public class MenuController : MonoBehaviour {
         shopPanel.SetActive(true);
         gameoverPanel.SetActive(false);
         logoutPanel.SetActive(false);
+        hudPanel.SetActive(false);
+    }
+
+    public void InGame()
+    {
+        menuPanel.SetActive(false);
+        homePanel.SetActive(false);
+        accountPanel.SetActive(false);
+        configPanel.SetActive(false);
+        newsPanel.SetActive(false);
+        rewardsPanel.SetActive(false);
+        charactersPanel.SetActive(false);
+        shopPanel.SetActive(false);
+        gameoverPanel.SetActive(false);
+        logoutPanel.SetActive(false);
+        hudPanel.SetActive(true);
     }
 
     public void GameOver()
@@ -147,6 +183,7 @@ public class MenuController : MonoBehaviour {
         shopPanel.SetActive(false);
         gameoverPanel.SetActive(true);
         logoutPanel.SetActive(false);
+        hudPanel.SetActive(false);
     }
 
     public void LogOut()

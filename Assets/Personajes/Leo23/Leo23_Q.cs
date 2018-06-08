@@ -34,6 +34,7 @@ public class Leo23_Q : Ability_abstract
                     InvokeRepeating("CoolDown", 0.1f, 1.0f);
                     PlayerController.instance.barraStamina.fillAmount -= costAbility / PlayerController.instance.stats.stats.stamina;
                     PlayerController.instance.AbilityOff();
+                    MenuController.instance.skillQ.fillAmount = 0;
                 }
                 else
                 {
@@ -55,11 +56,13 @@ public class Leo23_Q : Ability_abstract
         {
             CancelInvoke("CoolDown");
             cooldownQ = 0;
+            MenuController.instance.skillQ.fillAmount = 1;
         }
     }
 
     void CoolDown()
     {
         cooldownQ++;
+        MenuController.instance.skillQ.fillAmount += 1 / cooldownQlimit;
     }
 }
