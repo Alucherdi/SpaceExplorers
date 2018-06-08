@@ -1628,15 +1628,15 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 248397130}
-  - component: {fileID: 248397129}
   - component: {fileID: 248397131}
+  - component: {fileID: 248397129}
   m_Layer: 0
   m_Name: NetworkManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &248397129
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1645,10 +1645,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 248397128}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: -822479833, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Script: {fileID: 11500000, guid: 06e9bee4978aea54988845ed216e152c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_NetworkPort: 25225
+  m_NetworkPort: 7777
   m_ServerBindToIP: 0
   m_ServerBindAddress: 
   m_NetworkAddress: localhost
@@ -1657,8 +1657,7 @@ MonoBehaviour:
   m_ScriptCRCCheck: 1
   m_MaxDelay: 0.01
   m_LogLevel: 2
-  m_PlayerPrefab: {fileID: 1010011852535188, guid: 01bb92497ba6de64e9486bc703d641bf,
-    type: 2}
+  m_PlayerPrefab: {fileID: 0}
   m_AutoCreatePlayer: 1
   m_PlayerSpawnMethod: 0
   m_OfflineScene: 
@@ -1714,11 +1713,16 @@ MonoBehaviour:
   m_MaxBufferedPackets: 16
   m_AllowFragmentation: 1
   m_MatchHost: mm.unet.unity3d.com
-  m_MatchPort: 25225
+  m_MatchPort: 443
   matchName: default
   matchSize: 4
   isNetworkActive: 0
   matchMaker: {fileID: 0}
+  curPlayer: 0
+  allPlayerPrefabs:
+  - {fileID: 1653646511520992, guid: dd143dbdf9f7c36418fdf1f70088aa6b, type: 2}
+  - {fileID: 1536946327454832, guid: 9b3f5170426242846a8281e6b959386f, type: 2}
+  - {fileID: 1474679734591538, guid: e312a386ed2d9fb4a8bb49571a9d1033, type: 2}
 --- !u!4 &248397130
 Transform:
   m_ObjectHideFlags: 0
